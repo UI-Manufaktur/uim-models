@@ -6,7 +6,7 @@
 module uim.oop.attributes.uuids.entities.organization;
 
 @safe:
-import uim.oop;
+import uim.models;
 
 class DOrganizationIdAttribute : DEntityIdAttribute {
   mixin(AttributeThis!("OrganizationIdAttribute"));

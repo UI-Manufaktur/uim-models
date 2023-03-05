@@ -6,7 +6,7 @@
 module uim.oop.attributes.uuids.entities.slas.sla;
 
 @safe:
-import uim.oop;
+import uim.models;
 
 class DSlaIdAttribute : DEntityIdAttribute {
   mixin(AttributeThis!("SlaIdAttribute"));

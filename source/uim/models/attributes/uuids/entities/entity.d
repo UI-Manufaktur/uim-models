@@ -6,7 +6,7 @@
 module uim.oop.attributes.uuids.entities.entity;
 
 @safe:
-import uim.oop;
+import uim.models;
 
 // A unique identifier for entity instances
 

@@ -6,7 +6,7 @@
 module uim.oop.attributes.uuids.entities.currency;
 
 @safe:
-import uim.oop;
+import uim.models;
 
 // A unique identifier for entity instances
 

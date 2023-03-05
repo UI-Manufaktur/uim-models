@@ -6,7 +6,7 @@
 module uim.oop.attributes.uuids.entities.slas.invoked;
 
 @safe:
-import uim.oop;
+import uim.models;
 
 class DSLAInvokedIdAttribute : DEntityIdAttribute {
   mixin(AttributeThis!("SLAInvokedIdAttribute"));
