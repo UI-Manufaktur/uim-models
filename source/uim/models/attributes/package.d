@@ -8,25 +8,25 @@ module uim.models.attributes;
 @safe:
 import uim.models;
 
-public import uim.oop.attributes.attribute;
-public import uim.oop.attributes.interface_;
+public import uim.models.attributes.attribute;
+public import uim.models.attributes.interface_;
 
-public import uim.oop.attributes.lookups;
-public import uim.oop.attributes.codes;
+public import uim.models.attributes.lookups;
+public import uim.models.attributes.codes;
 
-public import uim.oop.attributes.arrays;
-public import uim.oop.attributes.booleans;
-public import uim.oop.attributes.bytes;
-public import uim.oop.attributes.chars;
-public import uim.oop.attributes.dates;
-public import uim.oop.attributes.datetimes;
-public import uim.oop.attributes.decimals;
-public import uim.oop.attributes.doubles;
-public import uim.oop.attributes.elements;
-public import uim.oop.attributes.entities;
-public import uim.oop.attributes.integers;
-public import uim.oop.attributes.ulongs;
-public import uim.oop.attributes.uuids;
+public import uim.models.attributes.arrays;
+public import uim.models.attributes.booleans;
+public import uim.models.attributes.bytes;
+public import uim.models.attributes.chars;
+public import uim.models.attributes.dates;
+public import uim.models.attributes.datetimes;
+public import uim.models.attributes.decimals;
+public import uim.models.attributes.doubles;
+public import uim.models.attributes.elements;
+public import uim.models.attributes.entities;
+public import uim.models.attributes.integers;
+public import uim.models.attributes.ulongs;
+public import uim.models.attributes.uuids;
 
 template AttributeThis(string name) {
   const char[] AttributeThis = q{

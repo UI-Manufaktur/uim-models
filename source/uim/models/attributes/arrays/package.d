@@ -8,11 +8,11 @@ module uim.models.attributes.arrays;
 @safe:
 import uim.models;
 
-public import uim.oop.attributes.arrays.array;
+public import uim.models.attributes.arrays.array;
 
-public import uim.oop.attributes.arrays.booleans;
-public import uim.oop.attributes.arrays.bytes;
-public import uim.oop.attributes.arrays.doubles;
-public import uim.oop.attributes.arrays.integers;
-public import uim.oop.attributes.arrays.strings;
-public import uim.oop.attributes.arrays.values;
+public import uim.models.attributes.arrays.booleans;
+public import uim.models.attributes.arrays.bytes;
+public import uim.models.attributes.arrays.doubles;
+public import uim.models.attributes.arrays.integers;
+public import uim.models.attributes.arrays.strings;
+public import uim.models.attributes.arrays.values;

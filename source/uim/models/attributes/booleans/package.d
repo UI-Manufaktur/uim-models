@@ -9,5 +9,5 @@ module uim.models.attributes.booleans;
 import uim.models;
 
 // main
-public import uim.oop.attributes.booleans.boolean;
+public import uim.models.attributes.booleans.boolean;
 

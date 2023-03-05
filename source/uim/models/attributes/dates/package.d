@@ -6,4 +6,4 @@
 module uim.models.attributes.dates;
 
 // main
-public import uim.oop.attributes.dates.date_;
+public import uim.models.attributes.dates.date_;

@@ -8,5 +8,5 @@ module uim.models.attributes.bytes;
 @safe:
 import uim.models;
 
-public import uim.oop.attributes.bytes.byte_;
+public import uim.models.attributes.bytes.byte_;
 
