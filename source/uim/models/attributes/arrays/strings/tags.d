@@ -6,7 +6,7 @@
 module uim.oop.attributes.arrays.strings.tags;
 
 @safe:
-import uim.oop;
+import uim.models;
 
 class DTagsAttribute : DStringArrayAttribute {
   mixin(AttributeThis!("TagsAttribute"));

@@ -6,7 +6,7 @@
 module uim.oop.attributes;
 
 @safe:
-import uim.oop;
+import uim.models;
 
 public import uim.oop.attributes.attribute;
 public import uim.oop.attributes.interface_;

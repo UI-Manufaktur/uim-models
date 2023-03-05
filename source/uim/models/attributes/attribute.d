@@ -6,7 +6,7 @@
 module uim.oop.attributes.attribute;
 
 @safe:
-import uim.oop;
+import uim.models;
 
 class DAttribute : DEntity, IAttribute {
   mixin(AttributeThis!("Attribute"));
