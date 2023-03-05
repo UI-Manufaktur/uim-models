@@ -1,9 +1,85 @@
 {
 	"authors": [
-		"oz"
+		"UI Manufaktur Team",
+		"Sicherheitsschmiede",
+		"Ozan Nurettin Süel"
 	],
-	"copyright": "Copyright © 2022, oz",
-	"description": "A minimal D application.",
-	"license": "proprietary",
-	"name": "uim-models"
+	"copyright": "Copyright © 2017-2022, UI Manufaktur UG",
+	"license": "Apache-2.0",
+	"name": "uim-models",
+	"description": "MODELS library for D",
+	"configurations": [
+		{
+			"name": "default",
+			"targetType": "library",
+			"dependencies": {
+				"colored": "~>0.0.28",
+				"vibe-d": "~>0.9.5"
+			},
+			"importPaths": [
+				"../../LIBS/uim-core",
+				"./"
+			],
+			"sourcePaths": [
+				"../../LIBS/uim-core",
+				"./"
+			]					
+		},
+		{
+			"name": "github",
+			"targetType": "library",
+			"dependencies": {
+				"colored": "~>0.0.27",
+				"vibe-d": "~>0.9.5",
+        "uim-core": {
+					"repository": "git+https://github.com/UI-Manufaktur/uim-core.git",
+					"version": "a5bc7477f2817b36273dd49eaa4b6025188803ad"
+				}
+			}
+		},
+		{
+			"name": "testLib",
+			"targetType": "library",
+			"dependencies": {
+				"colored": "~>0.0.27",
+				"vibe-d": "~>0.9.5"
+			},		
+			"importPaths": [
+				"../../LIBS/uim-core",
+				"../../LIBS/uim-oop",
+				"./"
+			],
+			"sourcePaths": [
+				"../../LIBS/uim-core",
+				"../../LIBS/uim-oop",
+				"./"
+			],
+			"versions": [
+				"test_uim_models"
+			]
+		},
+		{
+			"name": "testAll",
+			"targetType": "library",
+			"dependencies": {
+				"colored": "~>0.0.27",
+				"vibe-d": "~>0.9.5"
+			},		
+			"importPaths": [
+				"../../LIBS/uim-core",
+				"../../LIBS/uim-oop",
+				"./"
+			],
+			"sourcePaths": [
+				"../../LIBS/uim-core",
+				"../../LIBS/uim-oop",
+				"./"
+			],
+			"versions": [
+				"test_uim_core",
+				"test_uim_oop",
+				"test_uim_models"
+			]
+		}
+	]
 }
