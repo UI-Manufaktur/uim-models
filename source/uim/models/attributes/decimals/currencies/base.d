@@ -6,7 +6,7 @@
 module uim.oop.attributes.decimals.currencies.base;
 
 @safe:
-import uim.oop;
+import uim.models;
 
 class DBaseCurrencyAttribute : DCurrencyAttribute {
   mixin(AttributeThis!("BaseCurrencyAttribute"));

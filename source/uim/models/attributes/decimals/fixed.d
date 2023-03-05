@@ -6,7 +6,7 @@
 module uim.oop.attributes.decimals.fixed;
 
 @safe:
-import uim.oop;
+import uim.models;
 
 // The 64 bit fixed (4) scale numbers used by PBI
 class DFixedDecimalAttribute : DDecimalAttribute {

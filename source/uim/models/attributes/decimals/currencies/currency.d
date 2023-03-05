@@ -6,7 +6,7 @@
 module uim.oop.attributes.decimals.currencies.currency;
 
 @safe:
-import uim.oop;
+import uim.models;
 
 class DCurrencyAttribute : DDecimalAttribute {
   mixin(AttributeThis!("CurrencyAttribute"));

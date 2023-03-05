@@ -6,7 +6,7 @@
 module uim.oop.attributes.datetimes.birthdate;
 
 @safe:
-import uim.oop;
+import uim.models;
 
 class DBirthDateAttribute : DDatetimeAttribute {
   mixin(AttributeThis!("BirthDateAttribute"));

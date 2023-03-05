@@ -6,7 +6,7 @@
 module uim.oop.attributes.dates.datetimes.datetimeoffset;
 
 @safe:
-import uim.oop;
+import uim.models;
 
 class DDatetimeOffsetAttribute : DDatetimeAttribute {
   mixin(AttributeThis!("DatetimeOffsetAttribute"));

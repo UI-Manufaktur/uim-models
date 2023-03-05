@@ -6,7 +6,7 @@
 module uim.oop.attributes.datetimes.time;
 
 @safe:
-import uim.oop;
+import uim.models;
 
 class DTimeAttribute : DAttribute {
   mixin(AttributeThis!("TimeAttribute"));
