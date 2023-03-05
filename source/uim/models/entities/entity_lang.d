@@ -4,7 +4,7 @@
 *	Authors: UI Manufaktur Team
 *	Documentation [DE]: https://ui-manufaktur.com/docu/uim-oop/models/entities/entity_lang
 ************************************************************************************************/
-module uim.oop.entity_lang;
+module uim.models.entity_lang;
 
 @safe:
 import uim.models;
