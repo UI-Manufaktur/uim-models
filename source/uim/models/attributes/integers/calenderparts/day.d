@@ -6,7 +6,7 @@
 module uim.oop.attributes.integers.calenderparts.day;
 
 @safe:
-import uim.oop;
+import uim.models;
 
 /* means.calendar
 means.calendar.day */

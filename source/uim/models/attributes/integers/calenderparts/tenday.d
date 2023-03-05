@@ -12,7 +12,7 @@ means.calendar
 means.calendar.tenday */
 
 @safe:
-import uim.oop;
+import uim.models;
 
 class DTendayAttribute : DIntegerCalendarPart {
   mixin(AttributeThis!("TendayAttribute"));

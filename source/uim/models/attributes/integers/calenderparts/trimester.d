@@ -12,7 +12,7 @@ means.calendar
 means.calendar.trimester */
 
 @safe:
-import uim.oop;
+import uim.models;
 
 class DTrimesterAttribute : DIntegerCalendarPart {
   mixin(AttributeThis!("TrimesterAttribute"));

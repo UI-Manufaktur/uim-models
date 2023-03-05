@@ -6,7 +6,7 @@
 module uim.oop.attributes.lookups;
 
 @safe:
-import uim.oop;
+import uim.models;
 
 public import uim.oop.attributes.lookups.booleans;
 public import uim.oop.attributes.lookups.integers;

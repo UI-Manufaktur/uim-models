@@ -6,7 +6,7 @@
 module uim.oop.attributes.lookups.lookup;
 
 @safe:
-import uim.oop;
+import uim.models;
 
 class DLookupAttribute : DAttribute {
   mixin(AttributeThis!("LookupAttribute"));
