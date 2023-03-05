@@ -5,7 +5,7 @@
 **********************************************************************************************************/
 module uim.models.attributes.strings.phones;
 
-public import uim.oop.attributes.strings.phones.phone;
-public import uim.oop.attributes.strings.phones.fax;
-public import uim.oop.attributes.strings.phones.cell;
+public import uim.models.attributes.strings.phones.phone;
+public import uim.models.attributes.strings.phones.fax;
+public import uim.models.attributes.strings.phones.cell;
 

@@ -6,16 +6,16 @@
 module uim.models.attributes.uuids.entityids;
 
 // Main
-public import uim.oop.attributes.uuids.entities.entity;
+public import uim.models.attributes.uuids.entities.entity;
 
 // Packages
-public import uim.oop.attributes.uuids.entities.slas;
-public import uim.oop.attributes.uuids.entities.users;
-public import uim.oop.attributes.uuids.entities.account;
-public import uim.oop.attributes.uuids.entities.businessunit;
-public import uim.oop.attributes.uuids.entities.campaign;
-public import uim.oop.attributes.uuids.entities.contact;
-public import uim.oop.attributes.uuids.entities.currency;
-public import uim.oop.attributes.uuids.entities.file;
-public import uim.oop.attributes.uuids.entities.organization;
+public import uim.models.attributes.uuids.entities.slas;
+public import uim.models.attributes.uuids.entities.users;
+public import uim.models.attributes.uuids.entities.account;
+public import uim.models.attributes.uuids.entities.businessunit;
+public import uim.models.attributes.uuids.entities.campaign;
+public import uim.models.attributes.uuids.entities.contact;
+public import uim.models.attributes.uuids.entities.currency;
+public import uim.models.attributes.uuids.entities.file;
+public import uim.models.attributes.uuids.entities.organization;
 

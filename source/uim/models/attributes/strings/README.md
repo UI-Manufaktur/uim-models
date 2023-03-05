@@ -1,1 +1,1 @@
-# uim.oop.attributes.strings
+# uim.models.attributes.strings

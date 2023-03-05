@@ -5,8 +5,8 @@
 **********************************************************************************************************/
 module uim.models.attributes.uuids.entities.users;
 
-public import uim.oop.attributes.uuids.entities.users.user;
-public import uim.oop.attributes.uuids.entities.users.owner;
-public import uim.oop.attributes.uuids.entities.users.createdonbehalfby;
-public import uim.oop.attributes.uuids.entities.users.modifiedonbehalfby;
-public import uim.oop.attributes.uuids.entities.users.team;
+public import uim.models.attributes.uuids.entities.users.user;
+public import uim.models.attributes.uuids.entities.users.owner;
+public import uim.models.attributes.uuids.entities.users.createdonbehalfby;
+public import uim.models.attributes.uuids.entities.users.modifiedonbehalfby;
+public import uim.models.attributes.uuids.entities.users.team;

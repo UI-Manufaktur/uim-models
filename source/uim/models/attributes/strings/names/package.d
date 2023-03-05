@@ -5,8 +5,8 @@
 **********************************************************************************************************/
 module uim.models.attributes.strings.names;
 
-public import uim.oop.attributes.strings.names.name;
+public import uim.models.attributes.strings.names.name;
 
-public import uim.oop.attributes.strings.names.first;
-public import uim.oop.attributes.strings.names.full;
-public import uim.oop.attributes.strings.names.middle;
+public import uim.models.attributes.strings.names.first;
+public import uim.models.attributes.strings.names.full;
+public import uim.models.attributes.strings.names.middle;
