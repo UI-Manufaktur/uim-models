@@ -1,4 +1,4 @@
-module uim.oop.attributes.doubles.celsius;
+module uim.models.attributes.doubles.celsius;
 
 // Unit of measure for temperature in degrees celsius
 /* is.dataFormat.floatingPoint

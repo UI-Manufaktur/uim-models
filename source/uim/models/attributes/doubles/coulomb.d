@@ -1,4 +1,4 @@
-module uim.oop.attributes.doubles.coulomb;
+module uim.models.attributes.doubles.coulomb;
 
 @safe:
 import uim.models;
