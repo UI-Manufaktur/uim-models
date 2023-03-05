@@ -3,7 +3,7 @@
   License: Subject to the terms of the Apache 2.0 license, as written in the included LICENSE.txt file.  
   Authors: Ozan Nurettin Süel (Sicherheitsschmiede)                                                      
 **********************************************************************************************************/
-module uim.oop.attributes.doubles.ohms;
+module uim.models.attributes.doubles.ohms;
 
 public import uim.oop.attributes.doubles.ohms.ohm;
 public import uim.oop.attributes.doubles.ohms.kilo;
