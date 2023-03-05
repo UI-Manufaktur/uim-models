@@ -16,7 +16,7 @@ has.measurement.fundamentalComponent.meter
 means.measurement.prefix.centi */
 
 @safe:
-import uim.oop;
+import uim.models;
 
 class DCentimeterAttribute : DMeterAttribute {
   mixin(AttributeThis!("CentimeterAttribute"));
