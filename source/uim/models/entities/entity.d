@@ -6,7 +6,7 @@
 module uim.oop.entities.entity;
 
 @safe:
-import uim.oop;
+import uim.models;
 
 class DEntity /* : IRegistrable */ {
   static namespace = moduleName!DEntity;

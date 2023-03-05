@@ -7,7 +7,7 @@
 module uim.oop.entity_lang;
 
 @safe:
-import uim.oop;
+import uim.models;
 
 class DEntityLang : DEntity {
   this() { super(); }

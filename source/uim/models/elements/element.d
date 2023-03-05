@@ -6,7 +6,7 @@
 module uim.oop.elements.element;
 
 @safe:
-import uim.oop;
+import uim.models;
 
 class DElement {
   static namespace = moduleName!DElement;

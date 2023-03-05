@@ -6,7 +6,7 @@
 module uim.oop.entities.entities;
 
 @safe:
-import uim.oop;
+import uim.models;
 
 class DOOPEntities {
   this() {}

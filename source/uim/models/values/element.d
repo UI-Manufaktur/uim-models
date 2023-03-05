@@ -6,7 +6,7 @@
 module uim.oop.values.element;
 
 @safe:
-import uim.oop;
+import uim.models;
 
 class DElementValue : DValue {
   mixin(ValueThis!("ElementValue", "DElement"));    

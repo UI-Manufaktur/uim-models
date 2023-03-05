@@ -6,7 +6,7 @@
 module uim.oop.elements.configuration;
 
 @safe:
-import uim.oop;
+import uim.models;
 
 class DConfigurationElement : DElement {
   // Constructors
