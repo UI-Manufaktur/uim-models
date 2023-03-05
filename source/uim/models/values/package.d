@@ -6,7 +6,7 @@
 module uim.oop.values;
 
 @safe:
-import uim.oop;
+import uim.models;
 
 public import uim.oop.values.interface_;
 public import uim.oop.values.value;

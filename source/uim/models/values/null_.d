@@ -6,7 +6,7 @@
 module uim.oop.values.null_;
 
 @safe:
-import uim.oop;
+import uim.models;
 
 class DNullValue : DValue {
   mixin(ValueThis!("NullValue"));  

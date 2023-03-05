@@ -6,7 +6,7 @@
 module uim.oop.values.map;
 
 @safe:
-import uim.oop;
+import uim.models;
 
 /* class DMapValue {
   this() { initialize; }

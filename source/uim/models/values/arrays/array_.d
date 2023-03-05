@@ -6,7 +6,7 @@
 module uim.oop.values.arrays.array_;
 
 @safe:
-import uim.oop;
+import uim.models;
 
 class DArrayValue : DValue {
   mixin(ValueThis!("ArrayValue"));  

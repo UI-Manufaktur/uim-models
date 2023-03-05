@@ -6,7 +6,7 @@
 module uim.oop.values.interface_;
 
 @safe:
-import uim.oop;
+import uim.models;
 
 interface IValue {
   IAttribute attribute();

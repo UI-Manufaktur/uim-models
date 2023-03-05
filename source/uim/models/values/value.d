@@ -6,7 +6,7 @@
 module uim.oop.values.value;
 
 @safe:
-import uim.oop;
+import uim.models;
 
 class DValue : IValue {
   this() { initialize; }

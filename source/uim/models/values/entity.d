@@ -6,7 +6,7 @@
 module uim.oop.values.entity;
 
 @safe:
-import uim.oop;
+import uim.models;
 
 class DEntityValue : DValue {
   mixin(ValueThis!("EntityValue", "DEntity"));  
