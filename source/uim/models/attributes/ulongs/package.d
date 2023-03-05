@@ -6,4 +6,4 @@
 module uim.oop.attributes.ulongs;
 
 @safe:
-import uim.oop;
+import uim.models;

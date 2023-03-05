@@ -6,7 +6,7 @@
 module uim.oop.attributes.uuids.entities.account;
 
 @safe:
-import uim.oop;
+import uim.models;
 
 class DAccountIdAttribute : DEntityIdAttribute {
   mixin(AttributeThis!("AccountIdAttribute"));

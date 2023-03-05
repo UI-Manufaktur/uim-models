@@ -6,7 +6,7 @@
 module uim.oop.attributes.uuids.entities.businessunit;
 
 @safe:
-import uim.oop;
+import uim.models;
 
 // A unique identifier for entity instances
 

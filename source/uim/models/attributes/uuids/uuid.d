@@ -6,7 +6,7 @@
 module uim.oop.attributes.uuids.uuid;
 
 @safe:
-import uim.oop;
+import uim.models;
 
 class DUUIDAttribute : DAttribute {
   mixin(AttributeThis!("UUIDAttribute"));

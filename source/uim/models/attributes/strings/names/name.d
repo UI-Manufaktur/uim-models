@@ -13,7 +13,7 @@ is.dataFormat.array
 means.identity.name */
 
 @safe:
-import uim.oop;
+import uim.models;
 
 class DNameAttribute : DStringAttribute {
   mixin(AttributeThis!("NameAttribute"));

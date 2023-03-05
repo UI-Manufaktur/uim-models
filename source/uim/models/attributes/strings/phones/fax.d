@@ -13,7 +13,7 @@ is.dataFormat.array
 means.identity.service.phone.fax */
 
 @safe:
-import uim.oop;
+import uim.models;
 
 class DFaxAttribute : DStringAttribute {
   mixin(AttributeThis!("FaxAttribute"));
