@@ -6,7 +6,7 @@
 module uim.oop.attributes.strings.languagetags.culturetag;
 
 @safe:
-import uim.oop;
+import uim.models;
 
 class DCultureTagAttribute : DStringAttribute {
   mixin(AttributeThis!("CultureTagAttribute"));

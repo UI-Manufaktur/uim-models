@@ -11,7 +11,7 @@ is.dataFormat.array
 means.identity.person.fullName */
 
 @safe:
-import uim.oop;
+import uim.models;
 
 class DFullNameAttribute : DStringAttribute {
   mixin(AttributeThis!("FullNameAttribute"));

@@ -6,7 +6,7 @@
 module uim.oop.attributes.strings.languagetags;
 
 @safe:
-import uim.oop;
+import uim.models;
 
 public import uim.oop.attributes.strings.languagetags.languagetag;
 public import uim.oop.attributes.strings.languagetags.culturetag;

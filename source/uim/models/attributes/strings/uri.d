@@ -8,7 +8,7 @@ is.dataFormat.array
 means.reference.URI */
 
 @safe:
-import uim.oop;
+import uim.models;
 
 class DUriAttribute : DStringAttribute {
   mixin(AttributeThis!("UriAttribute"));

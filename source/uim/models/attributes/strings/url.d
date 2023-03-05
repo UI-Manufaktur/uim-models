@@ -6,7 +6,7 @@
 module uim.oop.attributes.strings.url;
 
 @safe:
-import uim.oop;
+import uim.models;
 
 class DUrlAttribute : DStringAttribute {
   mixin(AttributeThis!("UrlAttribute"));
