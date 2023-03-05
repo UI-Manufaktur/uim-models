@@ -6,7 +6,7 @@
 module  source.uim.oop.attributes.entities.campaign;
 
 @safe:
-import uim.oop;
+import uim.models;
 
 class DCampaignAttribute : DEntityAttribute {
   mixin(AttributeThis!("CampaignAttribute"));

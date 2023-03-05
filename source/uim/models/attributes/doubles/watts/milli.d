@@ -20,7 +20,7 @@ has.measurement.fundamentalComponent.second
 means.measurement.prefix.milli */
 
 @safe:
-import uim.oop;
+import uim.models;
 
 class DMilliWattAttribute : DWattAttribute {
   mixin(AttributeThis!("MilliWattAttribute"));

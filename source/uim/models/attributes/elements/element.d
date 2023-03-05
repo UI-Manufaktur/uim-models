@@ -6,7 +6,7 @@
 module uim.oop.attributes.elements.element;
 
 @safe:
-import uim.oop;
+import uim.models;
 
 class DElementAttribute : DAttribute {
   mixin(AttributeThis!("ElementAttribute"));
