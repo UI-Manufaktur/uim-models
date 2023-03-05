@@ -6,7 +6,7 @@
 module uim.oop.values.datetimes.systime;
 
 @safe:
-import uim.oop;
+import uim.models;
 
 class DSystimeValue : DValue {
   mixin(ValueThis!("SystimeValue", "SysTime"));  

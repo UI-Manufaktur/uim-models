@@ -6,7 +6,7 @@
 module uim.oop.values.datetimes.date_;
 
 @safe:
-import uim.oop;
+import uim.models;
 import std.datetime.date;
 
 class DDateValue : DValue {

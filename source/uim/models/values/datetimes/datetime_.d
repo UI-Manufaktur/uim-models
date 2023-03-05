@@ -6,7 +6,7 @@
 module uim.oop.values.datetimes.datetime_;
 
 @safe:
-import uim.oop;
+import uim.models;
 
 class DDatetimeValue : DValue {
   mixin(ValueThis!("DatetimeValue", "DateTime"));  

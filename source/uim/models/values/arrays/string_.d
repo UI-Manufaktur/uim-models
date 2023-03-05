@@ -6,7 +6,7 @@
 module uim.oop.values.arrays.string_;
 
 @safe:
-import uim.oop;
+import uim.models;
 
 class DStringArrayValue : DArrayValue {
   mixin(ValueThis!("StringArrayValue", "string[]"));  
