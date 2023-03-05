@@ -1,4 +1,4 @@
-module uim.oop.attributes.strings.uri;
+module uim.models.attributes.strings.uri;
 
 /* any <- char <- string <- uri
 Traits
