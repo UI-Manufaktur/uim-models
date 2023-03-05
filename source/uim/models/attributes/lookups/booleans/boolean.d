@@ -6,7 +6,7 @@
 module uim.oop.attributes.lookups.booleans.boolean;
 
 @safe:
-import uim.oop;
+import uim.models;
 
 class DBooleanBooleanAttribute : DLookupAttribute {
   mixin(AttributeThis!("BooleanBooleanAttribute"));

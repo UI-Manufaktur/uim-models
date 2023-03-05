@@ -6,7 +6,7 @@
 module uim.oop.attributes.lookups.booleans.string_;
 
 @safe:
-import uim.oop;
+import uim.models;
 
 class DBooleanStringAttribute : DAttribute {
   mixin(AttributeThis!("BooleanStringAttribute"));
