@@ -3,7 +3,7 @@
   License: Subject to the terms of the Apache 2.0 license, as written in the included LICENSE.txt file.  
   Authors: Ozan Nurettin Süel (Sicherheitsschmiede)                                                      
 **********************************************************************************************************/
-module uim.oop.attributes.doubles.meters.centi;
+module uim.models.attributes.doubles.meters.centi;
 
 // Unit of measure for length in 10E-2 meters
 /* any <- float <- double <- meter <- centimeter
