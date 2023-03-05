@@ -1,0 +1,1 @@
+# uim.oop.attributes.strings
