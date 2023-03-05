@@ -6,7 +6,7 @@
 module uim.models.attributes.decimals.currencies;
 
 // main
-public import uim.oop.attributes.decimals.currencies.currency;
+public import uim.models.attributes.decimals.currencies.currency;
 
 // subs
-public import uim.oop.attributes.decimals.currencies.base;
+public import uim.models.attributes.decimals.currencies.base;

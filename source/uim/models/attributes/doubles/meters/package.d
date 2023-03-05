@@ -6,9 +6,9 @@
 module uim.models.attributes.doubles.meters;
 
 // main
-public import uim.oop.attributes.doubles.meters.meter;
+public import uim.models.attributes.doubles.meters.meter;
 
 // subs
-public import uim.oop.attributes.doubles.meters.centi;
-public import uim.oop.attributes.doubles.meters.kilo;
-public import uim.oop.attributes.doubles.meters.milli;
+public import uim.models.attributes.doubles.meters.centi;
+public import uim.models.attributes.doubles.meters.kilo;
+public import uim.models.attributes.doubles.meters.milli;

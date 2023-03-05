@@ -5,9 +5,9 @@
 **********************************************************************************************************/
 module uim.models.attributes.doubles.volts;
 
-public import uim.oop.attributes.doubles.volts.volt;
+public import uim.models.attributes.doubles.volts.volt;
 
-public import uim.oop.attributes.doubles.volts.kilo;
-public import uim.oop.attributes.doubles.volts.mega;
-public import uim.oop.attributes.doubles.volts.milli;
+public import uim.models.attributes.doubles.volts.kilo;
+public import uim.models.attributes.doubles.volts.mega;
+public import uim.models.attributes.doubles.volts.milli;
 
