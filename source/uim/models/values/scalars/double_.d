@@ -6,7 +6,7 @@
 module uim.oop.values.scalars.double_;
 
 @safe:
-import uim.oop;
+import uim.models;
 
 class DDoubleValue : DValue {
   mixin(ValueThis!("DoubleValue", "double"));  

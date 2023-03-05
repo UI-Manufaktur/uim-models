@@ -6,7 +6,7 @@
 module uim.oop.values.scalars.long_;
 
 @safe:
-import uim.oop;
+import uim.models;
 
 class DLongValue : DValue {
   mixin(ValueThis!("LongValue", "long"));  

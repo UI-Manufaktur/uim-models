@@ -6,7 +6,7 @@
 module uim.oop.values.scalars.integer;
 
 @safe:
-import uim.oop;
+import uim.models;
 
 class DIntegerValue : DValue {
   mixin(ValueThis!("IntegerValue", "int"));  

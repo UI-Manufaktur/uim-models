@@ -6,7 +6,7 @@
 module uim.oop.values.scalars.string_;
 
 @safe:
-import uim.oop;
+import uim.models;
 
 class DStringValue : DValue {
   mixin(ValueThis!("StringValue"));  

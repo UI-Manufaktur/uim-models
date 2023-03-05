@@ -6,7 +6,7 @@
 module uim.oop.values.maps.config;
 
 @safe:
-import uim.oop;
+import uim.models;
 
 class DConfigurationValue : DMapValue!string {
   // Constructors

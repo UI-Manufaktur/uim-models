@@ -6,7 +6,7 @@
 module uim.oop.values.maps;
 
 @safe:
-import uim.oop;
+import uim.models;
 
 public import uim.oop.values.maps.map;
 public import uim.oop.values.maps.options;
