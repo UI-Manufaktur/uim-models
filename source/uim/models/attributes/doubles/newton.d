@@ -19,7 +19,7 @@ has.measurement.fundamentalComponent.meter
 has.measurement.fundamentalComponent.second */
 
 @safe:
-import uim.oop;
+import uim.models;
 
 class DNewtonAttribute : DDoubleAttribute {
   mixin(AttributeThis!("NewtonAttribute"));

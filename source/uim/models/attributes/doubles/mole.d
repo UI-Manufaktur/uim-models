@@ -17,7 +17,7 @@ means.measurement.units.si.mole
 has.measurement.fundamentalComponent.mole */
 
 @safe:
-import uim.oop;
+import uim.models;
 
 class DMoleAttribute : DDoubleAttribute {
   mixin(AttributeThis!("MoleAttribute"));

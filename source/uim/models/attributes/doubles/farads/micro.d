@@ -21,7 +21,7 @@ has.measurement.fundamentalComponent.microfarad
 means.measurement.prefix.micro */
 
 @safe:
-import uim.oop;
+import uim.models;
 
 class DMicroFaradAttribute : DFaradAttribute {
   mixin(AttributeThis!("MicroFaradAttribute"));

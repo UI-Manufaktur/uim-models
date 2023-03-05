@@ -15,7 +15,7 @@ has.measurement.fundamentalComponent.ampere
  */
 
 @safe:
-import uim.oop;
+import uim.models;
 
 class DAmpereAttribute : DDoubleAttribute {
   mixin(AttributeThis!("AmpereAttribute"));
