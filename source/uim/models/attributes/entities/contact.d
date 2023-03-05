@@ -3,7 +3,7 @@
   License: Subject to the terms of the Apache 2.0 license, as written in the included LICENSE.txt file.  
   Authors: Ozan Nurettin Süel (Sicherheitsschmiede)                                                      
 **********************************************************************************************************/
-module  source.uim.oop.attributes.entities.contact;
+module  source.uim.models.attributes.entities.contact;
 
 @safe:
 import uim.models;

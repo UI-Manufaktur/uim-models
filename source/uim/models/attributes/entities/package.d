@@ -9,4 +9,4 @@ module uim.models.attributes.entities;
 public import uim.oop;
 
 // Main
-public import uim.oop.attributes.entities.entity;
+public import uim.models.attributes.entities.entity;

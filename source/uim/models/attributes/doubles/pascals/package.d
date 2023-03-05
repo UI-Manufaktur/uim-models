@@ -5,8 +5,8 @@
 **********************************************************************************************************/
 module uim.models.attributes.doubles.pascals;
 
-public import uim.oop.attributes.doubles.pascals.pascal;
+public import uim.models.attributes.doubles.pascals.pascal;
 
-public import uim.oop.attributes.doubles.pascals.giga;
-public import uim.oop.attributes.doubles.pascals.kilo;
-public import uim.oop.attributes.doubles.pascals.mega;
+public import uim.models.attributes.doubles.pascals.giga;
+public import uim.models.attributes.doubles.pascals.kilo;
+public import uim.models.attributes.doubles.pascals.mega;

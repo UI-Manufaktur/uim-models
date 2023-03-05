@@ -22,7 +22,8 @@ has.measurement.fundamentalComponent.meter
 has.measurement.fundamentalComponent.second
 means.measurement.prefix.mega */
 
-import uim.oop;
+@safe:
+import uim.models;
 
 class DMegaWattAttribute : DWattAttribute {
   mixin(AttributeThis!("MegaWattAttribute"));
