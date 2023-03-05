@@ -3,7 +3,7 @@
 	License: Subject to the terms of the Apache 2.0 license, as written in the included LICENSE.txt file.  
 	Authors: Ozan Nurettin Süel (Sicherheitsschmiede)                                                      
 **********************************************************************************************************/
-module uim.oop.attributes.decimals.variable;
+module uim.models.attributes.decimals.variable;
 
 /* 15-digit precision numbers with no fixed scale
 
