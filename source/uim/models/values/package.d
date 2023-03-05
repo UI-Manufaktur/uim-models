@@ -8,23 +8,23 @@ module uim.models.values;
 @safe:
 import uim.models;
 
-public import uim.oop.values.interface_;
-public import uim.oop.values.value;
-public import uim.oop.values.map;
+public import uim.models.values.interface_;
+public import uim.models.values.value;
+public import uim.models.values.map;
 
 // Packages
-public import uim.oop.values.arrays;
-public import uim.oop.values.datetimes;
-public import uim.oop.values.lookups;
-public import uim.oop.values.maps;
-public import uim.oop.values.scalars;
+public import uim.models.values.arrays;
+public import uim.models.values.datetimes;
+public import uim.models.values.lookups;
+public import uim.models.values.maps;
+public import uim.models.values.scalars;
 
 // Modules
-public import uim.oop.values.element;
-public import uim.oop.values.entity;
-public import uim.oop.values.null_;
-public import uim.oop.values.object_;
-public import uim.oop.values.uuid;
+public import uim.models.values.element;
+public import uim.models.values.entity;
+public import uim.models.values.null_;
+public import uim.models.values.object_;
+public import uim.models.values.uuid;
 
 template ValueThis(string name, string datatype = null) { // Name for future releases
   const char[] ValueThis = `  

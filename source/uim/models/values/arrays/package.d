@@ -5,9 +5,9 @@
 **********************************************************************************************************/
 module uim.models.values.arrays;
 
-public import uim.oop.values.arrays.array_;
+public import uim.models.values.arrays.array_;
 
-public import uim.oop.values.arrays.integer;
-public import uim.oop.values.arrays.string_;
-public import uim.oop.values.arrays.tag;
-public import uim.oop.values.arrays.value;
+public import uim.models.values.arrays.integer;
+public import uim.models.values.arrays.string_;
+public import uim.models.values.arrays.tag;
+public import uim.models.values.arrays.value;

@@ -8,4 +8,4 @@ module uim.models.values.lookups;
 @safe:
 import uim.models;
 
-public import uim.oop.values.lookups.lookup;
+public import uim.models.values.lookups.lookup;

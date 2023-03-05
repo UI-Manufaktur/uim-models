@@ -5,8 +5,8 @@
 **********************************************************************************************************/
 module uim.models.values.datetimes;
 
-public import uim.oop.values.datetimes.date_;
-public import uim.oop.values.datetimes.datetime_;
-public import uim.oop.values.datetimes.systime;
-public import uim.oop.values.datetimes.time_;
-public import uim.oop.values.datetimes.timestamp;
+public import uim.models.values.datetimes.date_;
+public import uim.models.values.datetimes.datetime_;
+public import uim.models.values.datetimes.systime;
+public import uim.models.values.datetimes.time_;
+public import uim.models.values.datetimes.timestamp;

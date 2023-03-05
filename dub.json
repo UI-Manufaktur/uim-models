@@ -18,10 +18,12 @@
 			},
 			"importPaths": [
 				"../../LIBS/uim-core",
+				"../../LIBS/uim-oop",
 				"./"
 			],
 			"sourcePaths": [
 				"../../LIBS/uim-core",
+				"../../LIBS/uim-oop",
 				"./"
 			]					
 		},
