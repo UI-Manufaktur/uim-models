@@ -6,7 +6,7 @@
 module uim.oop.attributes.doubles.double_;
 
 @safe:
-import uim.oop;
+import uim.models;
 
 class DDoubleAttribute : DAttribute {
   mixin(AttributeThis!("DoubleAttribute"));

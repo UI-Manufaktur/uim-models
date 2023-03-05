@@ -12,7 +12,7 @@ is.dataFormat.big
 means.location.longitude */
 
 @safe:
-import uim.oop;
+import uim.models;
 
 class DLongitudeAttribute : DDoubleAttribute {
   mixin(AttributeThis!("LongitudeAttribute"));

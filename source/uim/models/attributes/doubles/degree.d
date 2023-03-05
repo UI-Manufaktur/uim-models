@@ -6,7 +6,7 @@
 module uim.oop.attributes.doubles.degree;
 
 @safe:
-import uim.oop;
+import uim.models;
 
 /* 
 Unit of measure for angles in degrees, 1/360 rotation

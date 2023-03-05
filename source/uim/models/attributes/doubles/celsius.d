@@ -8,7 +8,7 @@ means.measurement.units.si.celsius
 has.measurement.fundamentalComponent.kelvin */
 
 @safe:
-import uim.oop;
+import uim.models;
 
 class DCelsiusAttribute : DDoubleAttribute {
   mixin(AttributeThis!("CelsiusAttribute"));
