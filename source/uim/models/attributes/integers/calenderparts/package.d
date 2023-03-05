@@ -5,9 +5,9 @@
 **********************************************************************************************************/
 module uim.models.attributes.integers.calenderparts;
 
-public import uim.oop.attributes.integers.calenderparts.day;
-public import uim.oop.attributes.integers.calenderparts.integer;
-public import uim.oop.attributes.integers.calenderparts.month;
-public import uim.oop.attributes.integers.calenderparts.quarter;
-public import uim.oop.attributes.integers.calenderparts.tenday;
-public import uim.oop.attributes.integers.calenderparts.week;
+public import uim.models.attributes.integers.calenderparts.day;
+public import uim.models.attributes.integers.calenderparts.integer;
+public import uim.models.attributes.integers.calenderparts.month;
+public import uim.models.attributes.integers.calenderparts.quarter;
+public import uim.models.attributes.integers.calenderparts.tenday;
+public import uim.models.attributes.integers.calenderparts.week;

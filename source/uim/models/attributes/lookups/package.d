@@ -8,11 +8,11 @@ module uim.models.attributes.lookups;
 @safe:
 import uim.models;
 
-public import uim.oop.attributes.lookups.booleans;
-public import uim.oop.attributes.lookups.integers;
-public import uim.oop.attributes.lookups.strings;
+public import uim.models.attributes.lookups.booleans;
+public import uim.models.attributes.lookups.integers;
+public import uim.models.attributes.lookups.strings;
 
-public import uim.oop.attributes.lookups.lookup;
-// public import uim.oop.attributes.lookups.customertype;
-// public import uim.oop.attributes.lookups.string_;
-// public import uim.oop.attributes.lookups.preferredcontactmethod;
+public import uim.models.attributes.lookups.lookup;
+// public import uim.models.attributes.lookups.customertype;
+// public import uim.models.attributes.lookups.string_;
+// public import uim.models.attributes.lookups.preferredcontactmethod;

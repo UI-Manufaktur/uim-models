@@ -1,1 +1,1 @@
-# uim.oop.attributes.integers
+# uim.models.attributes.integers

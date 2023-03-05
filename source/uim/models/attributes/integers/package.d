@@ -8,16 +8,16 @@ module uim.models.attributes.integers;
 @safe:
 import uim.models;
 
-public import uim.oop.attributes.integers.integer;
+public import uim.models.attributes.integers.integer;
 
-public import uim.oop.attributes.integers.calenderparts;
+public import uim.models.attributes.integers.calenderparts;
 
-public import uim.oop.attributes.integers.age;
-public import uim.oop.attributes.integers.day;
-public import uim.oop.attributes.integers.displayorder;
-public import uim.oop.attributes.integers.hour;
-public import uim.oop.attributes.integers.long_;
-public import uim.oop.attributes.integers.minute;
-public import uim.oop.attributes.integers.minutes;
-public import uim.oop.attributes.integers.number;
-public import uim.oop.attributes.integers.year;
+public import uim.models.attributes.integers.age;
+public import uim.models.attributes.integers.day;
+public import uim.models.attributes.integers.displayorder;
+public import uim.models.attributes.integers.hour;
+public import uim.models.attributes.integers.long_;
+public import uim.models.attributes.integers.minute;
+public import uim.models.attributes.integers.minutes;
+public import uim.models.attributes.integers.number;
+public import uim.models.attributes.integers.year;

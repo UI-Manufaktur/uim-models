@@ -5,6 +5,6 @@
 **********************************************************************************************************/
 module uim.models.attributes.lookups.integers;
 
-public import uim.oop.attributes.lookups.integers.boolean;
-public import uim.oop.attributes.lookups.integers.integer;
-public import uim.oop.attributes.lookups.integers.string_;
+public import uim.models.attributes.lookups.integers.boolean;
+public import uim.models.attributes.lookups.integers.integer;
+public import uim.models.attributes.lookups.integers.string_;
