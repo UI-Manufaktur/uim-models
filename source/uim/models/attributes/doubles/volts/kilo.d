@@ -21,7 +21,7 @@ has.measurement.fundamentalComponent.ampere
 means.measurement.prefix.kilo */
 
 @safe:
-import uim.oop;
+import uim.models;
 
 class DKiloVoltAttribute : DVoltAttribute {
   mixin(AttributeThis!("KiloVoltAttribute"));

@@ -22,7 +22,7 @@ has.measurement.fundamentalComponent.meter
 has.measurement.fundamentalComponent.second */
 
 @safe:
-import uim.oop;
+import uim.models;
 
 class DPascalAttribute : DDoubleAttribute {
   mixin(AttributeThis!("PascalAttribute"));

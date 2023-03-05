@@ -16,7 +16,7 @@ has.measurement.fundamentalComponent.ampere
 means.measurement.prefix.mega */
 
 @safe:
-import uim.oop;
+import uim.models;
 
 class DMegaVoltAttribute : DVoltAttribute {
   mixin(AttributeThis!("MegaVoltAttribute"));

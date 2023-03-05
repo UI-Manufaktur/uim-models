@@ -20,7 +20,7 @@ has.measurement.fundamentalComponent.volt
 has.measurement.fundamentalComponent.ampere */
 
 @safe:
-import uim.oop;
+import uim.models;
 
 class DVoltAttribute : DDoubleAttribute {
   mixin(AttributeThis!("VoltAttribute"));

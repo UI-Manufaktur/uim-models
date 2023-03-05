@@ -22,7 +22,7 @@ has.measurement.fundamentalComponent.second
 has.measurement.fundamentalComponent.ampere */
 
 @safe:
-import uim.oop;
+import uim.models;
 
 class DOhmAttribute : DDoubleAttribute {
   mixin(AttributeThis!("OhmAttribute"));
