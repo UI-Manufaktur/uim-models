@@ -6,7 +6,7 @@
 module uim.oop.attributes.booleans;
 
 @safe:
-import uim.oop;
+import uim.models;
 
 // main
 public import uim.oop.attributes.booleans.boolean;

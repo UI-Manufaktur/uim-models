@@ -6,7 +6,7 @@
 module uim.oop.attributes.chars.char_;
 
 @safe:
-import uim.oop;
+import uim.models;
 
 class DCharAttribute : DAttribute {
   mixin(AttributeThis!"CharAttribute");

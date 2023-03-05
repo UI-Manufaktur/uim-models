@@ -6,7 +6,7 @@
 module uim.oop.attributes.codes.currency;
 
 @safe:
-import uim.oop;
+import uim.models;
 
 // is.dataFormat.character
 // is.dataFormat.big

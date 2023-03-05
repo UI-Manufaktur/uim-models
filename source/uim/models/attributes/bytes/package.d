@@ -6,7 +6,7 @@
 module uim.oop.attributes.bytes;
 
 @safe:
-import uim.oop;
+import uim.models;
 
 public import uim.oop.attributes.bytes.byte_;
 

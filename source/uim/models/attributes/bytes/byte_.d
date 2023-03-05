@@ -6,7 +6,7 @@
 module uim.oop.attributes.bytes.byte_;
 
 @safe:
-import uim.oop;
+import uim.models;
 
 class DByteAttribute : DAttribute {
   mixin(AttributeThis!("ByteAttribute"));

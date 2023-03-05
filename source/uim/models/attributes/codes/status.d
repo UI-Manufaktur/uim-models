@@ -6,7 +6,7 @@
 module uim.oop.attributes.codes.status;
 
 @safe:
-import uim.oop;
+import uim.models;
 
 class DStatusCodeAttribute : DIntegerStringAttribute {
   mixin(AttributeThis!("StatusCodeAttribute"));
