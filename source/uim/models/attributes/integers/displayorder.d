@@ -6,7 +6,7 @@
 module uim.oop.attributes.integers.displayorder;
 
 @safe:
-import uim.oop;
+import uim.models;
 
 class DDisplayOrderAttribute : DIntegerAttribute {
   mixin(AttributeThis!("DisplayOrderAttribute"));

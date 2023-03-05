@@ -6,7 +6,7 @@
 module uim.oop.attributes.integers.integer;
 
 @safe:
-import uim.oop;
+import uim.models;
 
 class DIntegerAttribute : DAttribute {
   mixin(AttributeThis!"IntegerAttribute");

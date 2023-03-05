@@ -12,7 +12,7 @@ means.measurement.duration.hours
 has.measurement.fundamentalComponent.second */
 
 @safe:
-import uim.oop;
+import uim.models;
 
 class DHourAttribute : DIntegerAttribute {
   mixin(AttributeThis!("HourAttribute"));
