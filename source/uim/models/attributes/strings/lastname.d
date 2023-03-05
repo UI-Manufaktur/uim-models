@@ -6,7 +6,7 @@
 module uim.oop.attributes.strings.lastname;
 
 @safe:
-import uim.oop;
+import uim.models;
 
 // means.identity.person.lastName
 class DLastNameAttribute : DStringAttribute {

@@ -6,7 +6,7 @@
 module uim.oop.attributes.strings.list;
 
 @safe:
-import uim.oop;
+import uim.models;
 
 // A CSV contained within one string value
 // means.content.text.CSV

@@ -16,7 +16,7 @@ is.dataFormat.array
 means.identity.IP4Address */
 
 @safe:
-import uim.oop;
+import uim.models;
 
 class DIP4AddressAttribute : DStringAttribute {
   mixin(AttributeThis!("IP4AddressAttribute"));
