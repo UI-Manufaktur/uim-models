@@ -6,7 +6,7 @@
 module uim.oop.attributes.strings.ethnicity;
 
 @safe:
-import uim.oop;
+import uim.models;
 
 /* 
 is.dataFormat.character

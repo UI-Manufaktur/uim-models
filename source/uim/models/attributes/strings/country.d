@@ -6,7 +6,7 @@
 module uim.oop.attributes.strings.country;
 
 @safe:
-import uim.oop;
+import uim.models;
 
 // means.location.country
 class DCountryAttribute : DStringAttribute {

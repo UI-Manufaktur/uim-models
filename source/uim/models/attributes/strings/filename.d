@@ -6,7 +6,7 @@
 module uim.oop.attributes.strings.filename;
 
 @safe:
-import uim.oop;
+import uim.models;
 
 // A string value representing the name of a file.
 class DFileNameAttribute : DStringAttribute {

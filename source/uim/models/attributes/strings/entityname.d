@@ -6,7 +6,7 @@
 module uim.oop.attributes.strings.entityname;
 
 @safe:
-import uim.oop;
+import uim.models;
 
 /* Type for trait parameters that take entity names as values
 is.dataFormat.character

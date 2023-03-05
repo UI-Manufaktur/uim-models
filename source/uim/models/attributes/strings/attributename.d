@@ -8,7 +8,7 @@ module uim.oop.attributes.strings.attributename;
 // Type for trait parameters that take attribute names as values
 
 @safe:
-import uim.oop;
+import uim.models;
 
 class DAttributeNameAttribute : DStringAttribute {
   mixin(AttributeThis!("AttributeNameAttribute"));

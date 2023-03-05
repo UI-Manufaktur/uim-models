@@ -6,7 +6,7 @@
 module uim.oop.attributes.strings.companyname;
 
 @safe:
-import uim.oop;
+import uim.models;
 
 // means.identity.company.name
 class DCompanyNameAttribute : DStringAttribute {

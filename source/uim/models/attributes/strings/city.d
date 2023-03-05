@@ -6,7 +6,7 @@
 module uim.oop.attributes.strings.city;
 
 @safe:
-import uim.oop;
+import uim.models;
 
 // means.location.city
 class DCityNameAttribute : DStringAttribute {

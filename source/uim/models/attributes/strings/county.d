@@ -6,7 +6,7 @@
 module uim.oop.attributes.strings.county;
 
 @safe:
-import uim.oop;
+import uim.models;
 
 // means.location.county
 class DCountyAttribute : DStringAttribute {
