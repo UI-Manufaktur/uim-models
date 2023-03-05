@@ -6,7 +6,7 @@
 module uim.oop.attributes.entities.organization;
 
 @safe:
-import uim.oop;
+import uim.models;
 
 class DOrganizationAttribute : DEntityAttribute {
   mixin(AttributeThis!("OrganizationAttribute"));

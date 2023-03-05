@@ -18,7 +18,7 @@ means.identity.entityId
 means.userId */
 
 @safe:
-import uim.oop;
+import uim.models;
 
 class DUserAttribute : DEntityAttribute {
   mixin(AttributeThis!("UserAttribute"));

@@ -6,7 +6,7 @@
 module uim.oop.attributes.entities.users.team;
 
 @safe:
-import uim.oop;
+import uim.models;
 
 class DTeamAttribute : DEntityAttribute {
   mixin(AttributeThis!("TeamAttribute"));
