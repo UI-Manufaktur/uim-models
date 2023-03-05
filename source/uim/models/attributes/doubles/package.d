@@ -1,4 +1,4 @@
-module uim.oop.attributes.doubles;
+module uim.models.attributes.doubles;
 
 // main
 public import uim.oop.attributes.doubles.double_;
