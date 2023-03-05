@@ -3,7 +3,7 @@
 *	License: Subject to the terms of the MIT license, as written in the included LICENSE.txt file.
 *	Authors: UI Manufaktur Team
 ************************************************************************************************/
-module uim.oop.attributes.dates;
+module uim.models.attributes.dates;
 
 // main
 public import uim.oop.attributes.dates.date_;
