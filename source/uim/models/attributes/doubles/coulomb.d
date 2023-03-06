@@ -23,7 +23,7 @@ class DCoulombAttribute : DDoubleAttribute {
 }
 mixin(AttributeCalls!("CoulombAttribute"));
 
-version(test_uim_oops) { unittest {
+version(test_uim_models) { unittest {
     // TODO
   }
 }

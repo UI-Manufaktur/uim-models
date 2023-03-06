@@ -23,7 +23,7 @@ class DFixedDecimalAttribute : DDecimalAttribute {
 }
 mixin(AttributeCalls!"FixedDecimalAttribute");
 
-version(test_uim_oops) { unittest {
+version(test_uim_models) { unittest {
     testAttribute(new DFixedDecimalAttribute);
     testAttribute(FixedDecimalAttribute);
   }

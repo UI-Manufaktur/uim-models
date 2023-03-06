@@ -32,7 +32,7 @@ means.measurement.currency
 }
 mixin(AttributeCalls!"BaseCurrencyAttribute");
 
-version(test_uim_oops) { unittest {
+version(test_uim_models) { unittest {
     testAttribute(new DBaseCurrencyAttribute);
     testAttribute(BaseCurrencyAttribute);
   }

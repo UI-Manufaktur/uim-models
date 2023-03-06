@@ -25,7 +25,7 @@ class DTimestampAttribute : DLongAttribute {
 }
 mixin(AttributeCalls!"TimestampAttribute");
 
-version(test_uim_oops) { unittest {
+version(test_uim_models) { unittest {
     testAttribute(new DTimestampAttribute);
     testAttribute(TimestampAttribute);
   }
