@@ -19,7 +19,7 @@ class DBooleanStringAttribute : DAttribute {
 }
 mixin(AttributeCalls!("BooleanStringAttribute"));
 
-version(test_uim_oops) { unittest {  
+version(test_uim_models) { unittest {  
     // TODO tests
   }
 }

@@ -41,7 +41,7 @@ class DIntegerBooleanAttribute : DLookupAttribute {
 }
 mixin(AttributeCalls!("IntegerBooleanAttribute"));
 
-version(test_uim_oops) { unittest {  
+version(test_uim_models) { unittest {  
     // TODO tests
   }
 }

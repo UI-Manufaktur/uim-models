@@ -28,7 +28,7 @@ class DWeekAttribute : DIntegerCalendarPart {
 }
 mixin(AttributeCalls!("WeekAttribute"));
 
-version(test_uim_oops) { unittest {
+version(test_uim_models) { unittest {
     testAttribute(new DWeekAttribute);
     testAttribute(WeekAttribute);
   }

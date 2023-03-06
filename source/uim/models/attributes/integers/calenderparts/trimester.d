@@ -28,7 +28,7 @@ class DTrimesterAttribute : DIntegerCalendarPart {
 }
 mixin(AttributeCalls!("TrimesterAttribute"));
 
-version(test_uim_oops) { unittest {
+version(test_uim_models) { unittest {
     testAttribute(new DTrimesterAttribute);
     testAttribute(TrimesterAttribute);
   }
