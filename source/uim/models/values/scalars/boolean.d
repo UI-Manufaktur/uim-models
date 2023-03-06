@@ -107,7 +107,7 @@ class DBooleanValue : DValue {
 }
 mixin(ValueCalls!("BooleanValue", "bool"));  
 
-version(test_uim_oops) { unittest {    
+version(test_uim_models) { unittest {    
     assert(BooleanValue(true) == true);
     assert(BooleanValue(false) != true);
     assert(BooleanValue.value(true) == true);

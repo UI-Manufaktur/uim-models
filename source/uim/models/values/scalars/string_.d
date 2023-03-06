@@ -79,7 +79,7 @@ class DStringValue : DValue {
     return StringValue(value);
   }
 
-  version(test_uim_oops) { unittest {    
+  version(test_uim_models) { unittest {    
     assert(StringValue("test").value == "test");
 
     assert(StringValue.value("test") == "test");
@@ -133,7 +133,7 @@ class DStringValue : DValue {
 }
 mixin(ValueCalls!("StringValue"));  
 
-version(test_uim_oops) { unittest {    
+version(test_uim_models) { unittest {    
   assert(StringValue("test") == "test");
   assert(StringValue("test") < "xxxx");
   assert(StringValue("test") <= "xxxx");
