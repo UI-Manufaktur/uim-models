@@ -71,6 +71,6 @@ class DSystimeValue : DValue {
 }
 mixin(ValueCalls!("SystimeValue", "SysTime"));  
 
-version(test_uim_oops) { unittest {    
+version(test_uim_models) { unittest {    
     // TODO
 }} 

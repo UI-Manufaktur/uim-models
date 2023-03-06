@@ -75,7 +75,7 @@ class DStringArrayValue : DArrayValue {
 }
 mixin(ValueCalls!("StringArrayValue", "string[]"));  
 
-version(test_uim_oops) { unittest {
+version(test_uim_models) { unittest {
     auto attribute = StringArrayValue(["a", "b", "c"]);
     assert(attribute.value.length == 3);
     assert(attribute.value[0] == "a");

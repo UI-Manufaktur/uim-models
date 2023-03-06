@@ -81,7 +81,7 @@ class DValue : IValue {
   void fromString(string newValue) { }
 }
 
-version(test_uim_oops) { unittest {   
+version(test_uim_models) { unittest {   
     auto value = new DValue;
     assert(!value.isNull);
     assert(!value.isString);

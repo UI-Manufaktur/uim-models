@@ -74,7 +74,7 @@ class DTimeValue : DValue {
 }
 mixin(ValueCalls!("TimeValue", "TimeOfDay"));  
 
-version(test_uim_oops) { unittest {    
+version(test_uim_models) { unittest {    
     assert(TimeValue.value("100").toTime == 100);
     assert(TimeValue.value(Json(100)).toTime == 100);
     assert(TimeValue.value("200").toTime != 100);
