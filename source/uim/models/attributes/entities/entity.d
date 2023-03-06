@@ -26,7 +26,7 @@ class DEntityAttribute : DAttribute {
 }
 mixin(AttributeCalls!"EntityAttribute");
 
-version(test_uim_oops) { unittest {
+version(test_uim_models) { unittest {
     testAttribute(new DEntityAttribute);
     testAttribute(EntityAttribute);
   }

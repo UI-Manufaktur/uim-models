@@ -22,7 +22,7 @@ class DSlaAttribute : DEntityAttribute {
 }
 mixin(AttributeCalls!("SlaAttribute"));
 
-version(test_uim_oops) { unittest {
+version(test_uim_models) { unittest {
     testAttribute(new DSlaAttribute);
     testAttribute(SlaAttribute);
   }

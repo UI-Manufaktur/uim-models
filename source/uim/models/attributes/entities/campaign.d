@@ -22,7 +22,7 @@ class DCampaignAttribute : DEntityAttribute {
 }
 mixin(AttributeCalls!("CampaignAttribute"));
 
-version(test_uim_oops) { unittest {
+version(test_uim_models) { unittest {
     testAttribute(new DCampaignAttribute);
     testAttribute(CampaignAttribute);
   }

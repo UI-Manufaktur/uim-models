@@ -22,7 +22,7 @@ class DContactAttribute : DEntityAttribute {
 }
 mixin(AttributeCalls!("ContactAttribute"));
 
-version(test_uim_oops) { unittest {
+version(test_uim_models) { unittest {
     testAttribute(new DContactAttribute);
     testAttribute(ContactAttribute);
   }

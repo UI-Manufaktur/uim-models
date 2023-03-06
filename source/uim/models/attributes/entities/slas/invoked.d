@@ -22,7 +22,7 @@ class DSLAInvokedAttribute : DEntityAttribute {
 }
 mixin(AttributeCalls!("SLAInvokedAttribute"));
 
-version(test_uim_oops) { unittest {
+version(test_uim_models) { unittest {
     testAttribute(new DSLAInvokedAttribute);
     testAttribute(SLAInvokedAttribute);
   }

@@ -22,7 +22,7 @@ class DFileAttribute : DEntityAttribute {
 }
 mixin(AttributeCalls!("FileAttribute"));
 
-version(test_uim_oops) { unittest {
+version(test_uim_models) { unittest {
     testAttribute(new DFileAttribute);
     testAttribute(FileAttribute);
   }
