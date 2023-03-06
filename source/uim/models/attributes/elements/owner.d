@@ -25,7 +25,7 @@ class DOwnerElementAttribute : DAttribute {
 }
 mixin(AttributeCalls!"OwnerElementAttribute");
 
-version(test_uim_oops) { unittest {
+version(test_uim_models) { unittest {
   testAttribute(new DOwnerElementAttribute);
   testAttribute(OwnerElementAttribute);
 }}

@@ -35,7 +35,7 @@ class DWattAttribute : DDoubleAttribute {
 }
 mixin(AttributeCalls!("WattAttribute"));
 
-version(test_uim_oops) { unittest {
+version(test_uim_models) { unittest {
     // TODO
   }
 }

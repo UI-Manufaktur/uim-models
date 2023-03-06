@@ -36,7 +36,7 @@ class DVoltAttribute : DDoubleAttribute {
 }
 mixin(AttributeCalls!("VoltAttribute"));
 
-version(test_uim_oops) { unittest {
+version(test_uim_models) { unittest {
     // TODO
   }
 }

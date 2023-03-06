@@ -36,7 +36,7 @@ class DKiloWattAttribute : DWattAttribute {
 }
 mixin(AttributeCalls!("KiloWattAttribute"));
 
-version(test_uim_oops) { unittest {
+version(test_uim_models) { unittest {
     // TODO
   }
 }
