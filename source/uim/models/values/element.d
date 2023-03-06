@@ -28,7 +28,7 @@ class DElementValue : DValue {
   DElement value() {
     return _value; 
   }
-  version(test_uim_oops) { unittest {    
+  version(test_uim_models) { unittest {    
     auto Element = SystemUser; // some kind of Element
     assert(ElementValue.value(Element).value.id == Element.id);
   }}
@@ -81,6 +81,6 @@ class DElementValue : DValue {
 }
 mixin(ValueCalls!("ElementValue"));  
 
-version(test_uim_oops) { unittest {  
+version(test_uim_models) { unittest {  
   assert(ElementValue);
 }}

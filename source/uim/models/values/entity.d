@@ -85,5 +85,5 @@ class DEntityValue : DValue {
 }
 mixin(ValueCalls!("EntityValue", "DEntity"));  
 
-version(test_uim_oops) { unittest {  
+version(test_uim_models) { unittest {  
 }}

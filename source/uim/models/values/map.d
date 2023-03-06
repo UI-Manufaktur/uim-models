@@ -84,7 +84,7 @@ import uim.models;
 }
 auto MapValue() { return new DMapValue; }
 
-version(test_uim_oops) { unittest {
+version(test_uim_models) { unittest {
   auto map = MapValue;
   map["key1"] = "value1";
   map["key2"] = true;

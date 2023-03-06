@@ -1,10 +1,9 @@
-/***********************************************************************************************
-*	Copyright: © 2017-2022, UI Manufaktur UG
-*	License: Subject to the terms of the MIT license, as written in the included LICENSE.txt file.
-*	Authors: UI Manufaktur Team
-*	Documentation [DE]: https://ui-manufaktur.com/docu/uim-oop/models/entities/entity_lang
-************************************************************************************************/
-module uim.models.entity_lang;
+/*********************************************************************************************************
+	Copyright: © 2015-2023 Ozan Nurettin Süel (Sicherheitsschmiede)                                        
+	License: Subject to the terms of the Apache 2.0 license, as written in the included LICENSE.txt file.  
+	Authors: Ozan Nurettin Süel (Sicherheitsschmiede)                                                      
+**********************************************************************************************************/
+module uim.models.entities.entity_lang;
 
 @safe:
 import uim.models;

@@ -5,8 +5,13 @@
 **********************************************************************************************************/
 module uim.models.elements;
 
-public import uim.oop.elements.interface_;
-public import uim.oop.elements.element;
+@safe:
+import uim.models;
+
+public import uim.models.elements.configuration;
+public import uim.models.elements.element;
+public import uim.models.elements.interface_;
+public import uim.models.elements.registry;
 
 template ElementThis(string name) {
   const char[] ElementThis = `

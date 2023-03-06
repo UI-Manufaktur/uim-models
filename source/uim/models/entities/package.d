@@ -5,8 +5,13 @@
 **********************************************************************************************************/
 module uim.models.entities;
 
-public import uim.oop.entities.entity;
-public import uim.oop.entities.entities;
+@safe:
+import uim.models;
+
+public import uim.models.entities.entity;
+public import uim.models.entities.entities;
+public import uim.models.entities.entity_lang;
+public import uim.models.entities.registry;
 
 template EntityThis(string name) {
   const char[] EntityThis = `
