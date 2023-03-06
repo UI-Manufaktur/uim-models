@@ -177,7 +177,7 @@ auto Element() { return new DElement; }
 auto Element(string name) { return new DElement(name); }
 auto Element(Json json) { return new DElement(json); }
 
-version(test_uim_oop) { unittest {
+version(test_uim_models) { unittest {
   assert(Element);
   assert(Element.name("test").name == "test");
   assert(Element.name("testName").name == "testname");

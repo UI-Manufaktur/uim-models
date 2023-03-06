@@ -54,8 +54,17 @@ class DIntegerValue : DValue {
   }
 
   alias opEquals = DValue.opEquals;
-  bool opEquals(int aValue) {
-    return (_value == aValue);
+  /* override */ bool opEquals(int equalValue) {
+    return (_value == equalValue);
+  }
+  override bool opEquals(string equalValue) {
+    return (_value == to!int(equalValue));
+  }
+  ///
+  unittest {
+    auto intValue = new DIntegerValue(100);
+    assert(intValue == 100);
+    assert(intValue != 10);
   }
 
   int opCall() {

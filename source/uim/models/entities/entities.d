@@ -59,6 +59,6 @@ class DOOPEntities {
   }
 }
 
-/* version(test_uim_oop) { unittest {
+/* version(test_uim_models) { unittest {
     assert(OOPEntities);
 }} */

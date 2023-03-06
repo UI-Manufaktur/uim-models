@@ -11,6 +11,14 @@ import uim.models;
 class DDoubleValue : DValue {
   mixin(ValueThis!("DoubleValue", "double"));  
 
+  // Initialization hook method.
+  override void initialize(DConfigurationValue configSettings = null) {
+    super.initialize(configSettings);
+
+    this
+      .isDouble(true);
+  }
+
   protected double _value;  
   alias value = DValue.value;
   O value(this O)(double newValue) {
@@ -19,13 +27,6 @@ class DDoubleValue : DValue {
   }
   double value() {
     return _value; 
-  }
-  // Initialization hook method.
-  override void initialize(DConfigurationValue configSettings = null) {
-    super.initialize(configSettings);
-
-    this
-      .isDouble(true);
   }
 
   // Hooks for setting 
@@ -91,18 +92,25 @@ class DDoubleValue : DValue {
 mixin(ValueCalls!("DoubleValue", "double"));  
 
 version(test_uim_models) { unittest {    
-    assert(DoubleValue.value("100").toDouble == 100);
-    assert(DoubleValue.value(Json(100)).toDouble == 100);
-    assert(DoubleValue.value("200").toDouble != 100);
-    assert(DoubleValue.value(Json(200)).toDouble != 100);
+  assert(DoubleValue.value("100").toDouble == 100);
+  assert(DoubleValue.value(Json(100)).toDouble == 100);
+  assert(DoubleValue.value("200").toDouble != 100);
+  assert(DoubleValue.value(Json(200)).toDouble != 100);
 
-    assert(DoubleValue.value("100").toString == "100");
-    assert(DoubleValue.value(Json(100)).toString == "100");
-    assert(DoubleValue.value("200").toString != "100");
-    assert(DoubleValue.value(Json(200)).toString != "100");
+  assert(DoubleValue.value("100").toString == "100");
+  assert(DoubleValue.value(Json(100)).toString == "100");
+  assert(DoubleValue.value("200").toString != "100");
+  assert(DoubleValue.value(Json(200)).toString != "100");
 
-    assert(DoubleValue.value("100").toJson == Json(100));
-    assert(DoubleValue.value(Json(100)).toJson == Json(100));
-    assert(DoubleValue.value("200").toJson != Json(100));
-    assert(DoubleValue.value(Json(200)).toJson != Json(100));
+  assert(DoubleValue.value("100").toJson == Json(100));
+  assert(DoubleValue.value(Json(100)).toJson == Json(100));
+  assert(DoubleValue.value("200").toJson != Json(100));
+  assert(DoubleValue.value(Json(200)).toJson != Json(100));
 }} 
+
+///
+unittest {
+  auto boolValue = new DBooleanValue(true);
+  assert(boolValue == true);
+  assert(boolValue != false);
+}

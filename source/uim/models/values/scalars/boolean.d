@@ -20,7 +20,7 @@ class DBooleanValue : DValue {
   }
 
   @property int get() {
-      return value;
+    return value;
   }
   alias get this;
 
@@ -82,6 +82,7 @@ class DBooleanValue : DValue {
     }
     return -1;
   }
+
   ///
   unittest {
     auto valueA = new DBooleanValue(true);

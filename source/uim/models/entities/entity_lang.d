@@ -26,7 +26,7 @@ class DEntityLang : DEntity {
 }
 auto EntityLang() { return new DEntityLang; }
 
-version(test_uim_oop) {
+version(test_uim_models) {
   unittest {
   }
 }
