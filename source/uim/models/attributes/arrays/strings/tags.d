@@ -26,7 +26,7 @@ class DTagsAttribute : DStringArrayAttribute {
 }
 mixin(AttributeCalls!"TagsAttribute");
 
-version(test_uim_oops) { unittest {
+version(test_uim_models) { unittest {
     testAttribute(new DTagsAttribute);
     testAttribute(TagsAttribute);
   }

@@ -77,7 +77,7 @@ class DAttribute : DEntity, IAttribute {
     _attribute = myAttclass;     
     return cast(O)this; } */
 
-  version(test_uim_oops) { unittest {    /// TODO
+  version(test_uim_models) { unittest {    /// TODO
     }
   }
 
@@ -123,7 +123,7 @@ class DAttribute : DEntity, IAttribute {
     result.name(aName); * /
     return result;
   }
-  version(test_uim_oops) { unittest {    /// TODO
+  version(test_uim_models) { unittest {    /// TODO
     }
   } */
 
@@ -205,7 +205,7 @@ class DAttribute : DEntity, IAttribute {
 
     return result;
   }
-  version(test_uim_oops) { unittest {    /// TODO
+  version(test_uim_models) { unittest {    /// TODO
     }
   }
 }

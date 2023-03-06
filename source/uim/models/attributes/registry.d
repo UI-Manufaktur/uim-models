@@ -3,28 +3,18 @@
 	License: Subject to the terms of the Apache 2.0 license, as written in the included LICENSE.txt file.  
 	Authors: Ozan Nurettin Süel (Sicherheitsschmiede)                                                      
 **********************************************************************************************************/
-module uim.models.attributes.bytes.byte_;
+module uim.models.attributes.registry;
 
 @safe:
 import uim.models;
 
-class DByteAttribute : DAttribute {
-  mixin(AttributeThis!("ByteAttribute"));
-
-  // Initialization hook method.
-  override void initialize(DConfigurationValue configSettings = null) {
-    super.initialize(configSettings);
-
-    this
-      .addDataFormats(["byte"])
-      .name("byte")
-      .registerPath("byte");
-  }
+class DAttributeRegistry : DRegistry!DAttribute {
+  static DAttributeRegistry registry;
 }
-mixin(AttributeCalls!("ByteAttribute"));
 
-version(test_uim_models) { unittest {
-    testAttribute(new DByteAttribute);
-    testAttribute(ByteAttribute);
+auto AttributeRegistry() { // SIngleton
+  if (DAttributeRegistry.registry is null) {
+    DAttributeRegistry.registry = new DAttributeRegistry;
   }
+  return DAttributeRegistry.registry;
 }

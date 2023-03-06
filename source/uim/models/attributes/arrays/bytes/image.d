@@ -31,7 +31,7 @@ means.content.binary.image */
 }
 mixin(AttributeCalls!("ImageAttribute"));
 
-version(test_uim_oops) { unittest {
+version(test_uim_models) { unittest {
     testAttribute(new DImageAttribute);
     testAttribute(ImageAttribute);
   }

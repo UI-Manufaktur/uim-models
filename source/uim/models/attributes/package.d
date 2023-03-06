@@ -10,6 +10,7 @@ import uim.models;
 
 public import uim.models.attributes.attribute;
 public import uim.models.attributes.interface_;
+public import uim.models.attributes.registry;
 
 public import uim.models.attributes.lookups;
 public import uim.models.attributes.codes;
@@ -84,7 +85,7 @@ static this() {
     // Decimals
 }
 
-version(test_uim_oops) { unittest {
+version(test_uim_models) { unittest {
     writeln(AttributeRegistry["boolean"].name);
     writeln(AttributeRegistry["byte"].name);
     writeln(AttributeRegistry["binary"].name);
