@@ -22,7 +22,7 @@ class DPercentageAttribute : DDoubleAttribute {
 }
 mixin(AttributeCalls!("PercentageAttribute"));
 
-version(test_uim_oops) { unittest {  
+version(test_uim_models) { unittest {  
     // TODO tests
   }
 }

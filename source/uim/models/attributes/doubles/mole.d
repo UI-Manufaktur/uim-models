@@ -33,7 +33,7 @@ class DMoleAttribute : DDoubleAttribute {
 }
 mixin(AttributeCalls!("MoleAttribute"));
 
-version(test_uim_oops) { unittest {
+version(test_uim_models) { unittest {
     // TODO
   }
 }
