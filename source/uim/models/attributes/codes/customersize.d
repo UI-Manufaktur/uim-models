@@ -29,7 +29,7 @@ class DCustomerSizeCodeAttribute : DIntegerStringAttribute {
 }
 mixin(AttributeCalls!("CustomerSizeCodeAttribute"));
 
-version(test_uim_oops) { unittest {  
+version(test_uim_models) { unittest {  
     // TODO tests
   }
 }

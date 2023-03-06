@@ -32,7 +32,7 @@ class DBirthDateAttribute : DDatetimeAttribute {
 }
 mixin(AttributeCalls!"BirthDateAttribute");
 
-version(test_uim_oops) { unittest {
+version(test_uim_models) { unittest {
     testAttribute(new DBirthDateAttribute);
     testAttribute(BirthDateAttribute);
   }

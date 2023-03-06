@@ -26,7 +26,7 @@ class DDatetimeOffsetAttribute : DDatetimeAttribute {
 }
 mixin(AttributeCalls!"DatetimeOffsetAttribute");
 
-version(test_uim_oops) { unittest {
+version(test_uim_models) { unittest {
     testAttribute(new DDatetimeOffsetAttribute);
     testAttribute(DatetimeOffsetAttribute);
   }

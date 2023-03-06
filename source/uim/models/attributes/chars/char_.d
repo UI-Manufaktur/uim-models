@@ -23,7 +23,7 @@ class DCharAttribute : DAttribute {
 }
 mixin(AttributeCalls!"CharAttribute");
 
-version(test_uim_oops) { unittest {
+version(test_uim_models) { unittest {
     testAttribute(new DCharAttribute);
     testAttribute(CharAttribute);
   }
