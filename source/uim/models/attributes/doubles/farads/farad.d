@@ -36,7 +36,7 @@ class DFaradAttribute : DDoubleAttribute {
 }
 mixin(AttributeCalls!("FaradAttribute"));
 
-version(test_uim_oops) { unittest {
+version(test_uim_models) { unittest {
     // TODO
   }
 }
