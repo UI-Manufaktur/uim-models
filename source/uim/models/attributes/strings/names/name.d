@@ -29,7 +29,7 @@ class DNameAttribute : DStringAttribute {
 }
 mixin(AttributeCalls!("NameAttribute"));
 
-version(test_uim_oops) { unittest {
+version(test_uim_models) { unittest {
     // TODO
   }
 }

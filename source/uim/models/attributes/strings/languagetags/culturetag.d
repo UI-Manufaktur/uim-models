@@ -24,7 +24,7 @@ class DCultureTagAttribute : DStringAttribute {
 }
 mixin(AttributeCalls!("CultureTagAttribute"));
 
-version(test_uim_oops) { unittest {
+version(test_uim_models) { unittest {
     // TODO
   }
 }

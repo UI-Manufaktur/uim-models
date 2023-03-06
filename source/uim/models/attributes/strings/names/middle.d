@@ -29,7 +29,7 @@ class DMiddleNameAttribute : DStringAttribute {
 }
 mixin(AttributeCalls!("MiddleNameAttribute"));
 
-version(test_uim_oops) { unittest {
+version(test_uim_models) { unittest {
     // TODO
   }
 }
