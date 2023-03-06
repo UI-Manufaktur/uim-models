@@ -26,7 +26,7 @@ class DDayAttribute : DIntegerAttribute {
 }
 mixin(AttributeCalls!("DayAttribute"));
 
-version(test_uim_oops) { unittest {
+version(test_uim_models) { unittest {
     testAttribute(new DDayAttribute);
     testAttribute(DayAttribute);
   }

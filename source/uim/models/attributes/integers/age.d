@@ -24,7 +24,7 @@ class DAgeAttribute : DIntegerAttribute {
 }
 mixin(AttributeCalls!"AgeAttribute");
 
-version(test_uim_oops) { unittest {
+version(test_uim_models) { unittest {
     testAttribute(new DAgeAttribute);
     testAttribute(AgeAttribute);
   }

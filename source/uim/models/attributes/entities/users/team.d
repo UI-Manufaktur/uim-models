@@ -22,7 +22,7 @@ class DTeamAttribute : DEntityAttribute {
 }
 mixin(AttributeCalls!("TeamAttribute"));
 
-version(test_uim_oops) { unittest {
+version(test_uim_models) { unittest {
   
     // TODO 
   }  

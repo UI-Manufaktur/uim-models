@@ -22,7 +22,7 @@ class DOwnerAttribute : DEntityAttribute {
 }
 mixin(AttributeCalls!("OwnerAttribute"));
 
-version(test_uim_oops) { unittest {
+version(test_uim_models) { unittest {
   
     // TODO 
   }  

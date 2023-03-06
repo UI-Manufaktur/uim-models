@@ -22,7 +22,7 @@ class DDisplayOrderAttribute : DIntegerAttribute {
 }
 mixin(AttributeCalls!("DisplayOrderAttribute"));
 
-version(test_uim_oops) { unittest {
+version(test_uim_models) { unittest {
     testAttribute(new DDisplayOrderAttribute);
     testAttribute(DisplayOrderAttribute);
   }

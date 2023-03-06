@@ -28,7 +28,7 @@ class DHourAttribute : DIntegerAttribute {
 }
 mixin(AttributeCalls!("HourAttribute"));
 
-version(test_uim_oops) { unittest {
+version(test_uim_models) { unittest {
     testAttribute(new DHourAttribute);
     testAttribute(HourAttribute);
   }

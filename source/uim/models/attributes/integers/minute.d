@@ -32,7 +32,7 @@ class DMinuteAttribute : DIntegerAttribute {
 }
 mixin(AttributeCalls!("MinuteAttribute"));
 
-version(test_uim_oops) { unittest {
+version(test_uim_models) { unittest {
     testAttribute(new DMinuteAttribute);
     testAttribute(MinuteAttribute);
   }
