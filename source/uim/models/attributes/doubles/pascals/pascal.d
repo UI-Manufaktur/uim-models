@@ -38,7 +38,7 @@ class DPascalAttribute : DDoubleAttribute {
 }
 mixin(AttributeCalls!("PascalAttribute"));
 
-version(test_uim_oops) { unittest {
+version(test_uim_models) { unittest {
     // TODO
   }
 }

@@ -31,7 +31,7 @@ class DMeterAttribute : DDoubleAttribute {
 }
 mixin(AttributeCalls!("MeterAttribute"));
 
-version(test_uim_oops) { unittest {
+version(test_uim_models) { unittest {
     // TODO
   }
 }
