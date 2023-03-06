@@ -30,7 +30,7 @@ class DMonthpartAttribute : DIntegerCalendarPart {
 }
 mixin(AttributeCalls!("MonthpartAttribute"));
 
-version(test_uim_oops) { unittest {
+version(test_uim_models) { unittest {
     testAttribute(new DMonthpartAttribute);
     testAttribute(MonthpartAttribute);
   }

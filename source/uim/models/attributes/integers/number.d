@@ -13,7 +13,7 @@ class DNumberAttribute : DIntegerAttribute {
 }
 mixin(AttributeCalls!("NumberAttribute"));
 
-version(test_uim_oops) { unittest {
+version(test_uim_models) { unittest {
     testAttribute(new DNumberAttribute);
     testAttribute(NumberAttribute);
   }

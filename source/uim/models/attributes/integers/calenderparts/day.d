@@ -23,7 +23,7 @@ override void initialize(DConfigurationValue configSettings = null) {
 }
 mixin(AttributeCalls!("DayPartAttribute"));
 
-version(test_uim_oops) { unittest {
+version(test_uim_models) { unittest {
     testAttribute(new DDayPartAttribute);
     testAttribute(DayPartAttribute);
   }

@@ -32,7 +32,7 @@ class DYearAttribute : DIntegerAttribute {
 }
 mixin(AttributeCalls!("YearAttribute"));
 
-version(test_uim_oops) { unittest {
+version(test_uim_models) { unittest {
     testAttribute(new DYearAttribute);
     testAttribute(YearAttribute);
   }

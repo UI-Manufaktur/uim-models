@@ -24,7 +24,7 @@ means.calendar.day
 }
 mixin(AttributeCalls!"IntegerCalendarPart");
 
-version(test_uim_oops) { unittest {
+version(test_uim_models) { unittest {
     testAttribute(new DIntegerCalendarPart);
     testAttribute(IntegerCalendarPart);
   }

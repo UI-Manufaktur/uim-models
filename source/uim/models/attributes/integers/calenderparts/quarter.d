@@ -30,7 +30,7 @@ class DQuarterAttribute : DIntegerCalendarPart {
 }
 mixin(AttributeCalls!("QuarterAttribute"));
 
-version(test_uim_oops) { unittest {
+version(test_uim_models) { unittest {
     testAttribute(new DQuarterAttribute);
     testAttribute(QuarterAttribute);
   }
