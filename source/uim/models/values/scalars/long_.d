@@ -53,11 +53,23 @@ class DLongValue : DValue {
   }
 
   alias opEquals = DValue.opEquals;
-  bool opEquals(long aValue) {
-    return (_value == aValue);
+  bool opEquals(long equalValue) {
+    return (_value == equalValue);
   }
-  bool opEquals(DLongValue aValue) {
-    return (_value == aValue.value);
+  override bool opEquals(string equalValue) {
+    return (this == to!long(equalValue));
+  }
+  unittest {
+    auto longValue = new DLongValue(100);
+    auto longValue100 = new DLongValue(100);
+    auto longValue10 = new DLongValue(10);
+
+    assert(longValue == 100);
+    assert(longValue != 10);
+    assert(longValue == longValue100);
+    assert(longValue != longValue10);
+    assert(longValue == "100");
+    assert(longValue != "10");
   }
 
   alias opCmp = Object.opCmp;

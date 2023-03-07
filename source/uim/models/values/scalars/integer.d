@@ -63,8 +63,15 @@ class DIntegerValue : DValue {
   ///
   unittest {
     auto intValue = new DIntegerValue(100);
+    auto intValue100 = new DIntegerValue(100);
+    auto intValue10 = new DIntegerValue(10);
+
     assert(intValue == 100);
     assert(intValue != 10);
+    assert(intValue == intValue100);
+    assert(intValue != intValue10);
+    assert(intValue == "100");
+    assert(intValue != "10");
   }
 
   int opCall() {
@@ -93,7 +100,7 @@ class DIntegerValue : DValue {
     return Json(_value); }
 
   override string toString() { 
-    if (isNull) return "0"; 
+    if (isNull) return "null"; 
     return to!string(_value); }
 }
 mixin(ValueCalls!("IntegerValue", "int"));  
