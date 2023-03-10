@@ -12,7 +12,7 @@ class DTagsAttribute : DStringArrayAttribute {
   mixin(AttributeThis!("TagsAttribute"));
 
   // Initialization hook method.
-  override void initialize(DConfigurationValue configSettings = null) {
+  override void initialize(Json configSettings = Json(null)) {
     super.initialize(configSettings);
 
     this
@@ -27,7 +27,6 @@ class DTagsAttribute : DStringArrayAttribute {
 mixin(AttributeCalls!"TagsAttribute");
 
 version(test_uim_models) { unittest {
-    testAttribute(new DTagsAttribute);
-    testAttribute(TagsAttribute);
-  }
-}
+  testAttribute(new DTagsAttribute);
+  testAttribute(TagsAttribute);
+}}
