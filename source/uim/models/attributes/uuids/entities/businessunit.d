@@ -14,7 +14,7 @@ class DBusinessUnitIdAttribute : DEntityIdAttribute {
   mixin(AttributeThis!("BusinessUnitIdAttribute"));
 
   // Initialization hook method.
-  override void initialize(DConfigurationValue configSettings = null) {
+  override void initialize(Json configSettings = Json(null)) {
     super.initialize(configSettings);
 
     this
