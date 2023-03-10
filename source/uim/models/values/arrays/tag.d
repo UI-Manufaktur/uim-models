@@ -12,14 +12,12 @@ class DTagArrayValue : DStringArrayValue {
   mixin(ValueThis!("TagArrayValue", "string[]"));  
 
   // Initialization hook method.
-  override void initialize(DConfigurationValue configSettings = null) {
+  override void initialize(Json configSettings = Json(null)) {
     super.initialize(configSettings);
-  }
 
-  override void set(string newValue) {
-    debug writeln("In DTagArrayValue - ", newValue);
-    this.value(newValue.split("#").map!(a => a.strip).array);
-    debug writeln("After split - ", this.value);
+    this
+      .shouldTrim(true)
+      .separator("#");
   }
 
   size_t length() {
@@ -33,7 +31,7 @@ class DTagArrayValue : DStringArrayValue {
   }
 
   override string toString() {
-    if (length > 0) return "#"~this.value.join(" #");
+    if (length > 0) return separator~this.value.join(separator);
     return null; 
   }
 }

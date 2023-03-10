@@ -13,7 +13,7 @@ class DValue : IValue {
   this(DAttribute theAttribute) { this().attribute(theAttribute); }
 
   // Hook
-  void initialize(DConfigurationValue configSettings = null) {}
+  void initialize(Json configSettings = Json(null)) {}
 
   // #region properties
     mixin(OProperty!("DAttribute", "attribute"));

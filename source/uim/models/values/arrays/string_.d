@@ -15,12 +15,16 @@ class DStringArrayValue : DArrayValue {
   }
 
   // Initialization hook method.
-  override void initialize(DConfigurationValue configSettings = null) {
+  override void initialize(Json configSettings = Json(null)) {
     super.initialize(configSettings);
 
     this
-      .isString(true);
+      .isString(true)
+      .separator(",");
   }
+
+  mixin(OProperty!("string", "separator"));
+  mixin(OProperty!("bool", "shouldTrim"));
 
   protected string[] _values;
   alias value = DValue.value;
@@ -36,9 +40,11 @@ class DStringArrayValue : DArrayValue {
   }
 
   override void set(string newValue) {
-    debug writeln("In DStringArrayValue - ", newValue);
-    this.value(newValue.split(",").map!(a => a.strip).array);
-    debug writeln("After split - ", this.value);
+    auto myValues = newValue.split(separator);
+    if (shouldTrim) {
+      myValues = myValues.map!(a => a.strip).array;
+    } 
+    this.value(myValues);
   }
 
   override void set(Json newValue) {
