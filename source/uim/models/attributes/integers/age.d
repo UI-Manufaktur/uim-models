@@ -12,7 +12,7 @@ class DAgeAttribute : DIntegerAttribute {
   mixin(AttributeThis!("AgeAttribute"));
 
   // Initialization hook method.
-  override void initialize(DConfigurationValue configSettings = null) {
+  override void initialize(Json configSettings = Json(null)) {
     super.initialize(configSettings);
 
     //means.demographic.age

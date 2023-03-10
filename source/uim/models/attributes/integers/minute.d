@@ -22,7 +22,7 @@ class DMinuteAttribute : DIntegerAttribute {
   mixin(AttributeThis!("MinuteAttribute"));
 
   // Initialization hook method.
-  override void initialize(DConfigurationValue configSettings = null) {
+  override void initialize(Json configSettings = Json(null)) {
     super.initialize(configSettings);
 
     this

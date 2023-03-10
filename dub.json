@@ -1,10 +1,9 @@
 {
 	"authors": [
-		"UI Manufaktur Team",
 		"Sicherheitsschmiede",
 		"Ozan Nurettin Süel"
 	],
-	"copyright": "Copyright © 2017-2022, UI Manufaktur UG",
+	"copyright": "Copyright © 2015-2023, Ozan NUrettin Süel",
 	"license": "Apache-2.0",
 	"name": "uim-models",
 	"description": "MODELS library for D",

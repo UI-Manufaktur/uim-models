@@ -16,7 +16,7 @@ import uim.models;
 class DDayAttribute : DIntegerAttribute {
   mixin(AttributeThis!("DayAttribute"));
 
-  override void initialize(DConfigurationValue configSettings = null) {
+  override void initialize(Json configSettings = Json(null)) {
     super.initialize(configSettings);
 
     this
