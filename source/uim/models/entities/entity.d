@@ -23,7 +23,7 @@ class DEntity /* : IRegistrable */ {
     if (aJson != Json(null)) this.fromJson(aJson); }
 
   // Initialize entity 
-  void initialize(DConfigurationValue configSettings = null) {
+  void initialize(Json configSettings = Json(null)) {
     this
       .className("Entity")
       .id(randomUUID)
@@ -602,7 +602,7 @@ class DEntity /* : IRegistrable */ {
 
   void fromJson(Json aJson) {
     if (aJson == Json(null)) { return; }
-    
+
     foreach (keyvalue; aJson.byKeyValue) {
       auto k = keyvalue.key;
       auto v = keyvalue.value;
@@ -649,6 +649,7 @@ class DEntity /* : IRegistrable */ {
             // debug writeln("Found ", k);
             _attributes[k].value(v); 
           } */
+
           this.values[k].value(v);
           break;
       }            
@@ -702,7 +703,6 @@ class DEntity /* : IRegistrable */ {
         if (!hideFields.exist(k)) result[k] = _attributes[k].jsonValue;
       } */
       foreach(k; values.keys) {
-        debug writeln("Value ", k, " = ",  this.values[k].toJson);
         result[k] = this.values[k].toJson;
       }
     }

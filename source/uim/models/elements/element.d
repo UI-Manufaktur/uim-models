@@ -21,7 +21,7 @@ class DElement {
     this();    
     if (aJson != Json(null)) this.fromJson(aJson); }
 
-  void initialize(DConfigurationValue configSettings = null) {}
+  void initialize(Json configSettings = Json(null)) {}
 
   mixin(OProperty!("DMapValue!string", "values"));
   mixin ValueMapWrapper;
