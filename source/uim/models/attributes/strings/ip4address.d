@@ -22,7 +22,7 @@ class DIP4AddressAttribute : DStringAttribute {
   mixin(AttributeThis!("IP4AddressAttribute"));
 
   // Initialization hook method.
-  override void initialize(DConfigurationValue configSettings = null) {
+  override void initialize(Json configSettings = Json(null)) {
     super.initialize(configSettings);
 
     this

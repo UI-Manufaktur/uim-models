@@ -13,7 +13,7 @@ class DFileNameAttribute : DStringAttribute {
   mixin(AttributeThis!("FileNameAttribute"));
 
   // Initialization hook method.
-  override void initialize(DConfigurationValue configSettings = null) {
+  override void initialize(Json configSettings = Json(null)) {
     super.initialize(configSettings);
 
 /* is.dataFormat.character
