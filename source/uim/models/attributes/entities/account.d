@@ -12,7 +12,7 @@ class DAccountAttribute : DEntityAttribute {
   mixin(AttributeThis!("AccountAttribute"));
 
   // Initialization hook method.
-  override void initialize(DConfigurationValue configSettings = null) {
+  override void initialize(Json configSettings = Json(null)) {
     super.initialize(configSettings);
 
     this
