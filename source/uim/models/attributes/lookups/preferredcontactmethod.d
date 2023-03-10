@@ -12,7 +12,7 @@ class DPreferredContactMethodAttribute : DAttribute {
   mixin(AttributeThis!("PreferredContactMethodAttribute"));
 
   // Initialization hook method.
-  override void initialize(DConfigurationValue configSettings = null) {
+  override void initialize(Json configSettings = Json(null)) {
     super.initialize(configSettings);
     // means.measurement.preferredcontactmethod
 
