@@ -12,7 +12,7 @@ class DBooleanValue : DValue {
   mixin(ValueThis!("BooleanValue", "bool"));  
 
   // Initialization hook method.
-  override void initialize(DConfigurationValue configSettings = null) {
+  override void initialize(Json configSettings = Json(null)) {
     super.initialize(configSettings);
 
     this
@@ -89,8 +89,13 @@ class DBooleanValue : DValue {
     auto valueB = new DBooleanValue(false);
     assert(valueA > valueB);
     assert(valueB < valueA);
-  }
 
+    auto valueC = (new DBooleanValue).value(true);
+    auto valueD = (new DBooleanValue).value(false);
+    assert(valueC > valueD);
+    assert(valueD < valueC);
+  }
+  
   override DValue copy() {
     return BooleanValue(value);
   }

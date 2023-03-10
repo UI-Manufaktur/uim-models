@@ -12,33 +12,68 @@ class DMapValue(K) : DValue, IMap {
   mixin(ValueThis!("MapValue"));
 
   protected DValue[K] _items;
+  mixin(OProperty!("bool", "isStatic"));
 
   DMapValue opIndexAssign(DValue value, K key) {
-    _items[key] = value;
+    if (containsKey(key)) {
+      _items[key] = value; 
+    } else {
+      _items[key] = value; }
+
     return this;
   }
+
   DMapValue opIndexAssign(bool value, K key) {
-    _items[key] = new DBooleanValue(value);
+    if (containsKey(key)) {
+      _items[key].value(value ? "true" : "false"); 
+    } else {
+    _items[key] = new DBooleanValue(value); }
+
     return this;
   }
+
   DMapValue opIndexAssign(int value, K key) {
-    _items[key] = new DIntegerValue(value);
+    if (containsKey(key)) {
+      _items[key].value(to!string(value)); 
+    } else {
+    _items[key] = new DIntegerValue(value); }
+
     return this;
   }
+
   DMapValue opIndexAssign(double value, K key) {
-    _items[key] = new DDoubleValue(value);
+    if (containsKey(key)) {
+      _items[key].value(to!string(value)); 
+    } else {
+    _items[key] = new DDoubleValue(value); }
+    
     return this;
   }
-  DMapValue opIndexAssign(string value, K key) {
-    _items[key] = new DStringValue(value);
+
+  DMapValue opIndexAssign(string value, K key) {    
+     if (containsKey(key)) {
+      _items[key].value(value); 
+    } else {
+     _items[key] = new DStringValue(value); }
+    
     return this;
   }
+
   DMapValue opIndexAssign(UUID value, K key) {
-    _items[key] = new DUUIDValue(value);
+    if (containsKey(key)) {
+      _items[key].value(value.toString); 
+    } else {
+      _items[key] = new DUUIDValue(value); }
+
     return this;
   }
+
   DMapValue opIndexAssign(DValue[] values, K key) {
-    _items[key] = new DArrayValue(values);
+    if (containsKey(key)) {
+      _items[key] = new DArrayValue(values);; 
+    } else {
+      _items[key] = new DArrayValue(values); }
+
     return this;
   }
 
@@ -130,7 +165,6 @@ unittest {
   assert(stringMap["key5"].toString == "100.1");
 
   stringMap["key6"] = [StringValue("v1"), StringValue("v2")];
-  writeln(stringMap["key6"]); // .toString == "100.1");
 
   assert(stringMap.toJson.toString == `{"key1":"value1","key6":null,"key2":"value2","key3":true,"key5":100.1,"key4":100}`); 
 }
