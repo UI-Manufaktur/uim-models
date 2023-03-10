@@ -26,7 +26,7 @@ class DHertzAttribute : DDoubleAttribute {
   mixin(AttributeThis!("HertzAttribute"));
 
   // Initialization hook method.
-  override void initialize(DConfigurationValue configSettings = null) {
+  override void initialize(Json configSettings = Json(null)) {
     super.initialize(configSettings);
 
 /* is.dataFormat.floatingPoint

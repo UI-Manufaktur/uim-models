@@ -24,7 +24,7 @@ class DMilliAmpereAttribute : DAmpereAttribute {
   mixin(AttributeThis!("MilliAmpereAttribute"));
 
   // Initialization hook method.
-  override void initialize(DConfigurationValue configSettings = null) {
+  override void initialize(Json configSettings = Json(null)) {
     super.initialize(configSettings);
 
     this
