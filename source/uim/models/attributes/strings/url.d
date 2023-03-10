@@ -12,7 +12,7 @@ class DUrlAttribute : DStringAttribute {
   mixin(AttributeThis!("UrlAttribute"));
 
   // Initialization hook method.
-  override void initialize(DConfigurationValue configSettings = null) {
+  override void initialize(Json configSettings = Json(null)) {
     super.initialize(configSettings);
 
     this
