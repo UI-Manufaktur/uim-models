@@ -70,7 +70,7 @@ class DMapValue(K) : DValue, IMap {
 
   DMapValue opIndexAssign(DValue[] values, K key) {
     if (containsKey(key)) {
-      _items[key] = new DArrayValue(values);; 
+      _items[key] = new DArrayValue(values); 
     } else {
       _items[key] = new DArrayValue(values); }
 

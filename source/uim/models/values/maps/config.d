@@ -8,11 +8,11 @@ module uim.models.values.maps.config;
 @safe:
 import uim.models;
 
-class DConfigurationValue : DMapValue!string {
+class DxConfigurationValue : DMapValue!string {
   // Constructors
   this() { initialize; }
 }
-auto ConfigurationValue() { return new DConfigurationValue; }
+auto ConfigurationValue() { return new DxConfigurationValue; }
 
 ///
 unittest {
