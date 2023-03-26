@@ -26,7 +26,7 @@ class DArrayValue : DValue {
   }
 
   DArrayValue add(DValue[] values...) { 
-    add(values); 
+    this.add(values.dup); 
     return this; }
 
   DArrayValue add(DValue[] values) {
