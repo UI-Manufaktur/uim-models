@@ -48,7 +48,10 @@ class DDateValue : DValue {
   }
 
   override DValue copy() {
-    return DateValue(value);
+    return DateValue(attribute, toJson);
+  }
+  override DValue dup() {
+    return copy;
   }
 
   override Json toJson() { 

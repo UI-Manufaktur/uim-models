@@ -27,9 +27,12 @@ class DTagArrayValue : DStringArrayValue {
   alias opEquals = DValue.opEquals;
 
   override DValue copy() {
-    return TagArrayValue();
+    return TagArrayValue(attribute, toJson);
   }
-
+  override DValue dup() {
+    return copy;
+  }
+  
   override string toString() {
     if (length > 0) return separator~this.value.join(separator);
     return null; 

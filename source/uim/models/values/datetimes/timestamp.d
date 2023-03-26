@@ -12,7 +12,10 @@ class DTimestampValue : DLongValue {
   mixin(ValueThis!("TimestampValue", "long"));  
 
   override DValue copy() {
-    return TimestampValue(value);
+    return TimestampValue(attribute, toJson);
+  }
+  override DValue dup() {
+    return copy;
   }
 
   alias opEquals = DLongValue.opEquals;

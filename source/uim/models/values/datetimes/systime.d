@@ -58,7 +58,10 @@ class DSystimeValue : DValue {
   }
 
   override DValue copy() {
-    return SystimeValue(value);
+    return SystimeValue(attribute, toJson);
+  }
+  override DValue dup() {
+    return copy;
   }
 
   override Json toJson() { 

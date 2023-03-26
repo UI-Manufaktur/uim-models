@@ -59,7 +59,10 @@ class DTimeValue : DValue {
   alias opEquals = DValue.opEquals;
 
   override DValue copy() {
-    return TimeValue(value);
+    return TimeValue(attribute, toJson);
+  }
+  override DValue dup() {
+    return copy;
   }
 
   alias opEquals = Object.opEquals;

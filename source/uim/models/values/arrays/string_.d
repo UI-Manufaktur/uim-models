@@ -65,9 +65,10 @@ class DStringArrayValue : DArrayValue {
   }
 
   override DValue copy() {
-    auto arrayValue = StringArrayValue;
-    foreach(item; _items) { arrayValue.add(item); }
-    return arrayValue;
+    return StringArrayValue(attribute, toJson);
+  }
+  override DValue dup() {
+    return copy;
   }
 
   override Json toJson() {

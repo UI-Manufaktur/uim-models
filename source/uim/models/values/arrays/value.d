@@ -34,5 +34,12 @@ class DValueArrayValue : DArrayValue {
 
   alias opEquals = Object.opEquals;
   alias opEquals = DValue.opEquals;
+
+  override DValue copy() {
+    return ValueArrayValue(attribute, toJson);
+  }
+  override DValue dup() {
+    return copy;
+  }
 }
 mixin(ValueCalls!("ValueArrayValue", "DValue[]"));  
