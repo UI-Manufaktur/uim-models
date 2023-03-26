@@ -114,7 +114,7 @@ class DMapValue(K) : DValue, IMap {
   }
 
   override DValue copy() {
-    return MapValue!K(attribute, toJson);
+    return NullValue; // MapValue!K(attribute, toJson);
   }
   override DValue dup() {
     return copy;

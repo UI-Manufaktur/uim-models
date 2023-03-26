@@ -8,7 +8,7 @@ module uim.models.entities.entity;
 @safe:
 import uim.models;
 
-class DEntity /* : IRegistrable */ {
+class DEntity : DElement /* : IRegistrable */ {
   static namespace = moduleName!DEntity;
 
   // Constructors
@@ -23,7 +23,9 @@ class DEntity /* : IRegistrable */ {
     if (aJson != Json(null)) this.fromJson(aJson); }
 
   // Initialize entity 
-  void initialize(Json configSettings = Json(null)) {
+  override void initialize(Json configSettings = Json(null)) {
+    super.initiaitze(configSettings);
+
     this
       .className("Entity")
       .id(randomUUID)
@@ -40,10 +42,6 @@ class DEntity /* : IRegistrable */ {
       .versionNumber(1L) // Allways starts with version 1
       .versionBy(this.createdBy);
   }
-
-  protected string _registerPath;
-  void registerPath(string path) { _registerPath = path; }
-  string registerPath() { return _registerPath; }
 
   string[] fieldNames() {
     return [      
@@ -64,7 +62,6 @@ class DEntity /* : IRegistrable */ {
     return cast(O)this;
   }
   mixin(OProperty!("string", "pool"));
-  mixin(OProperty!("string", "className"));
   mixin(OProperty!("long", "etag"));
   O etag(this O)(string newValue) { 
     this.etag(to!long(newValue)); 
@@ -73,7 +70,6 @@ class DEntity /* : IRegistrable */ {
   // mixin(OProperty!("DETBCollection", "collection"));
   mixin(OProperty!("string", "siteName"));
   // mixin(OProperty!("DOOPModel", "model"));
-  mixin(OProperty!("string[string]", "parameters"));
   mixin(OProperty!("Json", "config"));
 
 /// Versioning
@@ -174,9 +170,6 @@ class DEntity /* : IRegistrable */ {
       assert(Entity.id(id1).id(id2).id == id2);
     }
   } */
-
-  mixin(OProperty!("DMapValue!string", "values"));
-  mixin ValueMapWrapper;
 
   /* O opDispatch(string name, this O)(string aValue){
     if (auto myValue = this.values[name]) {
@@ -384,7 +377,7 @@ class DEntity /* : IRegistrable */ {
     this.versionNumber(to!long(newValue));
     return cast(O)this; }
   
-  STRINGAA selector(STRINGAA parameters) {
+  override STRINGAA selector(STRINGAA parameters) {
     STRINGAA results;
 
     auto foundId = parameters.get("entity_id", parameters.get("id", ""));
@@ -396,12 +389,11 @@ class DEntity /* : IRegistrable */ {
   }
 
   // Read entity from STRINGAA
-  DEntity fromStringAA(STRINGAA reqParameters) {
+  void fromStringAA(STRINGAA reqParameters) {
     foreach(k, v; reqParameters) this[k] = v; 
-    return this;
   }
 
-  DEntity fromRequest(STRINGAA requestValues) {
+  void fromRequest(STRINGAA requestValues) {
     debug writeln("fromRequest...", requestValues);
     debug writeln("fieldNames...", fieldNames);
     foreach(fName; fieldNames) {
@@ -415,11 +407,10 @@ class DEntity /* : IRegistrable */ {
         }
       }
     }
-    return this;
   }
 
   // Converts entity property to string, which is HTML compatible
-  string opIndex(string key) {
+  override string opIndex(string key) {
     switch(key) {
       case "registerPath": return this.registerPath;
       case "id": return this.id.toString;
@@ -463,7 +454,9 @@ class DEntity /* : IRegistrable */ {
     }      
   }
 
-  DEntity opIndexAssign(string value, string key) {
+  override void opIndexAssign(string value, string key) {
+    super.opIndexAssign(value, key);
+
     switch(key) {
       case "id": this.id(value); break;
       case "etag": this.etag(value); break;
@@ -512,7 +505,9 @@ class DEntity /* : IRegistrable */ {
   }
 
   // Read HTML value and set entity value
-  DEntity opIndexAssign(UUID value, string key) {
+  override void opIndexAssign(UUID value, string key) {
+    super.opIndexAssign(value, key);
+
     switch(key) {
       case "id": this.id(value); break;
       case "createdBy": this.createdBy(value); break;
@@ -531,7 +526,9 @@ class DEntity /* : IRegistrable */ {
     return this;
   }
 
-  void opIndexAssign(long value, string key) {
+  override void opIndexAssign(long value, string key) {
+    super.opIndexAssign( value, key); 
+
     switch(key) {
       case "createdOn": this.createdOn(value); break;
       case "modifiedOn": this.modifiedOn(value); break; 
@@ -545,7 +542,9 @@ class DEntity /* : IRegistrable */ {
     }      
   } 
 
-  void opIndexAssign(bool value, string key) {
+  override void opIndexAssign(bool value, string key) {
+    super.opIndexAssign(value, key);
+
     switch(key) {
       case "isLocked": this.isLocked(value); break;
       case "isDeleted": this.isDeleted(value); break;
@@ -560,7 +559,9 @@ class DEntity /* : IRegistrable */ {
   }
 
   // Set field(key) if type Entity
-  void opIndexAssign(DEntity value, string key) {
+  override void opIndexAssign(DEntity value, string key) {
+    super.opIndexAssign(value, key);
+
     switch(key) {
       default:
         /* if (key in attributes) {
@@ -571,7 +572,7 @@ class DEntity /* : IRegistrable */ {
     }      
   }
 
-  DEntity create() { return new DEntity; }
+/*   DEntity create() { return new DEntity; }
   DEntity create(Json data) {
     auto result = create;
     result.fromJson(data);   
@@ -584,9 +585,9 @@ class DEntity /* : IRegistrable */ {
   DEntity clone(Json data) { 
     auto result = clone;
     result.fromJson(data);
-    return result; }
+    return result; } */
   
-  DEntity copyTo(DEntity targetOfCopy) {
+/*   DEntity copyTo(DEntity targetOfCopy) {
     if (targetOfCopy) {
       targetOfCopy.fromJson(this.toJson);
       return targetOfCopy; }
@@ -596,9 +597,7 @@ class DEntity /* : IRegistrable */ {
       fromJson(targetOfCopy.toJson);
     }
     return this;
-  }
-
-  Bson toBson() { return Bson(toJson); }
+  } */
 
   void fromJson(Json aJson) {
     if (aJson == Json(null)) { return; }
@@ -656,8 +655,8 @@ class DEntity /* : IRegistrable */ {
     }
   }
 
-  Json toJson(string[] showFields = null, string[] hideFields = null) {
-    auto result = Json.emptyObject;
+  override Json toJson(string[] showFields = null, string[] hideFields = null) {
+    auto result = super.toJson(showFields, hideFields);
     
     if (showFields.length == 0 && hideFields.length == 0) {
       result["registerPath"] = this.registerPath;

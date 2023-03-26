@@ -31,11 +31,16 @@ class DElement {
   O name(this O)(string  newName) { _name = newName.strip.toLower.replace(" ", "_"); return cast(O)this; }
   string name() { return _name; }
 
-  // Display of entity 
+  mixin(OProperty!("string", "className"));
+  mixin(OProperty!("string[string]", "parameters"));
+
+/*   // Display of entity 
   mixin(OProperty!("string", "display"));
 
   //	Description about the entity and more
-  mixin(OProperty!("string", "description"));
+  mixin(OProperty!("string", "description")); */
+  
+  mixin(OProperty!("string", "registerPath"));
   
   STRINGAA selector(STRINGAA parameters) {
     STRINGAA results;
@@ -49,12 +54,12 @@ class DElement {
   }
 
   // Read entity from STRINGAA
-  DElement fromStringAA(STRINGAA reqParameters) {
+  void fromStringAA(STRINGAA reqParameters) {
     foreach(k, v; reqParameters) this[k] = v; 
     return this;
   }
 
-  DElement fromRequest(STRINGAA requestValues) {
+  void fromRequest(STRINGAA requestValues) {
     debug writeln("fromRequest...", requestValues);
     /* foreach(fName; fieldNames) {
       auto requestKey = "entity_"~fName;
@@ -82,7 +87,7 @@ class DElement {
     }      
   }
 
-  DElement opIndexAssign(string value, string key) {
+  void opIndexAssign(string value, string key) {
     switch(key) {
       case "name": this.name(value); break;
       case "display": this.display(value); break;
@@ -95,7 +100,7 @@ class DElement {
   }
 
   // Read value and set entity value
-  DElement opIndexAssign(UUID value, string key) {
+  void opIndexAssign(UUID value, string key) {
     switch(key) {
       default:
         values[key] = value;
@@ -128,7 +133,7 @@ class DElement {
     }      
   }
 
-  DElement create() { return new DElement; }
+/*   DElement create() { return new DElement; }
   DElement create(Json data) { return create.fromJson(data); }
 
   DElement clone() { return create.fromJson(toJson); }
@@ -138,11 +143,11 @@ class DElement {
     return targetOfCopy ? targetOfCopy.fromJson(this.toJson) : targetOfCopy; }
   DElement copyFrom(DElement targetOfCopy) {
     return targetOfCopy ? fromJson(targetOfCopy.toJson) : this;
-  }
+  } */
 
   Bson toBson() { return Bson(toJson); }
 
-  DElement fromJson(Json aJson) {
+  void fromJson(Json aJson) {
     if (aJson == Json(null)) return this;
     
     foreach (keyvalue; aJson.byKeyValue) {
