@@ -65,7 +65,10 @@ class DEntityValue : DValue {
   alias opEquals = DValue.opEquals;
 
   override DValue copy() {
-    return EntityValue;
+    return EntityValue(attribute, toJson);
+  }
+  override DValue dup() {
+    return copy;
   }
 
   override Json toJson() { 

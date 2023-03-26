@@ -28,7 +28,10 @@ class DJsonObjectValue : DValue {
   }
 
   override DValue copy() {
-    return NullValue(value);
+    return JsonObjectValue(attribute, toJson);
+  }
+  override DValue dup() {
+    return copy;
   }
   
   override Json toJson() {

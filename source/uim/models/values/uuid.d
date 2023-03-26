@@ -79,6 +79,9 @@ class DUUIDValue : DValue {
   override DValue copy() {
     return UUIDValue(value);
   }
+  override DValue dup() {
+    return UUIDValue(value);
+  }
 
   override Json toJson() { 
     if (isNull) return Json(null); 

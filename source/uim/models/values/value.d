@@ -72,7 +72,21 @@ class DValue : IValue {
     return false;
   }
   
+  O opCall(DAttribute newAttribute) {
+    this.attribute(newAttribute);
+    return cast(O)this;
+  }
+  O opCall(Json newData) {
+    this.fromJson(newData);
+    return cast(O)this;
+  }
+  O opCall(DAttribute newAttribute, Json newData) {
+    this.attribute(newAttribute).fromJson(newData);
+    return cast(O)this;
+  }
+
   abstract DValue copy(); 
+  abstract DValue dup(); 
 
   Json toJson() {
     return Json(null); }

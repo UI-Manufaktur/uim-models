@@ -35,9 +35,10 @@ class DIntegerArrayValue : DArrayValue {
   alias opEquals = DValue.opEquals;
   
   override DValue copy() {
-    auto arrayValue = IntegerArrayValue;
-    foreach(item; _items) { arrayValue.add(item); }
-    return arrayValue;
+    return IntegerArrayValue(attribute, toJson);
+  }
+  override DValue dup() {
+    return copy;
   }
 }
 mixin(ValueCalls!("IntegerArrayValue"));  

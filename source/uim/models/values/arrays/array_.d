@@ -43,9 +43,10 @@ class DArrayValue : DValue {
   DValue[] values() { return _items; }
 
   override DValue copy() {
-    auto arrayValue = ArrayValue;
-    foreach(item; _items) { arrayValue.add(item); }
-    return arrayValue;
+    return ArrayValue(attribute, toJson);
+  }
+  override DValue dup() {
+    return copy;
   }
 
   override string toString() {

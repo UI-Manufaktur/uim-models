@@ -61,7 +61,10 @@ class DElementValue : DValue {
   } */
 
   override DValue copy() {
-    return ElementValue;
+    return ElementValue(attribute, toJson);
+  }
+  override DValue dup() {
+    return copy;
   }
 
   override Json toJson() { 

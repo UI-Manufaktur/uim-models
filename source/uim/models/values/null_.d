@@ -22,7 +22,10 @@ class DNullValue : DValue {
   override DValue copy() {
     return NullValue;
   }
-
+  override DValue dup() {
+    return NullValue;
+  }
+  
   override Json toJson() { return Json(null); }
   override string toString() { return null; }
 }
