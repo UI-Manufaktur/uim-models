@@ -76,7 +76,10 @@ class DStringValue : DValue {
   }
 
   override DValue copy() {
-    return StringValue(value);
+    return StringValue(attribute, toJson);
+  }
+  override DValue dup() {
+    return copy;
   }
 
   version(test_uim_models) { unittest {    

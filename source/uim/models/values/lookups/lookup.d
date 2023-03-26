@@ -34,12 +34,11 @@ class DLookupValue(K, V) : DValue {
   alias opEquals = DValue.opEquals;
 
   override DValue copy() {
-    auto resultMap = LookupValue!(K, V);
-    foreach(key, value; _items) {
-      resultMap[key] = value;
-    }
-    return resultMap;
-  } 
+    return LookupValue!(K, V)(attribute, toJson);
+  }
+  override DValue dup() {
+    return copy;
+  }
 }
 auto LookupValue(K, V)() { return new DLookupValue!(K, V); }
 auto LookupValue(K, V)(DAttribute theAttribute) { return new DLookupValue!(K, V)(theAttribute); }

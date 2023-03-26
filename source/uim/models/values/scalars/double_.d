@@ -74,7 +74,10 @@ class DDoubleValue : DValue {
   }  
 
   override DValue copy() {
-    return DoubleValue(value);
+    return DoubleValue(attribute, toJson);
+  }
+  override DValue dup() {
+    return DoubleValue(attribute, toJson);
   }
 
   double toDouble() { 

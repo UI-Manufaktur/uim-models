@@ -114,12 +114,11 @@ class DMapValue(K) : DValue, IMap {
   }
 
   override DValue copy() {
-    auto resultMap = MapValue!K;
-    foreach(key, value; _items) {
-      resultMap[key] = value;
-    }
-    return resultMap;
-  } 
+    return MapValue!(K)(attribute, toJson);
+  }
+  override DValue dup() {
+    return copy;
+  }
 
   override Json toJson() {
     Json results = Json.emptyObject;

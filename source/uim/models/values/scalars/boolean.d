@@ -97,9 +97,12 @@ class DBooleanValue : DValue {
   }
   
   override DValue copy() {
-    return BooleanValue(value);
+    return BooleanValue(attribute, toJson);
   }
-
+  override DValue dup() {
+    return BooleanValue(attribute, toJson);
+  }
+  
   bool toBool() { 
     return _value; }
 

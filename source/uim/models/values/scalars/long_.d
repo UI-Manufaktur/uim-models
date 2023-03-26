@@ -121,7 +121,10 @@ class DLongValue : DValue {
   }  
 
   override DValue copy() {
-    return LongValue(value);
+    return LongValue(attribute, toJson);
+  }
+  override DValue dup() {
+    return copy;
   }
 
   long toLong() { 

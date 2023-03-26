@@ -88,7 +88,10 @@ class DIntegerValue : DValue {
   }  
 
   override DValue copy() {
-    return IntegerValue(value);
+    return IntegerValue(attribute, toJson);
+  }
+  override DValue dup() {
+    return IntegerValue(attribute, toJson);
   }
 
   int toLong() { 
