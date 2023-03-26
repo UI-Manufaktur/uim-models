@@ -72,15 +72,15 @@ class DValue : IValue {
     return false;
   }
   
-  O opCall(DAttribute newAttribute) {
+  O opCall(this O)(DAttribute newAttribute) {
     this.attribute(newAttribute);
     return cast(O)this;
   }
-  O opCall(Json newData) {
+  O opCall(this O)(Json newData) {
     this.fromJson(newData);
     return cast(O)this;
   }
-  O opCall(DAttribute newAttribute, Json newData) {
+  O opCall(this O)(DAttribute newAttribute, Json newData) {
     this.attribute(newAttribute).fromJson(newData);
     return cast(O)this;
   }
