@@ -8,7 +8,7 @@ module  source.uim.models.attributes.entities.contact;
 @safe:
 import uim.models;
 
-class DContactAttribute : DEntityAttribute {
+/* class DContactAttribute : DEntityAttribute {
   mixin(AttributeThis!("ContactAttribute"));
 
   // Initialization hook method.
@@ -26,4 +26,4 @@ version(test_uim_models) { unittest {
     testAttribute(new DContactAttribute);
     testAttribute(ContactAttribute);
   }
-}
+} */

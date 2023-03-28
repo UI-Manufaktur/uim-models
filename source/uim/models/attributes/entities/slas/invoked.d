@@ -8,7 +8,7 @@ module uim.models.attributes.entities.slas.invoked;
 @safe:
 import uim.models;
 
-class DSLAInvokedAttribute : DEntityAttribute {
+/* class DSLAInvokedAttribute : DEntityAttribute {
   mixin(AttributeThis!("SLAInvokedAttribute"));
 
   // Initialization hook method.
@@ -26,4 +26,4 @@ version(test_uim_models) { unittest {
     testAttribute(new DSLAInvokedAttribute);
     testAttribute(SLAInvokedAttribute);
   }
-} 
+}  */

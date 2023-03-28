@@ -8,7 +8,7 @@ module uim.models.attributes.entities.users.modifiedonbehalfby;
 @safe:
 import uim.models;
 
-class DModifiedOnBehalfByAttribute : DEntityAttribute {
+/* class DModifiedOnBehalfByAttribute : DEntityAttribute {
   mixin(AttributeThis!("ModifiedOnBehalfByAttribute"));
 
   // Initialization hook method.
@@ -26,4 +26,4 @@ version(test_uim_models) { unittest {
   
     // TODO 
   }  
-}
+} */

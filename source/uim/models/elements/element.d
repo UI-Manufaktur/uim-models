@@ -21,12 +21,16 @@ class DElement {
     this();    
     if (aJson != Json(null)) this.fromJson(aJson); }
 
-  void initialize(Json configSettings = Json(null)) {}
+  void initialize(Json configSettings = Json(null)) {
+    this  
+      .requestPrefix("element_");
+  }
 
   mixin(OProperty!("DMapValue!string", "values"));
   mixin ValueMapWrapper;
 
   mixin(OProperty!("string", "className"));
+  mixin(OProperty!("string", "requestPrefix"));
 
   // Every element can have a name like an identifier. 
   string _name;
@@ -53,35 +57,36 @@ class DElement {
   STRINGAA selector(STRINGAA parameters) {
     STRINGAA results;
 
-    auto foundId = parameters.get("entity_id", parameters.get("id", ""));
-    if (foundId.length > 0) results["id"] = foundId;               
-    auto foundName = parameters.get("entity_name", parameters.get("name", ""));
-    if (foundName.length > 0) results["name"] = foundName;               
+    foreach(key, val; parameters) {
+      if (key.indexOf(requestPrefix) == 0) {
+        results[key.replace(requestPrefix, "")] = val;
+      } else {
+        results[key] = val;
+      }
+    }
 
     return results;
   }
+  ///
+  unittest {
+    auto element = new DElement;
+    assert(element.selector(["x":"y", "element_id": "1234"]) == ["id":"1234", "x":"y"]);
+  }
 
-  // Read entity from STRINGAA
+  // Read data from STRINGAA
   void fromStringAA(STRINGAA reqParameters) {
     foreach(k, v; reqParameters) this[k] = v; 
   }
 
+  // Read data from request
   void fromRequest(STRINGAA requestValues) {
-    debug writeln("fromRequest...", requestValues);
-    /* foreach(fName; fieldNames) {
-      auto requestKey = "entity_"~fName;
-      if (auto boolValue = cast(DBooleanValue)values[fName]) {
-        boolValue.value(requestKey in requestValues ? true : false);
-      }
-      else {
-        if (requestKey in requestValues) {
-          this[fName] = requestValues[requestKey];
-        }
-      }
-    } */
+    auto myData = selector(requestValues);
+    foreach(key, value; myData) {
+      this[key] = value;
+    } 
   }
 
-  // Converts entity property to string, which is HTML compatible
+  // Returns data in string format (HTML compatible)
   string opIndex(string key) {
     switch(key) {
       case "name": return this.name;
@@ -91,6 +96,7 @@ class DElement {
     }      
   }
 
+  // Set data 
   void opIndexAssign(string value, string key) {
     switch(key) {
       case "name": this.name(value); break;
@@ -100,50 +106,68 @@ class DElement {
     }      
   }
 
-  // Read value and set entity value
-  void opIndexAssign(UUID value, string key) {
-    switch(key) {
-      default:
-        values[key] = value;
-        break;
-    }      
+  DValue valueOfKey(string key) {
+    if (auto keys = key.split(".")) {
+      if (keys.length == 1) { return values[key]; }
+
+      DValue myValue = cast(DElementValue)values[keys[0]];
+      if (auto myElementValue = cast(DElementValue)myValue) {
+        return myElementValue.value.valueOfKey(keys[1..$].join("."));
+      }
+      return myValue;
+    }
+    return values[key];
   }
 
+  // Set UUID value
+  void opIndexAssign(UUID value, string key) {
+    if (auto myValue = cast(DUUIDValue)valueOfKey(key)) { 
+      // values[key] exists and value of DUUIDValue
+      myValue.value = value;
+    }
+  }
+
+  // Set long value
   void opIndexAssign(long value, string key) {
-    switch(key) {
-      default:
-        values[key] = value;
-        break;
-    }      
+    if (auto myValue = cast(DLongValue)valueOfKey(key)) { 
+      // values[key] exists and value of DLongValue
+      myValue.value = value;
+    }     
   } 
 
+  // Set bool value
   void opIndexAssign(bool value, string key) {
-    switch(key) {
-      default:
-        values[key] = value;
-        break;
-    }      
+    if (auto myValue = cast(DBooleanValue)valueOfKey(key)) { 
+      // values[key] exists and value of DBooleanValue
+      myValue.value = value;
+    }    
   }
 
   // Set field(key) if type Entity
   void opIndexAssign(DElement value, string key) {
-    switch(key) {
-      default:
-        break;
-    }      
+    if (auto myValue = cast(DElementValue)valueOfKey(key)) { 
+      // values[key] exists and value of DLongValue
+      myValue.value = value;
+    }   
   }
 
-/*   DElement create() { return new DElement; }
-  DElement create(Json data) { return create.fromJson(data); }
+  DElement create() { return new DElement; }
+  DElement create(Json data) { auto myElement = create; myElement.fromJson(data); return myElement; }
 
-  DElement clone() { return create.fromJson(toJson); }
-  DElement clone(Json data) { return create.fromJson(toJson).fromJson(data); }
+  DElement clone() { return create(toJson); }
+  DElement clone(Json data) { auto myElement = create(toJson); myElement.fromJson(data); return myElement; }
   
   DElement copyTo(DElement targetOfCopy) {
-    return targetOfCopy ? targetOfCopy.fromJson(this.toJson) : targetOfCopy; }
+    if (targetOfCopy) {
+      targetOfCopy.fromJson(this.toJson);
+    }
+    return targetOfCopy; }
   DElement copyFrom(DElement targetOfCopy) {
-    return targetOfCopy ? fromJson(targetOfCopy.toJson) : this;
-  } */
+    if (targetOfCopy) {
+      fromJson(targetOfCopy.toJson);
+    }
+    return this;
+  } 
 
   Bson toBson() { return Bson(toJson); }
 

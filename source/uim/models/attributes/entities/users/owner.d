@@ -8,7 +8,7 @@ module uim.models.attributes.entities.users.owner;
 @safe:
 import uim.models;
 
-class DOwnerAttribute : DEntityAttribute {
+/* class DOwnerAttribute : DEntityAttribute {
   mixin(AttributeThis!("OwnerAttribute"));
 
   // Initialization hook method.
@@ -26,4 +26,4 @@ version(test_uim_models) { unittest {
   
     // TODO 
   }  
-}
+} */

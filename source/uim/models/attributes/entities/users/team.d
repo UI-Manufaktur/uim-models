@@ -8,7 +8,7 @@ module uim.models.attributes.entities.users.team;
 @safe:
 import uim.models;
 
-class DTeamAttribute : DEntityAttribute {
+/* class DTeamAttribute : DEntityAttribute {
   mixin(AttributeThis!("TeamAttribute"));
 
   // Initialization hook method.
@@ -26,4 +26,4 @@ version(test_uim_models) { unittest {
   
     // TODO 
   }  
-}
+} */

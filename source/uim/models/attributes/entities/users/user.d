@@ -20,7 +20,7 @@ means.userId */
 @safe:
 import uim.models;
 
-class DUserAttribute : DEntityAttribute {
+/* class DUserAttribute : DEntityAttribute {
   mixin(AttributeThis!("UserAttribute"));
 
   // Initialization hook method.
@@ -38,4 +38,4 @@ version(test_uim_models) { unittest {
   
     // TODO 
   }  
-}
+} */

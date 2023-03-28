@@ -3,7 +3,7 @@ module uim.models.mixins.value;
 @safe:
 import uim.models;
 
-/* template ValueProperty(string name, string datatype, string valueClass) {
+template ValueProperty(string name, string datatype = "string", string valueClass = "DStringValue") {
   const char[] ValueProperty = `
     @property `~datatype~` `~name~`() {
       if (auto myValue = cast(`~valueClass~`)values["`~name~`"]) {
@@ -12,10 +12,8 @@ import uim.models;
       return null;       
     }
     @property O `~name~`(this O)(`~datatype~` newValue) {
-      if (auto myValue = cast(`~valueClass~`)values["`~name~`"]) {
-        myValue.value = newValue;
-      }
+      this["`~name~`"] = newValue;
       return cast(O)this;
     }
   `;
-} */
+} 
