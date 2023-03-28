@@ -26,12 +26,20 @@ class DElement {
   mixin(OProperty!("DMapValue!string", "values"));
   mixin ValueMapWrapper;
 
-  // Every entity has a unique name - not primarykey only for human search
-  string _name;
-  O name(this O)(string  newName) { _name = newName.strip.toLower.replace(" ", "_"); return cast(O)this; }
-  string name() { return _name; }
-
   mixin(OProperty!("string", "className"));
+
+  // Every element can have a name like an identifier. 
+  string _name;
+  O name(this O)(string  newName) { _name = newName.strip.replace(" ", "_"); return cast(O)this; }
+  string name() { return _name; }
+  version(test_uim_models) {
+    unittest {
+      assert(Entity.name("name1").name == "name1");
+      assert(Entity.name("name1").name("name2").name == "name2");
+      assert(Entity.name("name name").name == "name_name");
+    }
+  }
+
   mixin(OProperty!("string[string]", "parameters"));
 
 /*   // Display of entity 
@@ -56,7 +64,6 @@ class DElement {
   // Read entity from STRINGAA
   void fromStringAA(STRINGAA reqParameters) {
     foreach(k, v; reqParameters) this[k] = v; 
-    return this;
   }
 
   void fromRequest(STRINGAA requestValues) {
@@ -72,15 +79,12 @@ class DElement {
         }
       }
     } */
-    return this;
   }
 
   // Converts entity property to string, which is HTML compatible
   string opIndex(string key) {
     switch(key) {
       case "name": return this.name;
-      case "display": return this.display;
-      case "description": return this.description;
       default:
         if (auto value = values[key]) { return value.toString; }
         return null;
@@ -90,13 +94,10 @@ class DElement {
   void opIndexAssign(string value, string key) {
     switch(key) {
       case "name": this.name(value); break;
-      case "display": this.display(value); break;
-      case "description": this.description(value); break;
       default:
         values[key] = value;
         break;
     }      
-    return this;
   }
 
   // Read value and set entity value
@@ -106,7 +107,6 @@ class DElement {
         values[key] = value;
         break;
     }      
-    return this;
   }
 
   void opIndexAssign(long value, string key) {
@@ -148,28 +148,24 @@ class DElement {
   Bson toBson() { return Bson(toJson); }
 
   void fromJson(Json aJson) {
-    if (aJson == Json(null)) return this;
+    if (aJson == Json(null)) return;
     
     foreach (keyvalue; aJson.byKeyValue) {
       auto k = keyvalue.key;
       auto v = keyvalue.value;
       switch(k) {
         case "name": this.name(v.get!string); break;
-        case "display": this.display(v.get!string); break;
         default: 
           this.values[k].value(v);
           break;
       }            
     }
-    return this;
   }
 
   Json toJson(string[] showFields = null, string[] hideFields = null) {
     auto result = Json.emptyObject;
     
     result["name"] = this.name;
-    result["display"] = this.display;
-    result["description"] = this.description;
 
     foreach(k; values.keys) {
       result[k] = this.values[k].toJson;

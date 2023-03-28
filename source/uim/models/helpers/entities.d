@@ -3,7 +3,7 @@ module uim.models.helpers.entities;
 @safe:
 import uim.models;
 
-Json toJson(DEntity[] entities) {
+/* Json toJson(DEntity[] entities) {
   auto result = Json.emptyArray;
 
   entities.each!(e => result ~= e.toJson);
@@ -19,3 +19,4 @@ unittest {
   assert(json.length == 2);
 }
 
+ */

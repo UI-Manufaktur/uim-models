@@ -8,7 +8,7 @@ module uim.models.attributes.entities.users.createdonbehalfby;
 @safe:
 import uim.models;
 
-class DCreatedOnBehalfByAttribute : DEntityAttribute {
+/* class DCreatedOnBehalfByAttribute : DEntityAttribute {
   mixin(AttributeThis!("CreatedOnBehalfByAttribute"));
 
   // Initialization hook method.
@@ -26,4 +26,4 @@ version(test_uim_models) { unittest {
   
     // TODO 
   }  
-}
+} */
