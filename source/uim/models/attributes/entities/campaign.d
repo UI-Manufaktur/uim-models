@@ -8,7 +8,7 @@ module  source.uim.models.attributes.entities.campaign;
 @safe:
 import uim.models;
 
-class DCampaignAttribute : DEntityAttribute {
+/* class DCampaignAttribute : DEntityAttribute {
   mixin(AttributeThis!("CampaignAttribute"));
 
   // Initialization hook method.
@@ -26,4 +26,4 @@ version(test_uim_models) { unittest {
     testAttribute(new DCampaignAttribute);
     testAttribute(CampaignAttribute);
   }
-}
+} */

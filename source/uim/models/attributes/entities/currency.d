@@ -10,7 +10,7 @@ import uim.models;
 
 // A unique identifier for entity instances
 
-class DCurrencyAttribute : DEntityAttribute {
+/* class DCurrencyAttribute : DEntityAttribute {
   mixin(AttributeThis!("CurrencyAttribute"));
 
   // Initialization hook method.
@@ -28,4 +28,4 @@ version(test_uim_models) { unittest {
     testAttribute(new DCurrencyAttribute);
     testAttribute(CurrencyAttribute);
   }
-}
+} */

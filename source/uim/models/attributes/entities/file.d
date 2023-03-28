@@ -8,7 +8,7 @@ module  source.uim.models.attributes.entities.file;
 @safe:
 import uim.models;
 
-class DFileAttribute : DEntityAttribute {
+/* class DFileAttribute : DEntityAttribute {
   mixin(AttributeThis!("FileAttribute"));
 
   // Initialization hook method.
@@ -26,4 +26,4 @@ version(test_uim_models) { unittest {
     testAttribute(new DFileAttribute);
     testAttribute(FileAttribute);
   }
-}
+} */

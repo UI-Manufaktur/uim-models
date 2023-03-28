@@ -10,7 +10,7 @@ import uim.models;
 
 // A unique identifier for entity instances
 
-class DBusinessUnitAttribute : DEntityAttribute {
+/* class DBusinessUnitAttribute : DEntityAttribute {
   mixin(AttributeThis!("BusinessUnitAttribute"));
 
   // Initialization hook method.
@@ -28,4 +28,4 @@ version(test_uim_models) { unittest {
     testAttribute(new DBusinessUnitAttribute);
     testAttribute(BusinessUnitAttribute);
   }
-}
+} */

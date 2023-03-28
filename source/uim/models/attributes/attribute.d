@@ -8,12 +8,12 @@ module uim.models.attributes.attribute;
 @safe:
 import uim.models;
 
-class DAttribute : DEntity, IAttribute {
+class DAttribute : /* DEntity,  */IAttribute {
   mixin(AttributeThis!("Attribute"));
 
   // Initialization hook method.
-  override void initialize(Json configSettings = Json(null)) { 
-    super.initialize(configSettings); }
+  /* override  */void initialize(Json configSettings = Json(null)) { 
+    /* super.initialize(configSettings); */ }
 
   mixin(OProperty!("string[]", "dataFormats")); // Select the data type of the property.")); // 
   bool hasDataFormat(string dataFormatName) {
@@ -27,6 +27,10 @@ class DAttribute : DEntity, IAttribute {
     return cast(O)this;
   }
 
+  mixin(OProperty!("UUID", "id"));  
+  mixin(OProperty!("string", "name"));  
+  mixin(OProperty!("string", "display"));  
+  mixin(OProperty!("string", "registerPath"));  
   mixin(OProperty!("bool", "isNullable"));
   mixin(OProperty!("string[string]", "descriptions"));
   mixin(OProperty!("string", "valueType")); // Select the data type of the property.")); // 
@@ -127,9 +131,9 @@ class DAttribute : DEntity, IAttribute {
     }
   } */
 
-  override void fromJson(Json aJson) {
+  /* override  */void fromJson(Json aJson) {
     if (aJson == Json(null)) {return; }
-    super.fromJson(aJson);
+    /* super.fromJson(aJson); */
 
     foreach (keyvalue; aJson.byKeyValue) {
       auto k = keyvalue.key;
@@ -169,8 +173,8 @@ class DAttribute : DEntity, IAttribute {
   }
 
   // Convert data to json (using vibe's funcs)
-  override Json toJson(string[] showFields = null, string[] hideFields = null) {
-    auto result = super.toJson(showFields, hideFields);
+  /* override  */Json toJson(string[] showFields = null, string[] hideFields = null) {
+    auto result = Json.emptyObject;
 
     // Fields
     result["isNullable"] = this.isNullable;
@@ -208,6 +212,9 @@ class DAttribute : DEntity, IAttribute {
   version(test_uim_models) { unittest {    /// TODO
     }
   }
+
+/*   alias opIndexAssign = DElement.opIndexAssign;
+  alias opIndexAssign = DEntity.opIndexAssign; */
 }
 auto Attribute() { return new DAttribute; }
 auto Attribute(UUID id) { return new DAttribute(id); }

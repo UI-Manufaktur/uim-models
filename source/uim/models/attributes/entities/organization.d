@@ -8,7 +8,7 @@ module uim.models.attributes.entities.organization;
 @safe:
 import uim.models;
 
-class DOrganizationAttribute : DEntityAttribute {
+/* class DOrganizationAttribute : DEntityAttribute {
   mixin(AttributeThis!("OrganizationAttribute"));
 
   // Initialization hook method.
@@ -26,4 +26,4 @@ version(test_uim_models) { unittest {
     testAttribute(new DOrganizationAttribute);
     testAttribute(OrganizationAttribute);
   }
-}
+} */

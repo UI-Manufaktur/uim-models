@@ -8,7 +8,7 @@ module uim.models.attributes.entities.slas.sla;
 @safe:
 import uim.models;
 
-class DSlaAttribute : DEntityAttribute {
+/* class DSlaAttribute : DEntityAttribute {
   mixin(AttributeThis!("SlaAttribute"));
 
   // Initialization hook method.
@@ -26,4 +26,4 @@ version(test_uim_models) { unittest {
     testAttribute(new DSlaAttribute);
     testAttribute(SlaAttribute);
   }
-} 
+}  */

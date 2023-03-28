@@ -8,7 +8,7 @@ module uim.models.attributes.entities.account;
 @safe:
 import uim.models;
 
-class DAccountAttribute : DEntityAttribute {
+/* class DAccountAttribute : DEntityAttribute {
   mixin(AttributeThis!("AccountAttribute"));
 
   // Initialization hook method.
@@ -26,4 +26,4 @@ version(test_uim_models) { unittest {
     testAttribute(new DAccountAttribute);
     testAttribute(AccountAttribute);
   }
-}
+} */
