@@ -101,10 +101,14 @@ class DElement {
     switch(key) {
       case "name": this.name(value); break;
       default:
-        values[key] = value;
+        values[key].set(value);
         break;
     }      
   }
+  ///
+  unittest {
+
+  } 
 
   DValue valueOfKey(string key) {
     if (auto keys = key.split(".")) {

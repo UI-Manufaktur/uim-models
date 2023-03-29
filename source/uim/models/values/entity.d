@@ -8,7 +8,7 @@ module uim.models.values.entity;
 @safe:
 import uim.models;
 
-/* class DEntityValue : DValue {
+class DEntityValue : DValue {
   mixin(ValueThis!("EntityValue", "DEntity"));  
 
   // Initialization hook method.
@@ -60,7 +60,7 @@ import uim.models;
   int opCmp(DEntity otherValue) {
     /// TODO
     return 1;
-  } * /
+  }  */
 
   alias opEquals = DValue.opEquals;
 
@@ -90,4 +90,3 @@ mixin(ValueCalls!("EntityValue", "DEntity"));
 
 version(test_uim_models) { unittest {  
 }}
- */

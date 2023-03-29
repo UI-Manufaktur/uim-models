@@ -29,40 +29,50 @@ class DUUIDValue : DValue {
     return cast(O)this; 
   }
 
-  void set(UUID newValue) {
-    _value = newValue;
-  }
-  override void set(string newValue) {
-    if (newValue is null) {
+  protected void set(Json newValue) {
+    if (newValue == Json(null)) {
+      if (!isNullable) return;
+
       this
-        .isNull(this.isNullable)
+        .isNull(true)
         .value(UUID());
+      return;
     }
-    else {
-      if (newValue.isUUID) {
-        this
-          .isNull(false)
-          .value(UUID(newValue));
-      }
+
+    if (newValue != Json.type.string) {
+      set(newValue.get!string);
     }
   }
 
-  override void set(Json newValue) {
-    if (newValue is Json(null)) {
-      if (this.isNullable) {
-        this
-          .isNull(true);
-      }
+  override void set(string newValue) {
+    if (newValue is null) {
+      if (!isNullable) return;
+
       this
+        .isNull(true)
         .value(UUID());
+      return;
     }
-    else {
-      if (newValue.get!string.isUUID) {
-        this
-          .isNull(false)
-          .value(UUID(newValue.get!string));
-      }
+
+    if (newValue.isUUID) {
+      this
+        .isNull(false)
+        .value(UUID(newValue));
     }
+  }
+
+  override void set(UUID newValue) {
+    if (newValue == UUID()) {
+      if (!isNullable) return;
+
+      this
+        .isNull(true)
+        .value(UUID());
+      return;
+    }    
+
+    this.isNull(false)
+    _value = newValue;
   }
 
   alias opEquals = DValue.opEquals;
