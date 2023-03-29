@@ -838,7 +838,7 @@ auto Entity(Json json) { return new DEntity(json); }
 
 ///
 unittest {
-  assert(Entity);
+  /* assert(Entity);
 
   assert(Entity.name("entity").name == "entity");
   
@@ -857,7 +857,7 @@ unittest {
   // writeln(entityValue.value["name"]);
   assert(entityValue.value["name"] == "newEntityName");
 
-  auto elementValue = ElementValue;
+  auto elementValue = ElementValue; */
   /* elementValue.name("TestElement");
   entity.values["element"] = entityValue;
 

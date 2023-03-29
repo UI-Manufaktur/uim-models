@@ -26,10 +26,11 @@ class DElement {
       .requestPrefix("element_");
   }
 
-  mixin(OProperty!("DMapValue!string", "values"));
+  mixin(DStringValueMap, "values"));
   mixin ValueMapWrapper;
 
   mixin(OProperty!("string", "className"));
+  mixin(OProperty!("bool", "isDynamic"));
   mixin(OProperty!("string", "requestPrefix"));
 
   // Every element can have a name like an identifier. 
@@ -97,21 +98,32 @@ class DElement {
   }
 
   // Set data 
-  void opIndexAssign(string value, string key) {
-    switch(key) {
-      case "name": this.name(value); break;
-      default:
-        values[key].set(value);
-        break;
-    }      
+  void opIndexAssign(string newValue, string key) {
+    writeln("In void opIndexAssign(string newValue, string key)");
+    if (auto myValue = valueOfKey(key)) {
+      writeln("Found Value");
+      myValue.set(newValue);
+      return;
+    }
+    writeln("Not Found Value");
+
+    if (isDynamic) { // can add new values
+      auto myValue = StringAttribute.createValue;
+      myValue.set(newValue);
+      values[key] = myValue;
+    }
   }
   ///
   unittest {
-
+    auto element = new DElement;
+    element.addValues(["test":StringAttribute]);
+    element["test"] = "something";
+    // assert(element["test"] == "something");
   } 
 
   DValue valueOfKey(string key) {
-    if (auto keys = key.split(".")) {
+    writeln("DValue valueOfKey(string key)");
+/*     if (auto keys = key.split(".")) {
       if (keys.length == 1) { return values[key]; }
 
       DValue myValue = cast(DElementValue)values[keys[0]];
@@ -120,7 +132,7 @@ class DElement {
       }
       return myValue;
     }
-    return values[key];
+ */    return values[key];
   }
 
   // Set UUID value

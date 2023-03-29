@@ -47,9 +47,14 @@ class DValue : IValue {
     // #endregion isNull
   // #endregion properties 
 
-  // Set with string value
-  protected void set(string newValue) {}
-  protected void set(Json newValue) {}
+  protected void set(Json newValue) {
+    // TODO
+  }
+
+  void set(string newValue) {
+    // TODO
+  }
+
 
   O value(this O)(string newValue) {
     this.set(newValue);

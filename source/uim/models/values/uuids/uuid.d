@@ -3,7 +3,7 @@
 	License: Subject to the terms of the Apache 2.0 license, as written in the included LICENSE.txt file.  
 	Authors: Ozan Nurettin Süel (Sicherheitsschmiede)                                                      
 **********************************************************************************************************/
-module uim.models.values.uuid;
+module uim.models.values.uuids.uuid;
 
 @safe:
 import uim.models;
@@ -29,7 +29,7 @@ class DUUIDValue : DValue {
     return cast(O)this; 
   }
 
-  protected void set(Json newValue) {
+  override void set(Json newValue) {
     if (newValue == Json(null)) {
       if (!isNullable) return;
 
@@ -39,7 +39,7 @@ class DUUIDValue : DValue {
       return;
     }
 
-    if (newValue != Json.type.string) {
+    if (newValue.type != Json.Type.string) {
       set(newValue.get!string);
     }
   }
@@ -61,7 +61,7 @@ class DUUIDValue : DValue {
     }
   }
 
-  override void set(UUID newValue) {
+  void set(UUID newValue) {
     if (newValue == UUID()) {
       if (!isNullable) return;
 
@@ -71,7 +71,7 @@ class DUUIDValue : DValue {
       return;
     }    
 
-    this.isNull(false)
+    this.isNull(false);
     _value = newValue;
   }
 

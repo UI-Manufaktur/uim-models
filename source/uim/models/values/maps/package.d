@@ -11,6 +11,7 @@ import uim.models;
 public import uim.models.values.maps.map;
 public import uim.models.values.maps.options;
 public import uim.models.values.maps.config;
+public import uim.models.values.maps.string;
 
 /* ublic import uim.models.values.maps.lookup;
 public import uim.models.values.maps.customertype;

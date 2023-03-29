@@ -3,17 +3,17 @@
 	License: Subject to the terms of the Apache 2.0 license, as written in the included LICENSE.txt file.  
 	Authors: Ozan Nurettin Süel (Sicherheitsschmiede)                                                      
 **********************************************************************************************************/
-module uim.models.values.maps.map;
+module uim.models.values.maps.string;
 
 @safe:
 import uim.models;
 
-class DMapValue(K) : DValue, IMap {
-  mixin(ValueThis!("MapValue"));
+class DStringValueMap : DValue, IMap {
+  mixin(ValueThis!("StringValueMap"));
 
-  protected DValue[K] _items;
+  protected DValue[string] _items;
 
-  DMapValue opIndexAssign(DValue value, K key) {
+  DStringValueMap opIndexAssign(DValue value, string key) {
     if (containsKey(key)) {
       _items[key] = value; 
     } else {
@@ -22,7 +22,7 @@ class DMapValue(K) : DValue, IMap {
     return this;
   }
 
-  DMapValue opIndexAssign(bool value, K key) {
+  DStringValueMap opIndexAssign(bool value, string key) {
     if (containsKey(key)) {
       _items[key].value(value ? "true" : "false"); 
     } else {
@@ -31,7 +31,7 @@ class DMapValue(K) : DValue, IMap {
     return this;
   }
 
-  DMapValue opIndexAssign(int value, K key) {
+  DStringValueMap opIndexAssign(int value, string key) {
     if (containsKey(key)) {
       _items[key].value(to!string(value)); 
     } else {
@@ -40,7 +40,7 @@ class DMapValue(K) : DValue, IMap {
     return this;
   }
 
-  DMapValue opIndexAssign(double value, K key) {
+  DStringValueMap opIndexAssign(double value, string key) {
     if (containsKey(key)) {
       _items[key].value(to!string(value)); 
     } else {
@@ -49,7 +49,7 @@ class DMapValue(K) : DValue, IMap {
     return this;
   }
 
-  DMapValue opIndexAssign(string value, K key) {    
+  DStringValueMap opIndexAssign(string value, string key) {    
      if (containsKey(key)) {
       _items[key].value(value); 
     } else {
@@ -58,7 +58,7 @@ class DMapValue(K) : DValue, IMap {
     return this;
   }
 
-  DMapValue opIndexAssign(UUID value, K key) {
+  DStringValueMap opIndexAssign(UUID value, string key) {
     if (containsKey(key)) {
       _items[key].value(value.toString); 
     } else {
@@ -67,7 +67,7 @@ class DMapValue(K) : DValue, IMap {
     return this;
   }
 
-  DMapValue opIndexAssign(DValue[] values, K key) {
+  DStringValueMap opIndexAssign(DValue[] values, string key) {
     if (containsKey(key)) {
       _items[key] = new DArrayValue(values); 
     } else {
@@ -76,8 +76,8 @@ class DMapValue(K) : DValue, IMap {
     return this;
   }
 
-  DValue opIndex(this O)(K key) {
-    writeln("DValue opIndex(this O)(K key)");
+  DValue opIndex(this O)(string key) {
+    writeln("DValue opIndex(this O)(string key)");
     writeln(_items);
     return _items.get(key, null);
   }
@@ -90,12 +90,12 @@ class DMapValue(K) : DValue, IMap {
     return _items.length;    
   }
 
-  K[] keys() {
+  string[] keys() {
     return _items.keys;
   }
 
   // containsKey - Returns true if this map contains a mapping for the specified key.
-  bool containsKey(K key) {
+  bool containsKey(string key) {
     foreach(k; keys) {
       if (k == key) { return true; }
     }
@@ -115,7 +115,7 @@ class DMapValue(K) : DValue, IMap {
   }
 
   override DValue copy() {
-    return NullValue; // MapValue!K(attribute, toJson);
+    return NullValue; // StringValueMap(attribute, toJson);
   }
   override DValue dup() {
     return copy;
@@ -141,11 +141,11 @@ class DMapValue(K) : DValue, IMap {
     return "["~results.join(",") ~"]";
   }
 }
-auto MapValue(K)() { return new DMapValue!K(); }
+auto StringValueMap()() { return new DStringValueMap; }
 
 ///
 unittest {  
-  auto stringMap = MapValue!string();
+  auto stringMap = StringValueMap();
   stringMap["key1"] = StringValue("value1");
 
   assert(stringMap["key1"].toString == "value1");
