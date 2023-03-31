@@ -12,6 +12,7 @@ public import uim.models.elements.configuration;
 public import uim.models.elements.element;
 public import uim.models.elements.interface_;
 public import uim.models.elements.registry;
+public import uim.models.elements.version_;
 
 template ElementThis(string name) {
   const char[] ElementThis = `

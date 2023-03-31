@@ -15,13 +15,13 @@ public import uim.models.values.map;
 // Packages
 public import uim.models.values.arrays;
 public import uim.models.values.datetimes;
+public import uim.models.values.elements;
 public import uim.models.values.lookups;
 public import uim.models.values.maps;
 public import uim.models.values.scalars;
 public import uim.models.values.uuids;
 
 // Modules
-public import uim.models.values.element;
 public import uim.models.values.entity;
 public import uim.models.values.null_;
 public import uim.models.values.object_;

@@ -77,8 +77,6 @@ class DStringValueMap : DValue, IMap {
   }
 
   DValue opIndex(this O)(string key) {
-    writeln("DValue opIndex(this O)(string key)");
-    writeln(_items);
     return _items.get(key, null);
   }
 

@@ -3,7 +3,7 @@
 	License: Subject to the terms of the Apache 2.0 license, as written in the included LICENSE.txt file.  
 	Authors: Ozan Nurettin Süel (Sicherheitsschmiede)                                                      
 **********************************************************************************************************/
-module uim.models.values.element;
+module uim.models.values.elements.element;
 
 @safe:
 import uim.models;
@@ -33,32 +33,46 @@ class DElementValue : DValue {
     assert(ElementValue.value(Element).value.id == Element.id);
   }}
 
-  protected void set(DElement newValue) {
-    if (newValue is null) { 
-      this.isNull(isNullable ? true : false); 
-      _value = null; }
-    else {
+  override void set(string newValue) {
+    /// TODO
+  }  
+
+  override void set(Json newValue) {
+    /// TODO
+  }
+
+  void set(DElement newValue) {
+    if (newValue) {
       this.isNull(false);
-      _value = newValue; 
+      _value = newValue;
+      return;
+    } 
+
+    if (isNullable) {
+      this.isNull(true);
+      _value = null;      
     }
-  }  
-
-  override protected void set(string newValue) {
-    /// TODO
-  }  
-
-  override protected void set(Json newValue) {
-    /// TODO
   }
 
-/*   bool opEquals(DElement otherValue) {
-    return (this.value.id == otherValue.id);
+  alias opEquals = DValue.opEquals;
+  bool opEquals(DElementValue otherValue) {
+    string left = value.toString;
+    string right = otherValue.value.toString;
+    return (left == right);
   }
 
-  int opCmp(DElement otherValue) {
+  bool opEquals(DElement otherValue) {
+    return (value.toString == otherValue.toString);
+  }
+
+  override bool opEquals(string otherValue) {
+    return (value.toString == otherValue);
+  }
+
+/*   int opCmp(DElement otherValue) {
     /// TODO
     return 1;
-  } */
+  }  */
 
   override DValue copy() {
     return ElementValue(attribute, toJson);
@@ -75,7 +89,7 @@ class DElementValue : DValue {
   // ElementValue converts to a JsonSTtring
   override string toString() { 
     if (isNull) return null; 
-    return toJson.toString; 
+    return this.value.toString; 
   }
 
   override void fromString(string newValue) { 

@@ -27,6 +27,16 @@ class DEntity : DElement /* : IRegistrable */ {
     super.initialize(configSettings);
 
     this
+      .addValues([
+        "description": StringAttribute,
+        "pool": StringAttribute,
+/*         "versionDescription": StringAttribute,
+        "versionDisplay": StringAttribute,
+        "versionMode": StringAttribute, 
+ */     "version": VersionElementAttribute              
+      ]);
+
+    this
       .className("Entity")
       .id(randomUUID)
       .etag(toTimestamp(now))
@@ -37,25 +47,96 @@ class DEntity : DElement /* : IRegistrable */ {
       .hasVersions(false)
       .hasLanguages(false)
       .config(Json.emptyObject)
-      .values(MapValue!string)
+      .requestPrefix("entity_")
       .versionOn(this.createdOn)
       .versionNumber(1L) // Allways starts with version 1
       .versionBy(this.createdBy);
-
-
-    this
-      .addValues([
-        "test": StringAttribute
-      ]);
   }
 
-  // mixin(ValueProperty!("pool", "string", "DStringValue"));
-  ///
+  mixin(ValueProperty!("string", "description"));  
+  /// 
   unittest {
-    // auto entity = new DEntity;
-    // assert(entity.pool("testPool").pool == "testPool");
+    auto entity = new DEntity;
+    writeln(entity);
+    entity.description = "newDescription";
+    assert(entity.description == "newDescription");
+    assert(entity.description != "noDescription");
+
+    assert(entity.description("otherDescription").description == "otherDescription");
+    assert(entity.description != "noDescription");  
   }
 
+  mixin(ValueProperty!("string", "pool"));
+  /// 
+  unittest {     
+    auto entity = new DEntity;
+    entity.pool = "newPool";
+    assert(entity.pool == "newPool");
+    assert(entity.pool != "noPool");
+
+    assert(entity.pool("otherPool").pool == "otherPool");
+    assert(entity.pool != "noPool"); 
+  }
+
+/*   mixin(ValueProperty!("string", "versionDescription", "version.description")); */
+  @property string versionDescription() {
+    if (auto myValue = cast(DStringValue)values["version.description"]) {
+      writeln("Get DValue for version.description");
+      return myValue.value;
+    }
+    writeln("No get DValue for version.description");
+    return null;       
+  }
+  @property O versionDescription(this O)(string newValue) {
+    if (auto myValue = cast(DStringValue)values["version.description"]) {
+      writeln("Set DValue for version.description with ", newValue);
+      myValue.value(newValue);
+      return cast(O)this;
+    }
+    writeln("No set found DValue for version.description");
+    return cast(O)this;
+  }
+  /// 
+  unittest {
+    auto entity = new DEntity;
+    entity["version.description"] = "version with description";
+    assert(entity["version.description"] == "version with description");
+    
+    writeln("Set version.description");
+    entity.versionDescription = "version with new description";
+    writeln(entity["version.description"]);
+
+    assert(entity.versionDescription == "version with new description");
+    assert(entity.versionDescription != "noVersionDescription");
+
+    assert(entity.versionDescription("version with other description").versionDescription == "version with other description");
+    assert(entity.versionDescription != "noVersionDescription");
+  }
+  
+  mixin(ValueProperty!("string", "versionDisplay", "version.display"));
+  /// 
+  unittest {
+    auto entity = new DEntity;
+    entity.versionDisplay = "newVersionDisplay";
+    assert(entity.versionDisplay == "newVersionDisplay");
+    assert(entity.versionDisplay != "noVersionDisplay");
+
+    assert(entity.versionDisplay("otherVersionDisplay").versionDisplay == "otherVersionDisplay");
+    assert(entity.versionDisplay != "noVersionDisplay");
+  }
+
+  mixin(ValueProperty!("string", "versionMode", "version.mode"));  
+   /// 
+  unittest {
+    auto entity = new DEntity;
+    entity.versionMode = "newVersionMode";
+    assert(entity.versionMode == "newVersionMode");
+    assert(entity.versionMode != "noVersionMode");
+
+    assert(entity.versionMode("otherVersionMode").versionMode == "otherVersionMode");
+    assert(entity.versionMode != "noVersionMode");
+  }
+  
   string[] fieldNames() {
     return [      
       "registerPath", "id", "etag", "name", "display", "createdOn", "createdBy", "modifiedOn", "modifiedBy", "lastAccessedOn", 
@@ -103,11 +184,6 @@ class DEntity : DElement /* : IRegistrable */ {
     this.versionBy(UUID(anUuid)); 
     return cast(O)this;
   }
-
-  mixin(OProperty!("string", "pool"));
-  mixin(OProperty!("string", "versionDescription"));
-  mixin(OProperty!("string", "versionDisplay"));
-  mixin(OProperty!("string", "versionMode"));
 
   O createVersion(this O)(string display = "", string description = "") {
     this.hasVersions = true;
@@ -317,9 +393,6 @@ class DEntity : DElement /* : IRegistrable */ {
     if (anUuid.isUUID) this.lastAccessBy(UUID(anUuid)); 
     else _lastAccessBy = NULLUUID;
     return cast(O)this; }
-
-  ///	Description about the entity and more
-  mixin(OProperty!("string", "description"));
 
   ///	Entity has only one version. Version handling starts with EntityVersion	
   mixin(OProperty!("bool", "hasVersions"));

@@ -23,15 +23,59 @@ class DElement {
 
   void initialize(Json configSettings = Json(null)) {
     this  
+      .values(StringValueMap);
+
+    this
+      .addValues([
+        "className": StringAttribute,
+        "registerPath": StringAttribute,
+        "requestPrefix": StringAttribute
+      ]);
+
+    this  
       .requestPrefix("element_");
   }
 
-  mixin(DStringValueMap, "values"));
+  mixin(OProperty!("DStringValueMap", "values"));
   mixin ValueMapWrapper;
 
-  mixin(OProperty!("string", "className"));
-  mixin(OProperty!("bool", "isDynamic"));
-  mixin(OProperty!("string", "requestPrefix"));
+  mixin(OProperty!("bool", "isStatic"));
+
+  mixin(ValueProperty!("string", "className"));
+  /// 
+  unittest {
+    auto element = new DElement;
+    element.className = "newClassName";
+    assert(element.className == "newClassName");
+    assert(element.className != "noClassName");
+
+    assert(element.className("otherClassName").className == "otherClassName");
+    assert(element.className != "noClassName");
+  }
+
+  mixin(ValueProperty!("string", "registerPath"));
+  /// 
+  unittest {
+    auto element = new DElement;
+    element.registerPath = "newRegisterPath";
+    assert(element.registerPath == "newRegisterPath");
+    assert(element.registerPath != "noRegisterPath");
+
+    assert(element.registerPath("otherRegisterPath").registerPath == "otherRegisterPath");
+    assert(element.registerPath != "noRegisterPath");
+  }
+
+  mixin(ValueProperty!("string", "requestPrefix")); 
+  /// 
+  unittest {
+    auto element = new DElement;
+    element.requestPrefix = "newRequestPrefix";
+    assert(element.requestPrefix == "newRequestPrefix");
+    assert(element.requestPrefix != "noRequestPrefix");
+
+    assert(element.requestPrefix("otherRequestPrefix").requestPrefix == "otherRequestPrefix");
+    assert(element.requestPrefix != "noRequestPrefix");
+  }
 
   // Every element can have a name like an identifier. 
   string _name;
@@ -52,9 +96,7 @@ class DElement {
 
   //	Description about the entity and more
   mixin(OProperty!("string", "description")); */
-  
-  mixin(OProperty!("string", "registerPath"));
-  
+    
   STRINGAA selector(STRINGAA parameters) {
     STRINGAA results;
 
@@ -89,25 +131,69 @@ class DElement {
 
   // Returns data in string format (HTML compatible)
   string opIndex(string key) {
-    switch(key) {
-      case "name": return this.name;
-      default:
-        if (auto value = values[key]) { return value.toString; }
-        return null;
+    if (auto value = valueOfKey(key)) { 
+      return value.toString;
     }      
+    return null;
   }
 
   // Set data 
-  void opIndexAssign(string newValue, string key) {
-    writeln("In void opIndexAssign(string newValue, string key)");
+  void opIndexAssign(DValue newValue, string key) {
+    if (!isStatic) { // can add new values and change datatypes
+      values[key] = newValue;  
+    } else { // Not dynamic
+      if (auto myValue = valueOfKey(key)) {
+        myValue.value(newValue.toJson);
+      }
+    }
+  }
+  ///
+  unittest {
+    auto value = (new DStringAttribute).createValue;
+    value.set("aValue");
+    assert(value.toString == "aValue");
+
+    auto element = new DElement;
+    element["test"] = value;
+
+    assert(element["test"] == "aValue");
+  } 
+
+  // Set data 
+  void opIndexAssign(Json newValue, string key) {
     if (auto myValue = valueOfKey(key)) {
-      writeln("Found Value");
       myValue.set(newValue);
       return;
     }
-    writeln("Not Found Value");
 
-    if (isDynamic) { // can add new values
+/*     if (!isStatic) { // can add new values
+      switch(newValue.type) {
+        case Json.Type.string: 
+          this.value(newValue.get!string); 
+        break;
+
+              auto myValue = StringAttribute.createValue;
+      myValue.set(newValue);
+      values[key] = myValue;
+    }
+ */  }
+  ///
+  unittest {
+    auto element = new DElement;
+    element.addValues(["test":StringAttribute]);
+    element["test"] = "something";
+    assert(element["test"] == "something");
+    assert(element["test"] != "a thing");
+  } 
+
+  // Set data 
+  void opIndexAssign(string newValue, string key) {
+    if (auto myValue = valueOfKey(key)) {
+      myValue.set(newValue);
+      return;
+    }
+
+    if (!isStatic) { // can add new values
       auto myValue = StringAttribute.createValue;
       myValue.set(newValue);
       values[key] = myValue;
@@ -118,21 +204,45 @@ class DElement {
     auto element = new DElement;
     element.addValues(["test":StringAttribute]);
     element["test"] = "something";
-    // assert(element["test"] == "something");
+    assert(element["test"] == "something");
+    assert(element["test"] != "a thing");
   } 
 
   DValue valueOfKey(string key) {
-    writeln("DValue valueOfKey(string key)");
-/*     if (auto keys = key.split(".")) {
+    writeln("In DValue valueOfKey(string key = "~key~")");
+    if (auto myValue = values[key]) {
+      writeln("Not Path");
+      return myValue;
+    }
+
+    writeln("Looking in path");
+    if (auto keys = key.split(".")) {
       if (keys.length == 1) { return values[key]; }
 
-      DValue myValue = cast(DElementValue)values[keys[0]];
+      DValue myValue = values[keys[0]];
       if (auto myElementValue = cast(DElementValue)myValue) {
-        return myElementValue.value.valueOfKey(keys[1..$].join("."));
+        myValue = myElementValue.value.valueOfKey(keys[1..$].join("."));
       }
       return myValue;
     }
- */    return values[key];
+
+    return null;
+  }
+  ///
+  unittest{
+    auto element2 = new DElement;
+    element2.addValues(["level2": StringAttribute]);
+    element2["level2"] = "valueLevel2";
+
+    auto value2 = new DElementValue;
+    value2.set(element2);
+
+    auto element1 = new DElement;
+    element1["level1"] = value2;
+
+    writeln(element1);
+    writeln(element1["level1.level2"]);
+    assert(element1["level1.level2"] == "valueLevel2");
   }
 
   // Set UUID value
@@ -212,6 +322,10 @@ class DElement {
     }
   
     return result;
+  }
+
+  override string toString() {
+    return toJson.toString;
   }
 }
 auto Element() { return new DElement; }

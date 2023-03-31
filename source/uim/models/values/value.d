@@ -96,7 +96,10 @@ class DValue : IValue {
   Json toJson() {
     return Json(null); }
 
-  override string toString() { return null; }
+  override string toString() { 
+    return null; 
+  }
+  
   void fromString(string newValue) { }
 }
 
