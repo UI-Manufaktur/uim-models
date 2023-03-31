@@ -6,20 +6,16 @@ import uim.models;
 template ValueProperty(string datatype, string name, string path = null, string valueClass = "DStringValue") {
   const char[] ValueProperty = `
     @property `~datatype~` `~name~`() {
-      if (auto myValue = cast(`~valueClass~`)values["`~(path ? path : name)~`"]) {
-        writeln("Get DValue for `~(path ? path : name)~`");
+      if (auto myValue = cast(`~valueClass~`)valueOfKey("`~(path ? path : name)~`")) {
         return myValue.value;
       }
-      writeln("No get DValue for `~(path ? path : name)~`");
       return null;       
     }
     @property O `~name~`(this O)(`~datatype~` newValue) {
-      if (auto myValue = cast(`~valueClass~`)values["`~(path ? path : name)~`"]) {
-        writeln("Set DValue for `~(path ? path : name)~` with ", newValue);
+      if (auto myValue = cast(`~valueClass~`)valueOfKey("`~(path ? path : name)~`")) {
         myValue.value(newValue);
         return cast(O)this;
       }
-      writeln("No set found DValue for `~(path ? path : name)~`");
       return cast(O)this;
     }
   `;

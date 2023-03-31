@@ -209,13 +209,10 @@ class DElement {
   } 
 
   DValue valueOfKey(string key) {
-    writeln("In DValue valueOfKey(string key = "~key~")");
     if (auto myValue = values[key]) {
-      writeln("Not Path");
       return myValue;
     }
 
-    writeln("Looking in path");
     if (auto keys = key.split(".")) {
       if (keys.length == 1) { return values[key]; }
 

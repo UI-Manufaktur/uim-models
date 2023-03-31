@@ -3,7 +3,24 @@
   License: Subject to the terms of the Apache 2.0 license, as written in the included LICENSE.txt file.  
   Authors: Ozan Nurettin Süel (Sicherheitsschmiede)                                                      
 **********************************************************************************************************/
-module uim.models.attributes.elements;
+module uim.models.attributes.elements.version_;
 
-public import uim.models.attributes.elements.element;
-public import uim.models.attributes.elements.version_;
+@safe:
+import uim.models;
+
+class DVersionElementAttribute : DAttribute {
+  mixin(AttributeThis!("VersionElementAttribute"));
+
+  override DValue createValue() {
+    return ElementValue(this)
+      .value(
+        Version        
+      );
+  }
+}
+mixin(AttributeCalls!"VersionElementAttribute");
+
+version(test_uim_models) { unittest {
+  testAttribute(new DVersionElementAttribute);
+  testAttribute(VersionElementAttribute);
+}}

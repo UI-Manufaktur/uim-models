@@ -78,24 +78,7 @@ class DEntity : DElement /* : IRegistrable */ {
     assert(entity.pool != "noPool"); 
   }
 
-/*   mixin(ValueProperty!("string", "versionDescription", "version.description")); */
-  @property string versionDescription() {
-    if (auto myValue = cast(DStringValue)values["version.description"]) {
-      writeln("Get DValue for version.description");
-      return myValue.value;
-    }
-    writeln("No get DValue for version.description");
-    return null;       
-  }
-  @property O versionDescription(this O)(string newValue) {
-    if (auto myValue = cast(DStringValue)values["version.description"]) {
-      writeln("Set DValue for version.description with ", newValue);
-      myValue.value(newValue);
-      return cast(O)this;
-    }
-    writeln("No set found DValue for version.description");
-    return cast(O)this;
-  }
+   mixin(ValueProperty!("string", "versionDescription", "version.description")); 
   /// 
   unittest {
     auto entity = new DEntity;
