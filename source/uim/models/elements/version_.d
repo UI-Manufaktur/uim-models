@@ -27,10 +27,45 @@ class DVersion: DElement {
     this
       .addValues([
         "description": StringAttribute,
+        "by": UUIDAttribute,
         "display": StringAttribute,
-        "mode": StringAttribute
+        "mode": StringAttribute,
+        "number": LongAttribute,
+        "on": TimestampAttribute
       ]);
   }
+
+  mixin(LongValueProperty!("number"));
+
+  ///	Date and time when the entity was versioned.	
+  mixin(TimeStampValueProperty!("on"));
+  /// 
+  unittest {
+    auto timestamp = toTimestamp(now);
+    auto element = new DVersion;
+    element.on = timestamp;
+    assert(element.on == timestamp);
+    assert(element.on != 1);
+
+    timestamp = toTimestamp(now);
+    assert(element.on(timestamp).on == timestamp);
+    assert(element.on != 1);
+  }
+
+  // Who created version
+  mixin(UUIDValueProperty!("by"));
+  /// 
+  unittest {
+    auto id = randomUUID;
+    auto element = new DVersion;
+    element.by = id;
+    assert(element.by == id);
+    assert(element.by != randomUUID);
+
+    id = randomUUID;
+    assert(element.by(id).by == id);
+    assert(element.by != randomUUID);
+  } 
 
   mixin(ValueProperty!("string", "description"));
   /// 

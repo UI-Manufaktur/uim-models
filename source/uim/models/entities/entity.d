@@ -30,10 +30,7 @@ class DEntity : DElement /* : IRegistrable */ {
       .addValues([
         "description": StringAttribute,
         "pool": StringAttribute,
-/*         "versionDescription": StringAttribute,
-        "versionDisplay": StringAttribute,
-        "versionMode": StringAttribute, 
- */     "version": VersionElementAttribute              
+        "version": VersionElementAttribute              
       ]);
 
     this
@@ -48,6 +45,7 @@ class DEntity : DElement /* : IRegistrable */ {
       .hasLanguages(false)
       .config(Json.emptyObject)
       .requestPrefix("entity_")
+      // Initialize version
       .versionOn(this.createdOn)
       .versionNumber(1L) // Allways starts with version 1
       .versionBy(this.createdBy);
@@ -78,16 +76,48 @@ class DEntity : DElement /* : IRegistrable */ {
     assert(entity.pool != "noPool"); 
   }
 
-   mixin(ValueProperty!("string", "versionDescription", "version.description")); 
+  mixin(LongValueProperty!("versionNumber", "version.number"));
+
+///	Date and time when the entity was versioned.	
+  mixin(TimeStampValueProperty!("versionOn", "version.on"));
+  /// 
+  unittest {
+    auto timestamp = toTimestamp(now);
+    auto entity = new DEntity;
+
+    entity.versionOn = timestamp;
+    assert(entity.versionOn == timestamp);
+    assert(entity.versionOn != 1);
+
+    timestamp = toTimestamp(now);
+    assert(entity.versionOn(timestamp).versionOn == timestamp);
+    assert(entity.versionOn != 1);
+  }
+
+  // Who created version
+  mixin(UUIDValueProperty!("versionBy", "version.by"));
+  /// 
+  unittest {
+    auto id = randomUUID;
+    auto entity = new DEntity;
+
+    entity.versionBy = id;
+    assert(entity.versionBy == id);
+    assert(entity.versionBy != randomUUID);
+
+    id = randomUUID;
+    assert(entity.versionBy(id).versionBy == id);
+    assert(entity.versionBy != randomUUID);
+  } 
+
+  mixin(ValueProperty!("string", "versionDescription", "version.description")); 
   /// 
   unittest {
     auto entity = new DEntity;
     entity["version.description"] = "version with description";
     assert(entity["version.description"] == "version with description");
     
-    writeln("Set version.description");
     entity.versionDescription = "version with new description";
-    writeln(entity["version.description"]);
 
     assert(entity.versionDescription == "version with new description");
     assert(entity.versionDescription != "noVersionDescription");
@@ -150,23 +180,7 @@ class DEntity : DElement /* : IRegistrable */ {
   mixin(OProperty!("Json", "config"));
 
 /// Versioning
-  ///	Date and time when the entity was versioned.	
-  mixin(OProperty!("long", "versionOn"));
-  O versionOn(this O)(SysTime aTime) {
-    this.versionOn(toTimeStamp(aTime));
-    return cast(O)this;
-  }
-  O versionOn(this O)(string aTime) {
-    this.versionOn(to!long(aTime));
-    return cast(O)this;
-  }
   
-  ///	Unique identifier of the user who versioned the entity.
-  mixin(OProperty!("UUID", "versionBy"));
-  O versionBy(this O)(string anUuid) { 
-    this.versionBy(UUID(anUuid)); 
-    return cast(O)this;
-  }
 
   O createVersion(this O)(string display = "", string description = "") {
     this.hasVersions = true;
@@ -429,12 +443,7 @@ class DEntity : DElement /* : IRegistrable */ {
   O deletedBy(this O)(string anUuid) { 
     this.deletedBy(UUID(anUuid)); 
     return cast(O)this; }
-
-  mixin(OProperty!("long", "versionNumber"));
-  O versionNumber(this O)(string newValue) {
-    this.versionNumber(to!long(newValue));
-    return cast(O)this; }
-  
+ 
   override STRINGAA selector(STRINGAA parameters) {
     STRINGAA results;
 
@@ -494,8 +503,8 @@ class DEntity : DElement /* : IRegistrable */ {
       case "versionNumber": return to!string(this.versionNumber);
       case "versionDisplay": return this.versionDisplay;
       case "versionMode": return this.versionMode;
-      case "versionOn": return to!string(this.versionOn);
-      case "versionBy": return to!string(this.versionBy);
+/*       case "versionOn": return to!string(this.versionOn);
+      case "versionBy": return to!string(this.versionBy); */
       case "versionDescription": return this.versionDescription;
       default:
         //if (key in attributes) { return attributes[key].stringValue; }
@@ -543,8 +552,8 @@ class DEntity : DElement /* : IRegistrable */ {
       case "versionNumber": this.versionNumber(value); break;
       case "versionDisplay": this.versionDisplay(value); break;
       case "versionMode": this.versionMode(value); break;
-      case "versionOn": this.versionOn(value); break;
-      case "versionBy": this.versionBy(value); break;
+/*       case "versionOn": this.versionOn(value); break;
+      case "versionBy": this.versionBy(value); break; */
       case "versionDescription": this.versionDescription(value); break;
       default:
         // if (key in attributes) attributes[key].value(value); 
@@ -577,7 +586,7 @@ class DEntity : DElement /* : IRegistrable */ {
       case "lastAccessBy": this.lastAccessBy(value); break; 
       case "lockedBy": this.lockedBy(value); break; 
       case "deletedBy": this.deletedBy(value); break; 
-      case "versionBy": this.versionBy(value); break;
+/*       case "versionBy": this.versionBy(value); break; */
       default:
         /* if (key in attributes) {
           if (auto att = cast(DOOPUUIDAttribute)attributes[key]) att.value(value); 
@@ -596,7 +605,7 @@ class DEntity : DElement /* : IRegistrable */ {
       case "lastAccessedOn": this.lastAccessedOn(value); break; 
       case "lockedOn": this.lockedOn(value); break;
       case "deletedOn": this.deletedOn(value); break;
-      case "versionOn": this.versionOn(value); break;
+/*       case "versionOn": this.versionOn(value); break; */
       default:
         values[key] = value;
         break;
@@ -700,8 +709,8 @@ class DEntity : DElement /* : IRegistrable */ {
         case "versionNumber": this.versionNumber(v.get!long); break;
         case "versionDisplay": this.versionDisplay(v.get!string); break;
         case "versionMode": this.versionMode(v.get!string); break;
-        case "versionOn": this.versionOn(v.get!long); break;
-        case "versionBy": this.versionBy(v.get!string); break;
+/*         case "versionOn": this.versionOn(v.get!long); break;
+        case "versionBy": this.versionBy(v.get!string); break; */
         case "versionDescription": this.versionDescription(v.get!string); break;
         default: 
           /* if (k in _attributes) {
@@ -723,7 +732,6 @@ class DEntity : DElement /* : IRegistrable */ {
       result["id"] = this.id.toString;
       result["name"] = this.name;
       result["display"] = this.display;
-      result["versionNumber"] = this.versionNumber;
       result["createdOn"] = this.createdOn;
       result["createdBy"] = this.createdBy.toString;
       result["modifiedOn"] = this.modifiedOn;
@@ -751,12 +759,6 @@ class DEntity : DElement /* : IRegistrable */ {
       result["parameters"] = parameterValues;
 
       result["config"] = this.config;     
-      result["versionNumber"] = this.versionNumber;
-      result["versionDisplay"] = this.versionDisplay;
-      result["versionMode"] = this.versionMode;
-      result["versionOn"] = this.versionOn;
-      result["versionBy"] = this.versionBy.toString;
-      result["versionDescription"] = this.versionDescription;
 
 /*       foreach(k; _attributes.byKey) {
         if (!hideFields.exist(k)) result[k] = _attributes[k].jsonValue;
@@ -770,7 +772,6 @@ class DEntity : DElement /* : IRegistrable */ {
       if (!hideFields.exist("id")) result["id"] = this.id.toString;
       if (!hideFields.exist("name")) result["name"] = this.name;
       if (!hideFields.exist("display")) result["display"] = this.display;
-      if (!hideFields.exist("versionNumber")) result["versionNumber"] = this.versionNumber;
       if (!hideFields.exist("createdOn")) result["createdOn"] = this.createdOn;
       if (!hideFields.exist("createdBy")) result["createdBy"] = this.createdBy.toString;
       if (!hideFields.exist("modifiedOn")) result["modifiedOn"] = this.modifiedOn;
@@ -800,19 +801,12 @@ class DEntity : DElement /* : IRegistrable */ {
         result["parameters"] = parameterValues;
       }
       if (!hideFields.exist("config")) result["config"] = this.config;     
-      if (!hideFields.exist("versionNumber")) result["versionNumber"] = this.versionNumber;
-      if (!hideFields.exist("versionDisplay")) result["versionDisplay"] = this.versionDisplay;
-      if (!hideFields.exist("versionMode")) result["versionMode"] = this.versionMode;
-      if (!hideFields.exist("versionOn")) result["versionOn"] = this.versionOn;
-      if (!hideFields.exist("versionBy")) result["versionBy"] = this.versionBy.toString;
-      if (!hideFields.exist("versionDescription")) result["versionDescription"] = this.versionDescription;
     }
     else {
       if ((showFields.exist("registerPath")) && (!hideFields.exist("registerPath"))) result["registerPath"] = this.registerPath;
       if ((showFields.exist("id")) && (!hideFields.exist("id"))) result["id"] = this.id.toString;
       if ((showFields.exist("name")) && (!hideFields.exist("name"))) result["name"] = this.name;
       if ((showFields.exist("display")) && (!hideFields.exist("display"))) result["display"] = this.display;
-      if ((showFields.exist("versionNumber")) && (!hideFields.exist("versionNumber"))) result["versionNumber"] = this.versionNumber;
       if ((showFields.exist("createdOn")) && (!hideFields.exist("createdOn"))) result["createdOn"] = this.createdOn;
       if ((showFields.exist("createdBy")) && (!hideFields.exist("createdBy"))) result["createdBy"] = this.createdBy.toString;
       if ((showFields.exist("modifiedOn")) && (!hideFields.exist("modifiedOn"))) result["modifiedOn"] = this.modifiedOn;
@@ -842,12 +836,6 @@ class DEntity : DElement /* : IRegistrable */ {
         result["parameters"] = values;
       }
       if ((showFields.exist("config")) && (!hideFields.exist("config"))) result["config"] = this.config;
-      if ((showFields.exist("versionNumber")) && (!hideFields.exist("versionNumber"))) result["versionNumber"] = this.versionNumber;
-      if ((showFields.exist("versionDisplay")) && (!hideFields.exist("versionDisplay"))) result["versionDisplay"] = this.versionDisplay;
-      if ((showFields.exist("versionOn")) && (!hideFields.exist("versionOn"))) result["versionOn"] = this.versionOn;
-      if ((showFields.exist("versionMode")) && (!hideFields.exist("versionMode"))) result["versionMode"] = this.versionMode;
-      if ((showFields.exist("versionBy")) && (!hideFields.exist("versionBy"))) result["versionBy"] = this.versionBy.toString;
-      if ((showFields.exist("versionDescription")) && (!hideFields.exist("versionDescription"))) result["versionDescription"] = this.versionDescription;
     }
 
     if (showFields.length == 0) {

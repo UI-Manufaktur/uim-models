@@ -237,8 +237,6 @@ class DElement {
     auto element1 = new DElement;
     element1["level1"] = value2;
 
-    writeln(element1);
-    writeln(element1["level1.level2"]);
     assert(element1["level1.level2"] == "valueLevel2");
   }
 
@@ -269,7 +267,7 @@ class DElement {
   // Set field(key) if type Entity
   void opIndexAssign(DElement value, string key) {
     if (auto myValue = cast(DElementValue)valueOfKey(key)) { 
-      // values[key] exists and value of DLongValue
+      // values[key] exists and value of DElementValue
       myValue.value = value;
     }   
   }
@@ -333,6 +331,5 @@ version(test_uim_models) { unittest {
   assert(Element);
   assert(Element.name("test").name == "test");
   assert(Element.name("testName").name == "testname");
-
 }}
 
