@@ -25,13 +25,6 @@ class DElement {
     this  
       .values(StringValueMap);
 
-    this
-      .addValues([
-        "className": StringAttribute,
-        "registerPath": StringAttribute,
-        "requestPrefix": StringAttribute
-      ]);
-
     this  
       .requestPrefix("element_");
   }
@@ -41,7 +34,7 @@ class DElement {
 
   mixin(OProperty!("bool", "isStatic"));
 
-  mixin(ValueProperty!("string", "className"));
+  mixin(OProperty!("string", "className"));
   /// 
   unittest {
     auto element = new DElement;
@@ -53,7 +46,7 @@ class DElement {
     assert(element.className != "noClassName");
   }
 
-  mixin(ValueProperty!("string", "registerPath"));
+  mixin(OProperty!("string", "registerPath"));
   /// 
   unittest {
     auto element = new DElement;
@@ -65,7 +58,7 @@ class DElement {
     assert(element.registerPath != "noRegisterPath");
   }
 
-  mixin(ValueProperty!("string", "requestPrefix")); 
+  mixin(OProperty!("string", "requestPrefix")); 
   /// 
   unittest {
     auto element = new DElement;
@@ -131,9 +124,15 @@ class DElement {
 
   // Returns data in string format (HTML compatible)
   string opIndex(string key) {
-    if (auto value = valueOfKey(key)) { 
-      return value.toString;
-    }      
+    switch(key) {
+      case "className": return className;
+      case "requestPrefix": return requestPrefix;
+      case "registerPath": return registerPath;
+      default:
+        if (auto value = valueOfKey(key)) { 
+          return value.toString;
+        } break;      
+    }
     return null;
   }
 
@@ -188,15 +187,23 @@ class DElement {
 
   // Set data 
   void opIndexAssign(string newValue, string key) {
-    if (auto myValue = valueOfKey(key)) {
-      myValue.set(newValue);
-      return;
-    }
+    switch(key) {
+      case "className": this.className(newValue); break;
+      case "name": this.name(newValue); break;
+      case "requestPrefix": this.requestPrefix(newValue); break;
+      case "registerPath": this.registerPath(newValue); break;
+      default:
+        if (auto myValue = valueOfKey(key)) {
+          myValue.set(newValue);
+          return;
+        }
 
-    if (!isStatic) { // can add new values
-      auto myValue = StringAttribute.createValue;
-      myValue.set(newValue);
-      values[key] = myValue;
+        if (!isStatic) { // can add new values
+          auto myValue = StringAttribute.createValue;
+          myValue.set(newValue);
+          values[key] = myValue;
+        } 
+        break;
     }
   }
   ///
@@ -299,7 +306,10 @@ class DElement {
       auto k = keyvalue.key;
       auto v = keyvalue.value;
       switch(k) {
+        case "className": this.className(v.get!string); break;
         case "name": this.name(v.get!string); break;
+        case "requestPrefix": this.requestPrefix(v.get!string); break;
+        case "registerPath": this.registerPath(v.get!string); break;
         default: 
           this.values[k].value(v);
           break;
@@ -312,9 +322,7 @@ class DElement {
     
     result["name"] = this.name;
 
-    foreach(k; values.keys) {
-      result[k] = this.values[k].toJson;
-    }
+    values.keys.each!(k => result[k] = this.values[k].toJson);
   
     return result;
   }

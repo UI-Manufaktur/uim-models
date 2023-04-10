@@ -7,8 +7,11 @@ public import std.uuid;
 // Dub
 public import vibe.d;
 
-public import uim.core;
-public import uim.oop;
+public { // Required uim libraries 
+  import uim.core;
+  import uim.oop;
+  import uim.entitybase;
+}
 
 public { // uim.models packages
   import uim.models.attributes;

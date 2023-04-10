@@ -18,11 +18,15 @@
 			"importPaths": [
 				"../../LIBS/uim-core",
 				"../../LIBS/uim-oop",
+				"../../LIBS/uim-entitybase",
+				"../../LIBS/uim-jsonbase",
 				"./"
 			],
 			"sourcePaths": [
 				"../../LIBS/uim-core",
 				"../../LIBS/uim-oop",
+				"../../LIBS/uim-entitybase",
+				"../../LIBS/uim-jsonbase",
 				"./"
 			]					
 		},

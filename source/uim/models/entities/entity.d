@@ -51,6 +51,9 @@ class DEntity : DElement /* : IRegistrable */ {
       .versionBy(this.createdBy);
   }
 
+  mixin(OProperty!("DETBCollection", "collection"));
+  mixin(OProperty!("string", "routingPath")); // required for routing
+
   mixin(ValueProperty!("string", "description"));  
   /// 
   unittest {

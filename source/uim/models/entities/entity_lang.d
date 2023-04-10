@@ -8,7 +8,7 @@ module uim.models.entities.entity_lang;
 @safe:
 import uim.models;
 
-class DEntityLang : DEntity {
+/* class DEntityLang : DEntity {
   this() { super(); }
   this(UUID myId) { super(myId); }
   this(string myName) { super(myName);}
@@ -29,4 +29,4 @@ auto EntityLang() { return new DEntityLang; }
 version(test_uim_models) {
   unittest {
   }
-}
+} */

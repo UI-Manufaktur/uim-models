@@ -62,3 +62,11 @@ class DOOPEntities {
 /* version(test_uim_models) { unittest {
     assert(OOPEntities);
 }} */
+
+Json toJson(DEntity[] someEntities) {
+  Json result = Json.emptyArray;
+
+  someEntities.each!(e => result ~= e.toJson);
+  
+  return result;
+}
