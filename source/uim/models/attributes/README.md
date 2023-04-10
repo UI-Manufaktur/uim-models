@@ -1,1 +1,1 @@
-# uim.models.attributes
+# Package 📦 uim.models.attributes
