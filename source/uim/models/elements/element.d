@@ -110,12 +110,12 @@ class DElement {
   }
 
   // Read data from STRINGAA
-  void fromStringAA(STRINGAA reqParameters) {
+  void fromStringAA(STRINGAA reqParameters, bool usePrefix = false) {
     foreach(k, v; reqParameters) this[k] = v; 
   }
 
   // Read data from request
-  void fromRequest(STRINGAA requestValues) {
+  void fromRequest(STRINGAA requestValues, bool usePrefix = true) {
     auto myData = selector(requestValues);
     foreach(key, value; myData) {
       this[key] = value;

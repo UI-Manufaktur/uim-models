@@ -2,7 +2,7 @@
 	"fileVersion": 1,
 	"versions": {
 		"color": "0.0.9",
-		"colored": "0.0.29",
+		"colored": "0.0.31",
 		"diet-ng": "1.8.1",
 		"eventcore": "0.9.25",
 		"libasync": "0.8.6",
@@ -15,7 +15,7 @@
 		"taggedalgebraic": "0.11.22",
 		"uim-core": "0.20.12",
 		"unit-threaded": "2.1.5",
-		"vibe-core": "2.1.0",
+		"vibe-core": "2.2.0",
 		"vibe-d": "0.9.6"
 	}
 }
