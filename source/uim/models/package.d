@@ -1,11 +1,15 @@
 module uim.models;
 
-public import std.stdio;
-public import std.string;
-public import std.uuid;
+public { // Phobos
+  import std.stdio;
+  import std.string;
+  import std.uuid;
+}
 
 // Dub
-public import vibe.d;
+public {
+  import vibe.d;
+}
 
 public { // Required uim libraries 
   import uim.core;
