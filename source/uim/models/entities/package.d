@@ -10,11 +10,8 @@ import uim.models;
 
 public { 
 	import uim.models.entities.entity;
-public { 
 	import uim.models.entities.entities;
-public { 
 	import uim.models.entities.entity_lang;
-public { 
 	import uim.models.entities.registry;
 
 template EntityThis(string name) {

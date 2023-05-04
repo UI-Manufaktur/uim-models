@@ -10,7 +10,5 @@ public {
 
 public { 
 	import uim.models.attributes.strings.names.first;
-public { 
 	import uim.models.attributes.strings.names.full;
-public { 
 	import uim.models.attributes.strings.names.middle;

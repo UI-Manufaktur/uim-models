@@ -10,5 +10,4 @@ import uim.models;
 
 public { 
 	import uim.models.attributes.strings.languagetags.languagetag;
-public { 
 	import uim.models.attributes.strings.languagetags.culturetag;

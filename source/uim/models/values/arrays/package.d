@@ -10,9 +10,6 @@ public {
 
 public { 
 	import uim.models.values.arrays.integer;
-public { 
 	import uim.models.values.arrays.string_;
-public { 
 	import uim.models.values.arrays.tag;
-public { 
 	import uim.models.values.arrays.value;

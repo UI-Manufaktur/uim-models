@@ -10,10 +10,7 @@ import uim.models;
 
 public { 
 	import uim.models.elements.configuration;
-public { 
 	import uim.models.elements.element;
-public { 
 	import uim.models.elements.registry;
-public { 
 	import uim.models.elements.version_;
 
