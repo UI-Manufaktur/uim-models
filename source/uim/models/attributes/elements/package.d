@@ -5,5 +5,7 @@
 **********************************************************************************************************/
 module uim.models.attributes.elements;
 
-public import uim.models.attributes.elements.element;
-public import uim.models.attributes.elements.version_;
+public { 
+	importuim.models.attributes.elements.element;
+public { 
+	importuim.models.attributes.elements.version_;

@@ -5,8 +5,13 @@
 **********************************************************************************************************/
 module uim.models.attributes.entities.users;
 
-public import uim.models.attributes.entities.users.user;
-public import uim.models.attributes.entities.users.owner;
-public import uim.models.attributes.entities.users.createdonbehalfby;
-public import uim.models.attributes.entities.users.modifiedonbehalfby;
-public import uim.models.attributes.entities.users.team;
+public { 
+	importuim.models.attributes.entities.users.user;
+public { 
+	importuim.models.attributes.entities.users.owner;
+public { 
+	importuim.models.attributes.entities.users.createdonbehalfby;
+public { 
+	importuim.models.attributes.entities.users.modifiedonbehalfby;
+public { 
+	importuim.models.attributes.entities.users.team;

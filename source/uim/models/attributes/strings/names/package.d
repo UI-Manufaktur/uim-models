@@ -5,8 +5,12 @@
 **********************************************************************************************************/
 module uim.models.attributes.strings.names;
 
-public import uim.models.attributes.strings.names.name;
+public { 
+	importuim.models.attributes.strings.names.name;
 
-public import uim.models.attributes.strings.names.first;
-public import uim.models.attributes.strings.names.full;
-public import uim.models.attributes.strings.names.middle;
+public { 
+	importuim.models.attributes.strings.names.first;
+public { 
+	importuim.models.attributes.strings.names.full;
+public { 
+	importuim.models.attributes.strings.names.middle;

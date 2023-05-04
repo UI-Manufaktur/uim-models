@@ -6,21 +6,37 @@
 module uim.models.attributes.chars.strings;
 
 // main
-public import uim.models.attributes.strings.string_;
+public { 
+	importuim.models.attributes.strings.string_;
 
 // subs
-public import uim.models.attributes.strings.addressline;
-public import uim.models.attributes.strings.attributename;
-public import uim.models.attributes.strings.city;
-public import uim.models.attributes.strings.colorname;
-public import uim.models.attributes.strings.companyname;
-public import uim.models.attributes.strings.country;
-public import uim.models.attributes.strings.county;
-public import uim.models.attributes.strings.html;
-public import uim.models.attributes.strings.json;
-public import uim.models.attributes.strings.languagetags;
-public import uim.models.attributes.strings.lastname;
-public import uim.models.attributes.strings.link;
-public import uim.models.attributes.strings.list;
-public import uim.models.attributes.strings.url;
-public import uim.models.attributes.strings.xml;
+public { 
+	importuim.models.attributes.strings.addressline;
+public { 
+	importuim.models.attributes.strings.attributename;
+public { 
+	importuim.models.attributes.strings.city;
+public { 
+	importuim.models.attributes.strings.colorname;
+public { 
+	importuim.models.attributes.strings.companyname;
+public { 
+	importuim.models.attributes.strings.country;
+public { 
+	importuim.models.attributes.strings.county;
+public { 
+	importuim.models.attributes.strings.html;
+public { 
+	importuim.models.attributes.strings.json;
+public { 
+	importuim.models.attributes.strings.languagetags;
+public { 
+	importuim.models.attributes.strings.lastname;
+public { 
+	importuim.models.attributes.strings.link;
+public { 
+	importuim.models.attributes.strings.list;
+public { 
+	importuim.models.attributes.strings.url;
+public { 
+	importuim.models.attributes.strings.xml;

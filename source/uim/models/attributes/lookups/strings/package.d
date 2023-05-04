@@ -5,6 +5,9 @@
 **********************************************************************************************************/
 module uim.models.attributes.lookups.strings;
 
-public import uim.models.attributes.lookups.strings.boolean;
-public import uim.models.attributes.lookups.strings.integer;
-public import uim.models.attributes.lookups.strings.string_;
+public { 
+	importuim.models.attributes.lookups.strings.boolean;
+public { 
+	importuim.models.attributes.lookups.strings.integer;
+public { 
+	importuim.models.attributes.lookups.strings.string_;

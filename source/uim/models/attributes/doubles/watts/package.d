@@ -5,8 +5,12 @@
 **********************************************************************************************************/
 module uim.models.attributes.doubles.watts;
 
-public import uim.models.attributes.doubles.watts.watt;
+public { 
+	importuim.models.attributes.doubles.watts.watt;
 
-public import uim.models.attributes.doubles.watts.kilo;
-public import uim.models.attributes.doubles.watts.mega;
-public import uim.models.attributes.doubles.watts.milli;
+public { 
+	importuim.models.attributes.doubles.watts.kilo;
+public { 
+	importuim.models.attributes.doubles.watts.mega;
+public { 
+	importuim.models.attributes.doubles.watts.milli;
