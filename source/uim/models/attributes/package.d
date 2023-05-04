@@ -10,40 +10,29 @@ import uim.models;
 
 public { 
 	import uim.models.attributes.attribute;
-public { 
 	import uim.models.attributes.registry;
+}
 
 public { 
 	import uim.models.attributes.lookups;
-public { 
 	import uim.models.attributes.codes;
+}
 
 public { 
 	import uim.models.attributes.arrays;
-public { 
 	import uim.models.attributes.booleans;
-public { 
 	import uim.models.attributes.bytes;
-public { 
 	import uim.models.attributes.chars;
-public { 
 	import uim.models.attributes.dates;
-public { 
 	import uim.models.attributes.datetimes;
-public { 
 	import uim.models.attributes.decimals;
-public { 
 	import uim.models.attributes.doubles;
-public { 
 	import uim.models.attributes.elements;
-public { 
 	import uim.models.attributes.entities;
-public { 
 	import uim.models.attributes.integers;
-public { 
 	import uim.models.attributes.ulongs;
-public { 
 	import uim.models.attributes.uuids;
+}
 
 template AttributeThis(string name) {
   const char[] AttributeThis = q{

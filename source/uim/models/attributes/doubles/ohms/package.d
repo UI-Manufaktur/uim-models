@@ -7,7 +7,5 @@ module uim.models.attributes.doubles.ohms;
 
 public { 
 	import uim.models.attributes.doubles.ohms.ohm;
-public { 
 	import uim.models.attributes.doubles.ohms.kilo;
-public { 
 	import uim.models.attributes.doubles.ohms.mega;

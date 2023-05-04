@@ -12,7 +12,5 @@ public {
 // subs
 public { 
 	import uim.models.attributes.doubles.meters.centi;
-public { 
 	import uim.models.attributes.doubles.meters.kilo;
-public { 
 	import uim.models.attributes.doubles.meters.milli;

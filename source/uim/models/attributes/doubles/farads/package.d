@@ -10,7 +10,5 @@ public {
 
 public { 
 	import uim.models.attributes.doubles.farads.micro;
-public { 
 	import uim.models.attributes.doubles.farads.nano;
-public { 
 	import uim.models.attributes.doubles.farads.pico;

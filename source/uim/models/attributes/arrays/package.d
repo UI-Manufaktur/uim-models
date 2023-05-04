@@ -13,13 +13,8 @@ public {
 
 public { 
 	import uim.models.attributes.arrays.booleans;
-public { 
 	import uim.models.attributes.arrays.bytes;
-public { 
 	import uim.models.attributes.arrays.doubles;
-public { 
 	import uim.models.attributes.arrays.integers;
-public { 
 	import uim.models.attributes.arrays.strings;
-public { 
 	import uim.models.attributes.arrays.values;

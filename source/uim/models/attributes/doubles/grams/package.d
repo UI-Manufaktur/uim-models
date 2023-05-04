@@ -10,5 +10,4 @@ public {
 
 public { 
 	import uim.models.attributes.doubles.grams.kilo;
-public { 
 	import uim.models.attributes.doubles.grams.milli;

@@ -10,7 +10,5 @@ public {
 
 public { 
 	import uim.models.attributes.doubles.hertzes.giga;
-public { 
 	import uim.models.attributes.doubles.hertzes.kilo;
-public { 
 	import uim.models.attributes.doubles.hertzes.mega;

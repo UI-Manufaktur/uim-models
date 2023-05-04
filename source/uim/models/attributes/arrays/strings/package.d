@@ -7,5 +7,4 @@ module uim.models.attributes.arrays.strings;
 
 public { 
 	import uim.models.attributes.arrays.strings.string_;
-public { 
 	import uim.models.attributes.arrays.strings.tags;

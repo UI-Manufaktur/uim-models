@@ -10,5 +10,4 @@ public {
 
 public { 
 	import uim.models.attributes.doubles.amperes.micro;
-public { 
 	import uim.models.attributes.doubles.amperes.milli;
