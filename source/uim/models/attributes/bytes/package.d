@@ -9,5 +9,5 @@ import uim.models;
 @safe:
 
 public { 
-	importuim.models.attributes.bytes.byte_;
+	import uim.models.attributes.bytes.byte_;
 

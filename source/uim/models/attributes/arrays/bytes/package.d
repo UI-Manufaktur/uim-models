@@ -6,7 +6,7 @@
 module uim.models.attributes.arrays.bytes;
 
 public { 
-	importuim.models.attributes.arrays.bytes.binary;
+	import uim.models.attributes.arrays.bytes.binary;
 public { 
-	importuim.models.attributes.arrays.bytes.image;
+	import uim.models.attributes.arrays.bytes.image;
 

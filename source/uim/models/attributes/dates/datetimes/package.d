@@ -7,15 +7,15 @@ module uim.models.attributes.datetimes;
 
 // main
 public { 
-	importuim.models.attributes.datetimes.datetime;
+	import uim.models.attributes.datetimes.datetime;
 
 // subs
 public { 
-	importuim.models.attributes.datetimes.birthdate;
+	import uim.models.attributes.datetimes.birthdate;
 public { 
-	importuim.models.attributes.datetimes.datetime;
+	import uim.models.attributes.datetimes.datetime;
 public { 
-	importuim.models.attributes.datetimes.time;
+	import uim.models.attributes.datetimes.time;
 public { 
-	importuim.models.attributes.datetimes.timestamp;
+	import uim.models.attributes.datetimes.timestamp;
 

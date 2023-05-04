@@ -9,17 +9,17 @@ import uim.models;
 @safe:
 
 public { 
-	importuim.models.attributes.arrays.array;
+	import uim.models.attributes.arrays.array;
 
 public { 
-	importuim.models.attributes.arrays.booleans;
+	import uim.models.attributes.arrays.booleans;
 public { 
-	importuim.models.attributes.arrays.bytes;
+	import uim.models.attributes.arrays.bytes;
 public { 
-	importuim.models.attributes.arrays.doubles;
+	import uim.models.attributes.arrays.doubles;
 public { 
-	importuim.models.attributes.arrays.integers;
+	import uim.models.attributes.arrays.integers;
 public { 
-	importuim.models.attributes.arrays.strings;
+	import uim.models.attributes.arrays.strings;
 public { 
-	importuim.models.attributes.arrays.values;
+	import uim.models.attributes.arrays.values;

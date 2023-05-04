@@ -10,5 +10,5 @@ import uim.models;
 
 // main
 public { 
-	importuim.models.attributes.booleans.boolean;
+	import uim.models.attributes.booleans.boolean;
 

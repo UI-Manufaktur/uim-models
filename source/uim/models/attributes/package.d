@@ -9,41 +9,41 @@ import uim.models;
 @safe:
 
 public { 
-	importuim.models.attributes.attribute;
+	import uim.models.attributes.attribute;
 public { 
-	importuim.models.attributes.registry;
+	import uim.models.attributes.registry;
 
 public { 
-	importuim.models.attributes.lookups;
+	import uim.models.attributes.lookups;
 public { 
-	importuim.models.attributes.codes;
+	import uim.models.attributes.codes;
 
 public { 
-	importuim.models.attributes.arrays;
+	import uim.models.attributes.arrays;
 public { 
-	importuim.models.attributes.booleans;
+	import uim.models.attributes.booleans;
 public { 
-	importuim.models.attributes.bytes;
+	import uim.models.attributes.bytes;
 public { 
-	importuim.models.attributes.chars;
+	import uim.models.attributes.chars;
 public { 
-	importuim.models.attributes.dates;
+	import uim.models.attributes.dates;
 public { 
-	importuim.models.attributes.datetimes;
+	import uim.models.attributes.datetimes;
 public { 
-	importuim.models.attributes.decimals;
+	import uim.models.attributes.decimals;
 public { 
-	importuim.models.attributes.doubles;
+	import uim.models.attributes.doubles;
 public { 
-	importuim.models.attributes.elements;
+	import uim.models.attributes.elements;
 public { 
-	importuim.models.attributes.entities;
+	import uim.models.attributes.entities;
 public { 
-	importuim.models.attributes.integers;
+	import uim.models.attributes.integers;
 public { 
-	importuim.models.attributes.ulongs;
+	import uim.models.attributes.ulongs;
 public { 
-	importuim.models.attributes.uuids;
+	import uim.models.attributes.uuids;
 
 template AttributeThis(string name) {
   const char[] AttributeThis = q{

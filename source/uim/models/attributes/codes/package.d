@@ -6,10 +6,10 @@
 module uim.models.attributes.codes;
 
 public { 
-	importuim.models.attributes.codes.customersize;
+	import uim.models.attributes.codes.customersize;
 public { 
-	importuim.models.attributes.codes.customersize;
+	import uim.models.attributes.codes.customersize;
 public { 
-	importuim.models.attributes.codes.state;
+	import uim.models.attributes.codes.state;
 public { 
-	importuim.models.attributes.codes.status;
+	import uim.models.attributes.codes.status;

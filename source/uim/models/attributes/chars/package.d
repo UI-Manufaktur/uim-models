@@ -9,7 +9,7 @@ import uim.models;
 @safe:
 
 public { 
-	importuim.models.attributes.chars.char_;
+	import uim.models.attributes.chars.char_;
 
 public { 
-	importuim.models.attributes.chars.strings;
+	import uim.models.attributes.chars.strings;

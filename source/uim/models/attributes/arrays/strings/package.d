@@ -6,6 +6,6 @@
 module uim.models.attributes.arrays.strings;
 
 public { 
-	importuim.models.attributes.arrays.strings.string_;
+	import uim.models.attributes.arrays.strings.string_;
 public { 
-	importuim.models.attributes.arrays.strings.tags;
+	import uim.models.attributes.arrays.strings.tags;
