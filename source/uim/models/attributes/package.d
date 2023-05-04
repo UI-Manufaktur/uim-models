@@ -5,8 +5,8 @@
 **********************************************************************************************************/
 module uim.models.attributes;
 
-@safe:
 import uim.models;
+@safe:
 
 public import uim.models.attributes.attribute;
 public import uim.models.attributes.registry;

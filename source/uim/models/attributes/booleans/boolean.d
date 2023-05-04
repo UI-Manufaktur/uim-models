@@ -5,8 +5,8 @@
 ************************************************************************************************/
 module uim.models.attributes.booleans.boolean;
 
-@safe:
 import uim.models;
+@safe:
 
 class DBooleanAttribute : DAttribute {
   mixin(AttributeThis!("BooleanAttribute"));

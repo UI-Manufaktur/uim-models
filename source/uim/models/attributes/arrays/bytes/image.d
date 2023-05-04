@@ -11,8 +11,8 @@ is.dataFormat.byte
 is.dataFormat.array
 means.content.image.image */
 
-@safe:
 import uim.models;
+@safe:
 
 class DImageAttribute : DBinaryAttribute {
   mixin(AttributeThis!("ImageAttribute"));

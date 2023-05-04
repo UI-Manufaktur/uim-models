@@ -5,8 +5,8 @@
 **********************************************************************************************************/
 module uim.models.attributes.booleans;
 
-@safe:
 import uim.models;
+@safe:
 
 // main
 public import uim.models.attributes.booleans.boolean;

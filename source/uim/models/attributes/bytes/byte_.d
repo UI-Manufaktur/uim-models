@@ -5,8 +5,8 @@
 **********************************************************************************************************/
 module uim.models.attributes.bytes.byte_;
 
-@safe:
 import uim.models;
+@safe:
 
 class DByteAttribute : DAttribute {
   mixin(AttributeThis!("ByteAttribute"));

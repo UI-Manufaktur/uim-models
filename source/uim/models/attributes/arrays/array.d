@@ -5,8 +5,8 @@
 **********************************************************************************************************/
 module uim.models.attributes.arrays.array;
 
-@safe:
 import uim.models;
+@safe:
 
 class DArrayAttribute : DAttribute {
   mixin(AttributeThis!("ArrayAttribute"));

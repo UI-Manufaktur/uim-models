@@ -5,8 +5,8 @@
 **********************************************************************************************************/
 module uim.models.attributes.arrays;
 
-@safe:
 import uim.models;
+@safe:
 
 public import uim.models.attributes.arrays.array;
 
