@@ -5,7 +5,10 @@
 **********************************************************************************************************/
 module uim.models.attributes.doubles.grams;
 
-public import uim.models.attributes.doubles.grams.gram;
+public { 
+	importuim.models.attributes.doubles.grams.gram;
 
-public import uim.models.attributes.doubles.grams.kilo;
-public import uim.models.attributes.doubles.grams.milli;
+public { 
+	importuim.models.attributes.doubles.grams.kilo;
+public { 
+	importuim.models.attributes.doubles.grams.milli;

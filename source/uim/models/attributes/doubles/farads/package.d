@@ -5,8 +5,12 @@
 **********************************************************************************************************/
 module uim.models.attributes.doubles.farads;
 
-public import uim.models.attributes.doubles.farads.farad;
+public { 
+	importuim.models.attributes.doubles.farads.farad;
 
-public import uim.models.attributes.doubles.farads.micro;
-public import uim.models.attributes.doubles.farads.nano;
-public import uim.models.attributes.doubles.farads.pico;
+public { 
+	importuim.models.attributes.doubles.farads.micro;
+public { 
+	importuim.models.attributes.doubles.farads.nano;
+public { 
+	importuim.models.attributes.doubles.farads.pico;

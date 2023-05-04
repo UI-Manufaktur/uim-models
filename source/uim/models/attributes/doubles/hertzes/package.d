@@ -5,8 +5,12 @@
 **********************************************************************************************************/
 module uim.models.attributes.doubles.hertzes;
 
-public import uim.models.attributes.doubles.hertzes.hertz;
+public { 
+	importuim.models.attributes.doubles.hertzes.hertz;
 
-public import uim.models.attributes.doubles.hertzes.giga;
-public import uim.models.attributes.doubles.hertzes.kilo;
-public import uim.models.attributes.doubles.hertzes.mega;
+public { 
+	importuim.models.attributes.doubles.hertzes.giga;
+public { 
+	importuim.models.attributes.doubles.hertzes.kilo;
+public { 
+	importuim.models.attributes.doubles.hertzes.mega;

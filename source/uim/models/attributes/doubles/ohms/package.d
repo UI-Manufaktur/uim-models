@@ -5,6 +5,9 @@
 **********************************************************************************************************/
 module uim.models.attributes.doubles.ohms;
 
-public import uim.models.attributes.doubles.ohms.ohm;
-public import uim.models.attributes.doubles.ohms.kilo;
-public import uim.models.attributes.doubles.ohms.mega;
+public { 
+	importuim.models.attributes.doubles.ohms.ohm;
+public { 
+	importuim.models.attributes.doubles.ohms.kilo;
+public { 
+	importuim.models.attributes.doubles.ohms.mega;

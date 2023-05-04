@@ -6,7 +6,9 @@
 module uim.models.attributes.decimals;
 
 // main
-public import uim.models.attributes.decimals.decimal;
+public { 
+	importuim.models.attributes.decimals.decimal;
 
 // packages
-public import uim.models.attributes.decimals.currencies;
+public { 
+	importuim.models.attributes.decimals.currencies;

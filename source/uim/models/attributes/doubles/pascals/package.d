@@ -5,8 +5,12 @@
 **********************************************************************************************************/
 module uim.models.attributes.doubles.pascals;
 
-public import uim.models.attributes.doubles.pascals.pascal;
+public { 
+	importuim.models.attributes.doubles.pascals.pascal;
 
-public import uim.models.attributes.doubles.pascals.giga;
-public import uim.models.attributes.doubles.pascals.kilo;
-public import uim.models.attributes.doubles.pascals.mega;
+public { 
+	importuim.models.attributes.doubles.pascals.giga;
+public { 
+	importuim.models.attributes.doubles.pascals.kilo;
+public { 
+	importuim.models.attributes.doubles.pascals.mega;
