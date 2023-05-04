@@ -5,7 +5,6 @@
 **********************************************************************************************************/
 module uim.models.attributes.entities;
 
-// Main
-public { 
+public { // Main
 	import uim.models.attributes.entities.entity;
 }

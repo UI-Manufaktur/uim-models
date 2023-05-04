@@ -7,7 +7,8 @@ module uim.models.attributes.entities.slas;
 
 public { 
 	import uim.models.attributes.entities.slas.sla;
+}
 
 public { 
 	import uim.models.attributes.entities.slas.invoked;
-
+}

@@ -9,3 +9,4 @@ public {
 	import uim.models.attributes.lookups.booleans.boolean;
 	import uim.models.attributes.lookups.booleans.integer;
 	import uim.models.attributes.lookups.booleans.string_;
+}

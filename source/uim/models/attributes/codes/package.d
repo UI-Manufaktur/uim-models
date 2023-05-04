@@ -10,3 +10,4 @@ public {
 	import uim.models.attributes.codes.customersize;
 	import uim.models.attributes.codes.state;
 	import uim.models.attributes.codes.status;
+}

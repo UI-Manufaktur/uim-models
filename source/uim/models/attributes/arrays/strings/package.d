@@ -8,3 +8,4 @@ module uim.models.attributes.arrays.strings;
 public { 
 	import uim.models.attributes.arrays.strings.string_;
 	import uim.models.attributes.arrays.strings.tags;
+}

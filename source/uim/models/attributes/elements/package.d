@@ -8,3 +8,4 @@ module uim.models.attributes.elements;
 public { 
 	import uim.models.attributes.elements.element;
 	import uim.models.attributes.elements.version_;
+}

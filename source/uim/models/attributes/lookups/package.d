@@ -5,19 +5,15 @@
 **********************************************************************************************************/
 module uim.models.attributes.lookups;
 
-import uim.models;
-@safe:
-
 public { 
 	import uim.models.attributes.lookups.booleans;
 	import uim.models.attributes.lookups.integers;
 	import uim.models.attributes.lookups.strings;
+}
 
 public { 
 	import uim.models.attributes.lookups.lookup;
-// public { 
 	import uim.models.attributes.lookups.customertype;
-// public { 
 	import uim.models.attributes.lookups.string_;
-// public { 
 	import uim.models.attributes.lookups.preferredcontactmethod;
+}

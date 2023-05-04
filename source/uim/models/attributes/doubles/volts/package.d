@@ -7,9 +7,10 @@ module uim.models.attributes.doubles.volts;
 
 public { 
 	import uim.models.attributes.doubles.volts.volt;
+}
 
 public { 
 	import uim.models.attributes.doubles.volts.kilo;
 	import uim.models.attributes.doubles.volts.mega;
 	import uim.models.attributes.doubles.volts.milli;
-
+}

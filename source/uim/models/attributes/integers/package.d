@@ -13,6 +13,7 @@ public {
 
 public { 
 	import uim.models.attributes.integers.calenderparts;
+}
 
 public { 
 	import uim.models.attributes.integers.age;
@@ -24,3 +25,4 @@ public {
 	import uim.models.attributes.integers.minutes;
 	import uim.models.attributes.integers.number;
 	import uim.models.attributes.integers.year;
+}
