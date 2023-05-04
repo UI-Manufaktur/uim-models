@@ -5,8 +5,8 @@
 **********************************************************************************************************/
 module uim.models.attributes.uuids.entities.currency;
 
-@safe:
 import uim.models;
+@safe:
 
 // A unique identifier for entity instances
 

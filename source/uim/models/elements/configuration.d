@@ -5,8 +5,8 @@
 **********************************************************************************************************/
 module uim.models.elements.configuration;
 
-@safe:
 import uim.models;
+@safe:
 
 class DConfigurationElement : DElement {
   // Constructors

@@ -17,8 +17,8 @@ is.dataFormat.guid
 means.identity.entityId
 means.userId */
 
-@safe:
 import uim.models;
+@safe:
 
 class DUserIdAttribute : DEntityIdAttribute {
   mixin(AttributeThis!("UserIdAttribute"));

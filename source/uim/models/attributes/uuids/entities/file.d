@@ -5,8 +5,8 @@
 **********************************************************************************************************/
 module uim.models.attributes.uuids.entities.file;
 
-@safe:
 import uim.models;
+@safe:
 
 class DFileIdAttribute : DEntityIdAttribute {
   mixin(AttributeThis!("FileIdAttribute"));
