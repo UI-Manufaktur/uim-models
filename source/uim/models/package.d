@@ -1,11 +1,15 @@
 module uim.models;
 
-public import std.stdio;
-public import std.string;
-public import std.uuid;
+public { 
+	importstd.stdio;
+public { 
+	importstd.string;
+public { 
+	importstd.uuid;
 
 // Dub
-public import vibe.d;
+public { 
+	importvibe.d;
 
 public { // Required uim libraries 
   import uim.core;

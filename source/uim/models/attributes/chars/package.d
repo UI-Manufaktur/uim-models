@@ -8,6 +8,8 @@ module uim.models.attributes.chars;
 import uim.models;
 @safe:
 
-public import uim.models.attributes.chars.char_;
+public { 
+	importuim.models.attributes.chars.char_;
 
-public import uim.models.attributes.chars.strings;
+public { 
+	importuim.models.attributes.chars.strings;

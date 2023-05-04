@@ -9,5 +9,6 @@ import uim.models;
 @safe:
 
 // main
-public import uim.models.attributes.booleans.boolean;
+public { 
+	importuim.models.attributes.booleans.boolean;
 

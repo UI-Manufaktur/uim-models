@@ -8,25 +8,42 @@ module uim.models.attributes;
 import uim.models;
 @safe:
 
-public import uim.models.attributes.attribute;
-public import uim.models.attributes.registry;
+public { 
+	importuim.models.attributes.attribute;
+public { 
+	importuim.models.attributes.registry;
 
-public import uim.models.attributes.lookups;
-public import uim.models.attributes.codes;
+public { 
+	importuim.models.attributes.lookups;
+public { 
+	importuim.models.attributes.codes;
 
-public import uim.models.attributes.arrays;
-public import uim.models.attributes.booleans;
-public import uim.models.attributes.bytes;
-public import uim.models.attributes.chars;
-public import uim.models.attributes.dates;
-public import uim.models.attributes.datetimes;
-public import uim.models.attributes.decimals;
-public import uim.models.attributes.doubles;
-public import uim.models.attributes.elements;
-public import uim.models.attributes.entities;
-public import uim.models.attributes.integers;
-public import uim.models.attributes.ulongs;
-public import uim.models.attributes.uuids;
+public { 
+	importuim.models.attributes.arrays;
+public { 
+	importuim.models.attributes.booleans;
+public { 
+	importuim.models.attributes.bytes;
+public { 
+	importuim.models.attributes.chars;
+public { 
+	importuim.models.attributes.dates;
+public { 
+	importuim.models.attributes.datetimes;
+public { 
+	importuim.models.attributes.decimals;
+public { 
+	importuim.models.attributes.doubles;
+public { 
+	importuim.models.attributes.elements;
+public { 
+	importuim.models.attributes.entities;
+public { 
+	importuim.models.attributes.integers;
+public { 
+	importuim.models.attributes.ulongs;
+public { 
+	importuim.models.attributes.uuids;
 
 template AttributeThis(string name) {
   const char[] AttributeThis = q{

@@ -5,6 +5,8 @@
 **********************************************************************************************************/
 module uim.models.attributes.arrays.bytes;
 
-public import uim.models.attributes.arrays.bytes.binary;
-public import uim.models.attributes.arrays.bytes.image;
+public { 
+	importuim.models.attributes.arrays.bytes.binary;
+public { 
+	importuim.models.attributes.arrays.bytes.image;
 

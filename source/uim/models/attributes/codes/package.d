@@ -5,7 +5,11 @@
 **********************************************************************************************************/
 module uim.models.attributes.codes;
 
-public import uim.models.attributes.codes.customersize;
-public import uim.models.attributes.codes.customersize;
-public import uim.models.attributes.codes.state;
-public import uim.models.attributes.codes.status;
+public { 
+	importuim.models.attributes.codes.customersize;
+public { 
+	importuim.models.attributes.codes.customersize;
+public { 
+	importuim.models.attributes.codes.state;
+public { 
+	importuim.models.attributes.codes.status;
