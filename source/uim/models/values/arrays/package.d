@@ -7,9 +7,11 @@ module uim.models.values.arrays;
 
 public { 
 	import uim.models.values.arrays.array_;
+}
 
 public { 
 	import uim.models.values.arrays.integer;
 	import uim.models.values.arrays.string_;
 	import uim.models.values.arrays.tag;
 	import uim.models.values.arrays.value;
+}

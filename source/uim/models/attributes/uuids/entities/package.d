@@ -8,6 +8,7 @@ module uim.models.attributes.uuids.entityids;
 // Main
 public { 
 	import uim.models.attributes.uuids.entities.entity;
+}
 
 // Packages
 public { 

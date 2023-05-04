@@ -11,3 +11,4 @@ public {
 	import uim.models.values.scalars.integer;
 	import uim.models.values.scalars.long_;
 	import uim.models.values.scalars.string_;
+}

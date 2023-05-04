@@ -5,14 +5,12 @@
 **********************************************************************************************************/
 module uim.models.values.maps;
 
-import uim.models;
-@safe:
-
 public { 
 	import uim.models.values.maps.map;
 	import uim.models.values.maps.options;
 	import uim.models.values.maps.config;
 	import uim.models.values.maps.string;
+}
 
 /* ublic import uim.models.values.maps.lookup;
 	import uim.models.values.maps.customertype;
