@@ -9,4 +9,4 @@ import uim.models;
 @safe:
 
 public { 
-	importuim.models.values.lookups.lookup;
+	import uim.models.values.lookups.lookup;

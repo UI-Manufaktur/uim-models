@@ -9,17 +9,17 @@ import uim.models;
 @safe:
 
 public { 
-	importuim.models.attributes.lookups.booleans;
+	import uim.models.attributes.lookups.booleans;
 public { 
-	importuim.models.attributes.lookups.integers;
+	import uim.models.attributes.lookups.integers;
 public { 
-	importuim.models.attributes.lookups.strings;
+	import uim.models.attributes.lookups.strings;
 
 public { 
-	importuim.models.attributes.lookups.lookup;
+	import uim.models.attributes.lookups.lookup;
 // public { 
-	importuim.models.attributes.lookups.customertype;
+	import uim.models.attributes.lookups.customertype;
 // public { 
-	importuim.models.attributes.lookups.string_;
+	import uim.models.attributes.lookups.string_;
 // public { 
-	importuim.models.attributes.lookups.preferredcontactmethod;
+	import uim.models.attributes.lookups.preferredcontactmethod;

@@ -7,8 +7,8 @@ module uim.models.attributes.uuids;
 
 // main
 public { 
-	importuim.models.attributes.uuids.uuid;
+	import uim.models.attributes.uuids.uuid;
 
 // subs
 public { 
-	importuim.models.attributes.uuids.entityids;
+	import uim.models.attributes.uuids.entityids;

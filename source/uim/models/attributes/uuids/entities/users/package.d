@@ -6,12 +6,12 @@
 module uim.models.attributes.uuids.entities.users;
 
 public { 
-	importuim.models.attributes.uuids.entities.users.user;
+	import uim.models.attributes.uuids.entities.users.user;
 public { 
-	importuim.models.attributes.uuids.entities.users.owner;
+	import uim.models.attributes.uuids.entities.users.owner;
 public { 
-	importuim.models.attributes.uuids.entities.users.createdonbehalfby;
+	import uim.models.attributes.uuids.entities.users.createdonbehalfby;
 public { 
-	importuim.models.attributes.uuids.entities.users.modifiedonbehalfby;
+	import uim.models.attributes.uuids.entities.users.modifiedonbehalfby;
 public { 
-	importuim.models.attributes.uuids.entities.users.team;
+	import uim.models.attributes.uuids.entities.users.team;

@@ -6,8 +6,8 @@
 module uim.models.attributes.lookups.integers;
 
 public { 
-	importuim.models.attributes.lookups.integers.boolean;
+	import uim.models.attributes.lookups.integers.boolean;
 public { 
-	importuim.models.attributes.lookups.integers.integer;
+	import uim.models.attributes.lookups.integers.integer;
 public { 
-	importuim.models.attributes.lookups.integers.string_;
+	import uim.models.attributes.lookups.integers.string_;

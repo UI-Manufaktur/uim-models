@@ -6,13 +6,13 @@
 module uim.models.values.arrays;
 
 public { 
-	importuim.models.values.arrays.array_;
+	import uim.models.values.arrays.array_;
 
 public { 
-	importuim.models.values.arrays.integer;
+	import uim.models.values.arrays.integer;
 public { 
-	importuim.models.values.arrays.string_;
+	import uim.models.values.arrays.string_;
 public { 
-	importuim.models.values.arrays.tag;
+	import uim.models.values.arrays.tag;
 public { 
-	importuim.models.values.arrays.value;
+	import uim.models.values.arrays.value;

@@ -6,9 +6,9 @@
 module uim.models.attributes.strings.phones;
 
 public { 
-	importuim.models.attributes.strings.phones.phone;
+	import uim.models.attributes.strings.phones.phone;
 public { 
-	importuim.models.attributes.strings.phones.fax;
+	import uim.models.attributes.strings.phones.fax;
 public { 
-	importuim.models.attributes.strings.phones.cell;
+	import uim.models.attributes.strings.phones.cell;
 

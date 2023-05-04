@@ -9,19 +9,19 @@ import uim.models;
 @safe:
 
 public { 
-	importuim.models.values.maps.map;
+	import uim.models.values.maps.map;
 public { 
-	importuim.models.values.maps.options;
+	import uim.models.values.maps.options;
 public { 
-	importuim.models.values.maps.config;
+	import uim.models.values.maps.config;
 public { 
-	importuim.models.values.maps.string;
+	import uim.models.values.maps.string;
 
 /* ublic import uim.models.values.maps.lookup;
 public { 
-	importuim.models.values.maps.customertype;
+	import uim.models.values.maps.customertype;
 public { 
-	importuim.models.values.maps.string_;
+	import uim.models.values.maps.string_;
 public { 
-	importuim.models.values.maps.preferredcontactmethod; */
+	import uim.models.values.maps.preferredcontactmethod; */
 

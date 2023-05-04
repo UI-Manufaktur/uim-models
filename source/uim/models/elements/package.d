@@ -11,9 +11,9 @@ import uim.models;
 public { 
 	import uim.models.elements.configuration;
 public { 
-	importuim.models.elements.element;
+	import uim.models.elements.element;
 public { 
-	importuim.models.elements.registry;
+	import uim.models.elements.registry;
 public { 
-	importuim.models.elements.version_;
+	import uim.models.elements.version_;
 

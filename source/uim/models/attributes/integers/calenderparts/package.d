@@ -6,14 +6,14 @@
 module uim.models.attributes.integers.calenderparts;
 
 public { 
-	importuim.models.attributes.integers.calenderparts.day;
+	import uim.models.attributes.integers.calenderparts.day;
 public { 
-	importuim.models.attributes.integers.calenderparts.integer;
+	import uim.models.attributes.integers.calenderparts.integer;
 public { 
-	importuim.models.attributes.integers.calenderparts.month;
+	import uim.models.attributes.integers.calenderparts.month;
 public { 
-	importuim.models.attributes.integers.calenderparts.quarter;
+	import uim.models.attributes.integers.calenderparts.quarter;
 public { 
-	importuim.models.attributes.integers.calenderparts.tenday;
+	import uim.models.attributes.integers.calenderparts.tenday;
 public { 
-	importuim.models.attributes.integers.calenderparts.week;
+	import uim.models.attributes.integers.calenderparts.week;

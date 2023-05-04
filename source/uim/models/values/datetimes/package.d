@@ -6,12 +6,12 @@
 module uim.models.values.datetimes;
 
 public { 
-	importuim.models.values.datetimes.date_;
+	import uim.models.values.datetimes.date_;
 public { 
-	importuim.models.values.datetimes.datetime_;
+	import uim.models.values.datetimes.datetime_;
 public { 
-	importuim.models.values.datetimes.systime;
+	import uim.models.values.datetimes.systime;
 public { 
-	importuim.models.values.datetimes.time_;
+	import uim.models.values.datetimes.time_;
 public { 
-	importuim.models.values.datetimes.timestamp;
+	import uim.models.values.datetimes.timestamp;

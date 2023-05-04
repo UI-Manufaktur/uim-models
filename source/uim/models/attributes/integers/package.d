@@ -9,26 +9,26 @@ import uim.models;
 @safe:
 
 public { 
-	importuim.models.attributes.integers.integer;
+	import uim.models.attributes.integers.integer;
 
 public { 
-	importuim.models.attributes.integers.calenderparts;
+	import uim.models.attributes.integers.calenderparts;
 
 public { 
-	importuim.models.attributes.integers.age;
+	import uim.models.attributes.integers.age;
 public { 
-	importuim.models.attributes.integers.day;
+	import uim.models.attributes.integers.day;
 public { 
-	importuim.models.attributes.integers.displayorder;
+	import uim.models.attributes.integers.displayorder;
 public { 
-	importuim.models.attributes.integers.hour;
+	import uim.models.attributes.integers.hour;
 public { 
-	importuim.models.attributes.integers.long_;
+	import uim.models.attributes.integers.long_;
 public { 
-	importuim.models.attributes.integers.minute;
+	import uim.models.attributes.integers.minute;
 public { 
-	importuim.models.attributes.integers.minutes;
+	import uim.models.attributes.integers.minutes;
 public { 
-	importuim.models.attributes.integers.number;
+	import uim.models.attributes.integers.number;
 public { 
-	importuim.models.attributes.integers.year;
+	import uim.models.attributes.integers.year;

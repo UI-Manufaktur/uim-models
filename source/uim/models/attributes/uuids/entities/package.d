@@ -7,25 +7,25 @@ module uim.models.attributes.uuids.entityids;
 
 // Main
 public { 
-	importuim.models.attributes.uuids.entities.entity;
+	import uim.models.attributes.uuids.entities.entity;
 
 // Packages
 public { 
-	importuim.models.attributes.uuids.entities.slas;
+	import uim.models.attributes.uuids.entities.slas;
 public { 
-	importuim.models.attributes.uuids.entities.users;
+	import uim.models.attributes.uuids.entities.users;
 public { 
-	importuim.models.attributes.uuids.entities.account;
+	import uim.models.attributes.uuids.entities.account;
 public { 
-	importuim.models.attributes.uuids.entities.businessunit;
+	import uim.models.attributes.uuids.entities.businessunit;
 public { 
-	importuim.models.attributes.uuids.entities.campaign;
+	import uim.models.attributes.uuids.entities.campaign;
 public { 
-	importuim.models.attributes.uuids.entities.contact;
+	import uim.models.attributes.uuids.entities.contact;
 public { 
-	importuim.models.attributes.uuids.entities.currency;
+	import uim.models.attributes.uuids.entities.currency;
 public { 
-	importuim.models.attributes.uuids.entities.file;
+	import uim.models.attributes.uuids.entities.file;
 public { 
-	importuim.models.attributes.uuids.entities.organization;
+	import uim.models.attributes.uuids.entities.organization;
 

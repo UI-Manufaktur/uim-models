@@ -9,13 +9,13 @@ import uim.models;
 @safe:
 
 public { 
-	importuim.models.entities.entity;
+	import uim.models.entities.entity;
 public { 
-	importuim.models.entities.entities;
+	import uim.models.entities.entities;
 public { 
-	importuim.models.entities.entity_lang;
+	import uim.models.entities.entity_lang;
 public { 
-	importuim.models.entities.registry;
+	import uim.models.entities.registry;
 
 template EntityThis(string name) {
   const char[] EntityThis = `

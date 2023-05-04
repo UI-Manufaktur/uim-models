@@ -6,8 +6,8 @@
 module uim.models.attributes.lookups.booleans;
 
 public { 
-	importuim.models.attributes.lookups.booleans.boolean;
+	import uim.models.attributes.lookups.booleans.boolean;
 public { 
-	importuim.models.attributes.lookups.booleans.integer;
+	import uim.models.attributes.lookups.booleans.integer;
 public { 
-	importuim.models.attributes.lookups.booleans.string_;
+	import uim.models.attributes.lookups.booleans.string_;

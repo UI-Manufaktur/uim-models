@@ -6,12 +6,12 @@
 module uim.models.values.scalars;
 
 public { 
-	importuim.models.values.scalars.boolean;
+	import uim.models.values.scalars.boolean;
 public { 
-	importuim.models.values.scalars.double_;
+	import uim.models.values.scalars.double_;
 public { 
-	importuim.models.values.scalars.integer;
+	import uim.models.values.scalars.integer;
 public { 
-	importuim.models.values.scalars.long_;
+	import uim.models.values.scalars.long_;
 public { 
-	importuim.models.values.scalars.string_;
+	import uim.models.values.scalars.string_;

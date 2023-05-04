@@ -9,6 +9,6 @@ import uim.models;
 @safe:
 
 public { 
-	importuim.models.attributes.strings.languagetags.languagetag;
+	import uim.models.attributes.strings.languagetags.languagetag;
 public { 
-	importuim.models.attributes.strings.languagetags.culturetag;
+	import uim.models.attributes.strings.languagetags.culturetag;

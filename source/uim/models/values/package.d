@@ -9,33 +9,33 @@ import uim.models;
 @safe:
 
 public { 
-	importuim.models.values.value;
+	import uim.models.values.value;
 public { 
-	importuim.models.values.map;
+	import uim.models.values.map;
 
 // Packages
 public { 
-	importuim.models.values.arrays;
+	import uim.models.values.arrays;
 public { 
-	importuim.models.values.datetimes;
+	import uim.models.values.datetimes;
 public { 
-	importuim.models.values.elements;
+	import uim.models.values.elements;
 public { 
-	importuim.models.values.lookups;
+	import uim.models.values.lookups;
 public { 
-	importuim.models.values.maps;
+	import uim.models.values.maps;
 public { 
-	importuim.models.values.scalars;
+	import uim.models.values.scalars;
 public { 
-	importuim.models.values.uuids;
+	import uim.models.values.uuids;
 
 // Modules
 public { 
-	importuim.models.values.entity;
+	import uim.models.values.entity;
 public { 
-	importuim.models.values.null_;
+	import uim.models.values.null_;
 public { 
-	importuim.models.values.object_;
+	import uim.models.values.object_;
 
 template ValueThis(string name, string datatype = null) { // Name for future releases
   const char[] ValueThis = `  

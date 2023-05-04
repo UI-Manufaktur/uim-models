@@ -1,4 +1,4 @@
 module uim.models.helpers;
 
 public { 
-	importuim.models.helpers.entities;
+	import uim.models.helpers.entities;
