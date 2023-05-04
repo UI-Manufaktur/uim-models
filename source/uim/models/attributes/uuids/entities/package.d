@@ -20,4 +20,4 @@ public {
 	import uim.models.attributes.uuids.entities.currency;
 	import uim.models.attributes.uuids.entities.file;
 	import uim.models.attributes.uuids.entities.organization;
-
+}

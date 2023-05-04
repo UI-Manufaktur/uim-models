@@ -7,8 +7,10 @@ module uim.models.attributes.strings.names;
 
 public { 
 	import uim.models.attributes.strings.names.name;
+}
 
 public { 
 	import uim.models.attributes.strings.names.first;
 	import uim.models.attributes.strings.names.full;
 	import uim.models.attributes.strings.names.middle;
+}

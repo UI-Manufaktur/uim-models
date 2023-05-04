@@ -26,3 +26,4 @@ public {
 	import uim.models.attributes.strings.list;
 	import uim.models.attributes.strings.url;
 	import uim.models.attributes.strings.xml;
+}
