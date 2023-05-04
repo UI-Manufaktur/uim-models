@@ -5,8 +5,8 @@
 **********************************************************************************************************/
 module uim.models.attributes.entities.slas.invoked;
 
-@safe:
 import uim.models;
+@safe:
 
 /* class DSLAInvokedAttribute : DEntityAttribute {
   mixin(AttributeThis!("SLAInvokedAttribute"));

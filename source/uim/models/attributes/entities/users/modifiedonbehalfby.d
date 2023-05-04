@@ -5,8 +5,8 @@
 **********************************************************************************************************/
 module uim.models.attributes.entities.users.modifiedonbehalfby;
 
-@safe:
 import uim.models;
+@safe:
 
 /* class DModifiedOnBehalfByAttribute : DEntityAttribute {
   mixin(AttributeThis!("ModifiedOnBehalfByAttribute"));

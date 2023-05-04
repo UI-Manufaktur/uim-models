@@ -5,8 +5,8 @@
 **********************************************************************************************************/
 module uim.models.attributes.entities.account;
 
-@safe:
 import uim.models;
+@safe:
 
 /* class DAccountAttribute : DEntityAttribute {
   mixin(AttributeThis!("AccountAttribute"));

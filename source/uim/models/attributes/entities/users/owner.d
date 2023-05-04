@@ -5,8 +5,8 @@
 **********************************************************************************************************/
 module uim.models.attributes.entities.users.owner;
 
-@safe:
 import uim.models;
+@safe:
 
 /* class DOwnerAttribute : DEntityAttribute {
   mixin(AttributeThis!("OwnerAttribute"));

@@ -5,8 +5,8 @@
 **********************************************************************************************************/
 module uim.models.attributes.entities.slas.sla;
 
-@safe:
 import uim.models;
+@safe:
 
 /* class DSlaAttribute : DEntityAttribute {
   mixin(AttributeThis!("SlaAttribute"));

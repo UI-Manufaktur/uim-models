@@ -5,8 +5,8 @@
 **********************************************************************************************************/
 module uim.models.attributes.entities.businessunit;
 
-@safe:
 import uim.models;
+@safe:
 
 // A unique identifier for entity instances
 

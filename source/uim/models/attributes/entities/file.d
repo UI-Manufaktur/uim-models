@@ -5,8 +5,8 @@
 **********************************************************************************************************/
 module  source.uim.models.attributes.entities.file;
 
-@safe:
 import uim.models;
+@safe:
 
 /* class DFileAttribute : DEntityAttribute {
   mixin(AttributeThis!("FileAttribute"));
