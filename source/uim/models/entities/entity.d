@@ -459,13 +459,13 @@ class DEntity : DElement /* : IRegistrable */ {
   }
 
   // Read entity from STRINGAA
-  override void fromStringAA(STRINGAA reqParameters, bool usePrefix = false) {
-    super.fromStringAA(reqParameters);
+  override void readFromStringAA(STRINGAA reqParameters, bool usePrefix = false) {
+    super.readFromStringAA(reqParameters);
     foreach(k, v; reqParameters) this[k] = v; 
   }
 
-  override void fromRequest(STRINGAA requestValues, bool usePrefix = true) {
-    super.fromRequest(requestValues, usePrefix);
+  override void readFromRequest(STRINGAA requestValues, bool usePrefix = true) {
+    super.readFromRequest(requestValues, usePrefix);
 
     foreach(fName; fieldNames) {
       auto requestKey = "entity_"~fName;
