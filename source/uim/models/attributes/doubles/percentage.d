@@ -5,8 +5,8 @@
 **********************************************************************************************************/
 module uim.models.attributes.doubles.percentage;
 
-@safe:
 import uim.models;
+@safe:
 
 class DPercentageAttribute : DDoubleAttribute {
   mixin(AttributeThis!("PercentageAttribute"));

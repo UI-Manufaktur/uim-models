@@ -20,8 +20,8 @@ has.measurement.fundamentalComponent.second
 has.measurement.fundamentalComponent.microfarad
 means.measurement.prefix.micro */
 
-@safe:
 import uim.models;
+@safe:
 
 class DMicroFaradAttribute : DFaradAttribute {
   mixin(AttributeThis!("MicroFaradAttribute"));

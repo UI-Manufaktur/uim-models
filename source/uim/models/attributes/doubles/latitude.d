@@ -5,8 +5,8 @@
 **********************************************************************************************************/
 module uim.models.attributes.doubles.latitude;
 
-@safe:
 import uim.models;
+@safe:
 
 // means.location.latitude
 class DLatitudeAttribute : DDoubleAttribute {

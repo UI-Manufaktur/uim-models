@@ -16,8 +16,8 @@ means.measurement.dimension.angle
 means.measurement.units.si.radian
 has.measurement.fundamentalComponent */
 
-@safe:
 import uim.models;
+@safe:
 
 class DRadianAttribute : DDoubleAttribute {
   mixin(AttributeThis!("RadianAttribute"));

@@ -14,8 +14,8 @@ means.measurement.units.si.ampere
 has.measurement.fundamentalComponent.ampere
  */
 
-@safe:
 import uim.models;
+@safe:
 
 class DAmpereAttribute : DDoubleAttribute {
   mixin(AttributeThis!("AmpereAttribute"));
