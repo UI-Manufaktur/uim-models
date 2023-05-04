@@ -5,8 +5,8 @@
 **********************************************************************************************************/
 module uim.models.attributes.integers.calenderparts.day;
 
-@safe:
 import uim.models;
+@safe:
 
 /* means.calendar
 means.calendar.day */

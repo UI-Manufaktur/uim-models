@@ -15,8 +15,8 @@ means.measurement.dimension.time
 means.measurement.duration.minutes
 has.measurement.fundamentalComponent.second */
 
-@safe:
 import uim.models;
+@safe:
 
 class DMinuteAttribute : DIntegerAttribute {
   mixin(AttributeThis!("MinuteAttribute"));

@@ -15,8 +15,8 @@ means.measurement.dimension.time
 means.measurement.duration.years
 has.measurement.fundamentalComponent.second */
 
-@safe:
 import uim.models;
+@safe:
 
 class DYearAttribute : DIntegerAttribute {
   mixin(AttributeThis!("YearAttribute"));

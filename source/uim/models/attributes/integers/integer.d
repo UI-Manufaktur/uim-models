@@ -5,8 +5,8 @@
 **********************************************************************************************************/
 module uim.models.attributes.integers.integer;
 
-@safe:
 import uim.models;
+@safe:
 
 class DIntegerAttribute : DAttribute {
   mixin(AttributeThis!"IntegerAttribute");

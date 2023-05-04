@@ -5,8 +5,8 @@
 **********************************************************************************************************/
 module uim.models.attributes.integers.long_;
 
-@safe:
 import uim.models;
+@safe:
 
 class DLongAttribute : DAttribute {
   mixin(AttributeThis!("LongAttribute"));

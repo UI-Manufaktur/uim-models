@@ -5,8 +5,8 @@
 **********************************************************************************************************/
 module uim.models.attributes.integers.day;
 
-@safe:
 import uim.models;
+@safe:
 
   /* Unit of measure for time in 'one earth rotation' interval
   is.dataFormat.integer

@@ -5,8 +5,8 @@
 **********************************************************************************************************/
 module uim.models.attributes.integers;
 
-@safe:
 import uim.models;
+@safe:
 
 public import uim.models.attributes.integers.integer;
 
