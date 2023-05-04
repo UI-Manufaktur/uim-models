@@ -5,8 +5,8 @@
 **********************************************************************************************************/
 module uim.models.attributes.chars;
 
-@safe:
 import uim.models;
+@safe:
 
 public import uim.models.attributes.chars.char_;
 

@@ -5,8 +5,8 @@
 **********************************************************************************************************/
 module uim.models.attributes.dates.date_;
 
-@safe:
 import uim.models;
+@safe:
 
 class DDateAttribute : DAttribute {
   mixin(AttributeThis!("DateAttribute"));

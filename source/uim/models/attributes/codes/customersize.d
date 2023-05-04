@@ -5,8 +5,8 @@
 **********************************************************************************************************/
 module uim.models.attributes.codes.customersize;
 
-@safe:
 import uim.models;
+@safe:
 
 class DCustomerSizeCodeAttribute : DIntegerStringAttribute {
   mixin(AttributeThis!("CustomerSizeCodeAttribute"));

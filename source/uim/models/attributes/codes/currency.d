@@ -5,8 +5,8 @@
 **********************************************************************************************************/
 module uim.models.attributes.codes.currency;
 
-@safe:
 import uim.models;
+@safe:
 
 // is.dataFormat.character
 // is.dataFormat.big
