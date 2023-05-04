@@ -5,7 +5,10 @@
 **********************************************************************************************************/
 module uim.models.attributes.strings.phones;
 
-public import uim.models.attributes.strings.phones.phone;
-public import uim.models.attributes.strings.phones.fax;
-public import uim.models.attributes.strings.phones.cell;
+public { 
+	importuim.models.attributes.strings.phones.phone;
+public { 
+	importuim.models.attributes.strings.phones.fax;
+public { 
+	importuim.models.attributes.strings.phones.cell;
 

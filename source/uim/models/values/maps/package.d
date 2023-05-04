@@ -8,13 +8,20 @@ module uim.models.values.maps;
 import uim.models;
 @safe:
 
-public import uim.models.values.maps.map;
-public import uim.models.values.maps.options;
-public import uim.models.values.maps.config;
-public import uim.models.values.maps.string;
+public { 
+	importuim.models.values.maps.map;
+public { 
+	importuim.models.values.maps.options;
+public { 
+	importuim.models.values.maps.config;
+public { 
+	importuim.models.values.maps.string;
 
 /* ublic import uim.models.values.maps.lookup;
-public import uim.models.values.maps.customertype;
-public import uim.models.values.maps.string_;
-public import uim.models.values.maps.preferredcontactmethod; */
+public { 
+	importuim.models.values.maps.customertype;
+public { 
+	importuim.models.values.maps.string_;
+public { 
+	importuim.models.values.maps.preferredcontactmethod; */
 

@@ -1,3 +1,4 @@
 module uim.models.values.elements;
 
-public import uim.models.values.elements.element;
+public { 
+	importuim.models.values.elements.element;

@@ -8,8 +8,12 @@ module uim.models.elements;
 import uim.models;
 @safe:
 
-public import uim.models.elements.configuration;
-public import uim.models.elements.element;
-public import uim.models.elements.registry;
-public import uim.models.elements.version_;
+public { 
+	import uim.models.elements.configuration;
+public { 
+	importuim.models.elements.element;
+public { 
+	importuim.models.elements.registry;
+public { 
+	importuim.models.elements.version_;
 

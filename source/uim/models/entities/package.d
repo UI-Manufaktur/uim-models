@@ -8,10 +8,14 @@ module uim.models.entities;
 import uim.models;
 @safe:
 
-public import uim.models.entities.entity;
-public import uim.models.entities.entities;
-public import uim.models.entities.entity_lang;
-public import uim.models.entities.registry;
+public { 
+	importuim.models.entities.entity;
+public { 
+	importuim.models.entities.entities;
+public { 
+	importuim.models.entities.entity_lang;
+public { 
+	importuim.models.entities.registry;
 
 template EntityThis(string name) {
   const char[] EntityThis = `

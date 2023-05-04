@@ -5,7 +5,9 @@
 **********************************************************************************************************/
 module uim.models.attributes.uuids.entities.slas;
 
-public import uim.models.attributes.uuids.entities.slas.sla;
+public { 
+	importuim.models.attributes.uuids.entities.slas.sla;
 
-public import uim.models.attributes.uuids.entities.slas.invoked;
+public { 
+	importuim.models.attributes.uuids.entities.slas.invoked;
 

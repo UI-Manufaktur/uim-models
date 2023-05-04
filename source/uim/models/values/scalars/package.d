@@ -5,8 +5,13 @@
 **********************************************************************************************************/
 module uim.models.values.scalars;
 
-public import uim.models.values.scalars.boolean;
-public import uim.models.values.scalars.double_;
-public import uim.models.values.scalars.integer;
-public import uim.models.values.scalars.long_;
-public import uim.models.values.scalars.string_;
+public { 
+	importuim.models.values.scalars.boolean;
+public { 
+	importuim.models.values.scalars.double_;
+public { 
+	importuim.models.values.scalars.integer;
+public { 
+	importuim.models.values.scalars.long_;
+public { 
+	importuim.models.values.scalars.string_;

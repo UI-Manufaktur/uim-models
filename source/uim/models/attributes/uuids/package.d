@@ -6,7 +6,9 @@
 module uim.models.attributes.uuids;
 
 // main
-public import uim.models.attributes.uuids.uuid;
+public { 
+	importuim.models.attributes.uuids.uuid;
 
 // subs
-public import uim.models.attributes.uuids.entityids;
+public { 
+	importuim.models.attributes.uuids.entityids;
