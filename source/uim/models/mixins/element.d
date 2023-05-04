@@ -1,7 +1,7 @@
 module uim.models.mixins.element;
 
-@safe:
 import uim.models;
+@safe:
 
 template ElementThis(string name) {
   const char[] ElementThis = `

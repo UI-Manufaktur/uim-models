@@ -1,7 +1,7 @@
 module uim.models.entities.registry;
 
-@safe:
 import uim.models;
+@safe:
 
 class DEntityRegistry : DRegistry!DEntity {
   static DEntityRegistry registry;

@@ -5,8 +5,8 @@
 **********************************************************************************************************/
 module uim.models.interfaces.attribute;
 
-@safe:
 import uim.models;
+@safe:
 
 interface IAttribute {
 	// Data formats of the attribute. 

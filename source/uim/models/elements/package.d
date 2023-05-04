@@ -5,8 +5,8 @@
 **********************************************************************************************************/
 module uim.models.elements;
 
-@safe:
 import uim.models;
+@safe:
 
 public import uim.models.elements.configuration;
 public import uim.models.elements.element;

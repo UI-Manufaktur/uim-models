@@ -1,7 +1,7 @@
 module uim.models.helpers.entities;
 
-@safe:
 import uim.models;
+@safe:
 
 /* Json toJson(DEntity[] entities) {
   auto result = Json.emptyArray;

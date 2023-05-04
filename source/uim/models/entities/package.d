@@ -5,8 +5,8 @@
 **********************************************************************************************************/
 module uim.models.entities;
 
-@safe:
 import uim.models;
+@safe:
 
 public import uim.models.entities.entity;
 public import uim.models.entities.entities;

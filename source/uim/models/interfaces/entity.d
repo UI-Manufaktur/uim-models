@@ -5,8 +5,8 @@
 **********************************************************************************************************/
 module uim.models.interfaces.entity;
 
-@safe:
 import uim.models;
+@safe:
 
 interface IEntity : IElement {
 }

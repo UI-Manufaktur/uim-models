@@ -5,8 +5,8 @@
 **********************************************************************************************************/
 module uim.models.interfaces.element;
 
-@safe:
 import uim.models;
+@safe:
 
 interface IElement {
 	// Read data from STRINGAA

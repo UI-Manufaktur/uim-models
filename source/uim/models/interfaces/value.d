@@ -5,8 +5,8 @@
 **********************************************************************************************************/
 module uim.models.interfaces.value;
 
-@safe:
 import uim.models;
+@safe:
 
 interface IValue {
   IAttribute attribute();

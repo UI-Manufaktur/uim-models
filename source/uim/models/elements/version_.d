@@ -5,8 +5,8 @@
 **********************************************************************************************************/
 module uim.models.elements.version_;
 
-@safe:
 import uim.models;
+@safe:
 
 class DVersion: DElement {
   static namespace = moduleName!DVersion;

@@ -5,8 +5,8 @@
 **********************************************************************************************************/
 module uim.models.entities.entity_lang;
 
-@safe:
 import uim.models;
+@safe:
 
 /* class DEntityLang : DEntity {
   this() { super(); }
