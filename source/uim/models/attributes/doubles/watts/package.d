@@ -10,7 +10,5 @@ public {
 
 public { 
 	import uim.models.attributes.doubles.watts.kilo;
-public { 
 	import uim.models.attributes.doubles.watts.mega;
-public { 
 	import uim.models.attributes.doubles.watts.milli;

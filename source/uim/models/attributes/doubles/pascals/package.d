@@ -10,7 +10,5 @@ public {
 
 public { 
 	import uim.models.attributes.doubles.pascals.giga;
-public { 
 	import uim.models.attributes.doubles.pascals.kilo;
-public { 
 	import uim.models.attributes.doubles.pascals.mega;

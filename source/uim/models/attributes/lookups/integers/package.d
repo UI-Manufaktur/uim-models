@@ -7,7 +7,5 @@ module uim.models.attributes.lookups.integers;
 
 public { 
 	import uim.models.attributes.lookups.integers.boolean;
-public { 
 	import uim.models.attributes.lookups.integers.integer;
-public { 
 	import uim.models.attributes.lookups.integers.string_;

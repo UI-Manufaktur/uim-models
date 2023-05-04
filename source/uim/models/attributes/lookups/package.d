@@ -10,9 +10,7 @@ import uim.models;
 
 public { 
 	import uim.models.attributes.lookups.booleans;
-public { 
 	import uim.models.attributes.lookups.integers;
-public { 
 	import uim.models.attributes.lookups.strings;
 
 public { 

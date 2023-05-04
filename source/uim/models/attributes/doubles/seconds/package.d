@@ -10,5 +10,4 @@ public {
 
 public { 
 	import uim.models.attributes.doubles.seconds.micro;
-public { 
 	import uim.models.attributes.doubles.seconds.milli;

@@ -16,19 +16,11 @@ public {
 
 public { 
 	import uim.models.attributes.integers.age;
-public { 
 	import uim.models.attributes.integers.day;
-public { 
 	import uim.models.attributes.integers.displayorder;
-public { 
 	import uim.models.attributes.integers.hour;
-public { 
 	import uim.models.attributes.integers.long_;
-public { 
 	import uim.models.attributes.integers.minute;
-public { 
 	import uim.models.attributes.integers.minutes;
-public { 
 	import uim.models.attributes.integers.number;
-public { 
 	import uim.models.attributes.integers.year;
