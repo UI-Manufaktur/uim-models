@@ -3,9 +3,9 @@ module uim.models.attributes.doubles;
 // main
 public { 
 	import uim.models.attributes.doubles.double_;
+}
 
-// packages
-public { 
+public { // Packages
 	import uim.models.attributes.doubles.amperes;
 	import uim.models.attributes.doubles.farads;
 	import uim.models.attributes.doubles.grams;
@@ -16,6 +16,7 @@ public {
 	import uim.models.attributes.doubles.seconds;
 	import uim.models.attributes.doubles.volts;
 	import uim.models.attributes.doubles.watts;
+}
 
 // subs
 public { 
@@ -32,3 +33,4 @@ public {
 	import uim.models.attributes.doubles.newton;
 	import uim.models.attributes.doubles.percentage;
 	import uim.models.attributes.doubles.radian;
+}

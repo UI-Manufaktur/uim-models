@@ -5,11 +5,9 @@
 **********************************************************************************************************/
 module uim.models.attributes.arrays;
 
-import uim.models;
-@safe:
-
 public { 
 	import uim.models.attributes.arrays.array;
+}
 
 public { 
 	import uim.models.attributes.arrays.booleans;
@@ -18,3 +16,4 @@ public {
 	import uim.models.attributes.arrays.integers;
 	import uim.models.attributes.arrays.strings;
 	import uim.models.attributes.arrays.values;
+}

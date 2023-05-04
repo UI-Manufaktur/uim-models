@@ -8,6 +8,7 @@ module uim.models.attributes.datetimes;
 // main
 public { 
 	import uim.models.attributes.datetimes.datetime;
+}
 
 // subs
 public { 
@@ -15,4 +16,4 @@ public {
 	import uim.models.attributes.datetimes.datetime;
 	import uim.models.attributes.datetimes.time;
 	import uim.models.attributes.datetimes.timestamp;
-
+}

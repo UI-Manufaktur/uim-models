@@ -8,4 +8,4 @@ module uim.models.attributes.arrays.bytes;
 public { 
 	import uim.models.attributes.arrays.bytes.binary;
 	import uim.models.attributes.arrays.bytes.image;
-
+}

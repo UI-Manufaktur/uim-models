@@ -5,9 +5,6 @@
 **********************************************************************************************************/
 module uim.models.attributes.bytes;
 
-import uim.models;
-@safe:
-
 public { 
 	import uim.models.attributes.bytes.byte_;
-
+}

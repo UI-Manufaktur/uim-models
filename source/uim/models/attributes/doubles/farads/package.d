@@ -7,8 +7,10 @@ module uim.models.attributes.doubles.farads;
 
 public { 
 	import uim.models.attributes.doubles.farads.farad;
+}
 
 public { 
 	import uim.models.attributes.doubles.farads.micro;
 	import uim.models.attributes.doubles.farads.nano;
 	import uim.models.attributes.doubles.farads.pico;
+}

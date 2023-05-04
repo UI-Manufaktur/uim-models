@@ -7,7 +7,9 @@ module uim.models.attributes.doubles.grams;
 
 public { 
 	import uim.models.attributes.doubles.grams.gram;
+}
 
 public { 
 	import uim.models.attributes.doubles.grams.kilo;
 	import uim.models.attributes.doubles.grams.milli;
+}
