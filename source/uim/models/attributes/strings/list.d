@@ -5,8 +5,8 @@
 **********************************************************************************************************/
 module uim.models.attributes.strings.list;
 
-@safe:
 import uim.models;
+@safe:
 
 // A CSV contained within one string value
 // means.content.text.CSV

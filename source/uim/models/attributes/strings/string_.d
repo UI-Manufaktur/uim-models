@@ -5,8 +5,8 @@
 **********************************************************************************************************/
 module uim.models.attributes.strings.string_;
 
-@safe:
 import uim.models;
+@safe:
 
 class DStringAttribute : DCharAttribute {
   mixin(AttributeThis!"StringAttribute");

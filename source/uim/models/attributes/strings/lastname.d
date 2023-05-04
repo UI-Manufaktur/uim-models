@@ -5,8 +5,8 @@
 **********************************************************************************************************/
 module uim.models.attributes.strings.lastname;
 
-@safe:
 import uim.models;
+@safe:
 
 // means.identity.person.lastName
 class DLastNameAttribute : DStringAttribute {

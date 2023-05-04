@@ -16,8 +16,8 @@ is.dataFormat.array
 means.content.text.HTML
  */
  
-@safe:
 import uim.models;
+@safe:
 
 class DHtmlAttribute : DStringAttribute {
   mixin(AttributeThis!("HtmlAttribute"));

@@ -15,8 +15,8 @@ is.dataFormat.big
 is.dataFormat.array
 means.identity.IP6Address */
 
-@safe:
 import uim.models;
+@safe:
 
 class DIP6AddressAttribute : DStringAttribute {
   mixin(AttributeThis!("IP6AddressAttribute"));

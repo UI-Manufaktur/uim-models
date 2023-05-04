@@ -12,8 +12,8 @@ is.dataFormat.big
 is.dataFormat.array
 means.identity.tickerSymbol */
 
-@safe:
 import uim.models;
+@safe:
 
 class DTickerSymbolAttribute : DStringAttribute {
   mixin(AttributeThis!("TickerSymbolAttribute"));

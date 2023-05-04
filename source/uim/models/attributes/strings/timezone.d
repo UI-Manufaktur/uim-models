@@ -12,8 +12,8 @@ is.dataFormat.big
 is.dataFormat.array
 means.location.timezone */
 
-@safe:
 import uim.models;
+@safe:
 
 class DTimezoneAttribute : DStringAttribute {
   mixin(AttributeThis!("TimezoneAttribute"));

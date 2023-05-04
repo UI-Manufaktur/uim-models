@@ -5,8 +5,8 @@
 **********************************************************************************************************/
 module uim.models.attributes.strings.url;
 
-@safe:
 import uim.models;
+@safe:
 
 class DUrlAttribute : DStringAttribute {
   mixin(AttributeThis!("UrlAttribute"));

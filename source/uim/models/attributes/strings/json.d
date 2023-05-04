@@ -21,8 +21,8 @@ is.dataFormat.array
 means.content.text.JSON
  */
  
-@safe:
 import uim.models;
+@safe:
 
 class DJsonAttribute : DStringAttribute {
   mixin(AttributeThis!("JsonAttribute"));
