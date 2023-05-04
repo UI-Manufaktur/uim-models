@@ -5,13 +5,8 @@
 **********************************************************************************************************/
 module uim.models.attributes.integers;
 
-import uim.models;
-@safe:
-
 public { 
 	import uim.models.attributes.integers.integer;
-
-public { 
 	import uim.models.attributes.integers.calenderparts;
 }
 

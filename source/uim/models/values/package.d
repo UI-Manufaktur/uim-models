@@ -11,6 +11,7 @@ import uim.models;
 public { 
 	import uim.models.values.value;
 	import uim.models.values.map;
+}
 
 // Packages
 public { 
@@ -21,12 +22,14 @@ public {
 	import uim.models.values.maps;
 	import uim.models.values.scalars;
 	import uim.models.values.uuids;
+}
 
 // Modules
 public { 
 	import uim.models.values.entity;
 	import uim.models.values.null_;
 	import uim.models.values.object_;
+}
 
 template ValueThis(string name, string datatype = null) { // Name for future releases
   const char[] ValueThis = `  

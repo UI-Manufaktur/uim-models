@@ -5,9 +5,6 @@
 **********************************************************************************************************/
 module uim.models.attributes.strings.languagetags;
 
-import uim.models;
-@safe:
-
 public { 
 	import uim.models.attributes.strings.languagetags.languagetag;
 	import uim.models.attributes.strings.languagetags.culturetag;

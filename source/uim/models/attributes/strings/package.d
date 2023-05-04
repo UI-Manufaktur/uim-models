@@ -8,6 +8,7 @@ module uim.models.attributes.chars.strings;
 // main
 public { 
 	import uim.models.attributes.strings.string_;
+}
 
 // subs
 public { 
