@@ -1,7 +1,7 @@
 module uim.models.attributes.doubles.coulomb;
 
-@safe:
 import uim.models;
+@safe:
 
 // Unit of measure for electric charge or amount of electricity in coulombs
 

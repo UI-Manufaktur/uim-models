@@ -12,8 +12,8 @@ is.dataFormat.floatingPoint
 is.dataFormat.big
 means.measurement.distance.inches */
 
-@safe:
 import uim.models;
+@safe:
 
 class DInchesAttribute : DDoubleAttribute {
   mixin(AttributeThis!("InchesAttribute"));

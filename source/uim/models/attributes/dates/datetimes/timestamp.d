@@ -5,8 +5,8 @@
 **********************************************************************************************************/
 module uim.models.attributes.datetimes.timestamp;
 
-@safe:
 import uim.models;
+@safe:
 
 class DTimestampAttribute : DLongAttribute {
   mixin(AttributeThis!("TimestampAttribute"));
