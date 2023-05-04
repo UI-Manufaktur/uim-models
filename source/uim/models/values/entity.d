@@ -5,8 +5,8 @@
 **********************************************************************************************************/
 module uim.models.values.entity;
 
-@safe:
 import uim.models;
+@safe:
 
 class DEntityValue : DValue {
   mixin(ValueThis!("EntityValue", "DEntity"));  

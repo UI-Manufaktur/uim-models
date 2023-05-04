@@ -1,7 +1,7 @@
 module uim.models.mixins.value;
 
-@safe:
 import uim.models;
+@safe:
 
 auto valueGetter(string name, string datatype, string valueClass, string path) {
   string newPath = (path ? path : name);

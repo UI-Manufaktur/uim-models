@@ -5,8 +5,8 @@
 **********************************************************************************************************/
 module uim.models.values.arrays.array_;
 
-@safe:
 import uim.models;
+@safe:
 
 class DArrayValue : DValue {
   mixin(ValueThis!("ArrayValue"));  

@@ -5,8 +5,8 @@
 **********************************************************************************************************/
 module uim.models.values.value;
 
-@safe:
 import uim.models;
+@safe:
 
 class DValue : IValue {
   this() { initialize; }

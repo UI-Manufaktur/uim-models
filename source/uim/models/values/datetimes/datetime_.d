@@ -5,8 +5,8 @@
 **********************************************************************************************************/
 module uim.models.values.datetimes.datetime_;
 
-@safe:
 import uim.models;
+@safe:
 
 class DDatetimeValue : DValue {
   mixin(ValueThis!("DatetimeValue", "DateTime"));  

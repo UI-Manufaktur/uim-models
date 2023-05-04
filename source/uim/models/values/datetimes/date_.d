@@ -5,8 +5,8 @@
 **********************************************************************************************************/
 module uim.models.values.datetimes.date_;
 
-@safe:
 import uim.models;
+@safe:
 import std.datetime.date;
 
 class DDateValue : DValue {

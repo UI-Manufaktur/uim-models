@@ -5,8 +5,8 @@
 **********************************************************************************************************/
 module uim.models.values.arrays.tag;
 
-@safe:
 import uim.models;
+@safe:
 
 class DTagArrayValue : DStringArrayValue {
   mixin(ValueThis!("TagArrayValue", "string[]"));  
