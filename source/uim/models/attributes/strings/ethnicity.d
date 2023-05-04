@@ -5,8 +5,8 @@
 **********************************************************************************************************/
 module uim.models.attributes.strings.ethnicity;
 
-@safe:
 import uim.models;
+@safe:
 
 /* 
 is.dataFormat.character

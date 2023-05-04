@@ -5,8 +5,8 @@
 **********************************************************************************************************/
 module uim.models.attributes.strings.companyname;
 
-@safe:
 import uim.models;
+@safe:
 
 // means.identity.company.name
 class DCompanyNameAttribute : DStringAttribute {

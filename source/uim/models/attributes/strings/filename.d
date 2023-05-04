@@ -5,8 +5,8 @@
 **********************************************************************************************************/
 module uim.models.attributes.strings.filename;
 
-@safe:
 import uim.models;
+@safe:
 
 // A string value representing the name of a file.
 class DFileNameAttribute : DStringAttribute {

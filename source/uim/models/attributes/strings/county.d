@@ -5,8 +5,8 @@
 **********************************************************************************************************/
 module uim.models.attributes.strings.county;
 
-@safe:
 import uim.models;
+@safe:
 
 // means.location.county
 class DCountyAttribute : DStringAttribute {

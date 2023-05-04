@@ -5,8 +5,8 @@
 **********************************************************************************************************/
 module uim.models.attributes.strings.email;
 
-@safe:
 import uim.models;
+@safe:
 
 // means.identity.person.email
 class DEmailAttribute : DStringAttribute {

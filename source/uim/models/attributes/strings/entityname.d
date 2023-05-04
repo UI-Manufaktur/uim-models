@@ -5,8 +5,8 @@
 **********************************************************************************************************/
 module uim.models.attributes.strings.entityname;
 
-@safe:
 import uim.models;
+@safe:
 
 /* Type for trait parameters that take entity names as values
 is.dataFormat.character

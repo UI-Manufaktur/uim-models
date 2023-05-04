@@ -5,8 +5,8 @@
 **********************************************************************************************************/
 module uim.models.attributes.strings.city;
 
-@safe:
 import uim.models;
+@safe:
 
 // means.location.city
 class DCityNameAttribute : DStringAttribute {

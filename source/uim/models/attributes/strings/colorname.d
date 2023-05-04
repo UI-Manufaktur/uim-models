@@ -5,8 +5,8 @@
 **********************************************************************************************************/
 module uim.models.attributes.strings.colorname;
 
-@safe:
 import uim.models;
+@safe:
 
 // means.measurement.color
 class DColorNameAttribute : DStringAttribute {
