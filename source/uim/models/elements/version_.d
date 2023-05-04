@@ -9,7 +9,7 @@ import uim.models;
 @safe:
 
 class DVersion: DElement {
-  static namespace = moduleName!DVersion;
+  // static namespace = moduleName!DVersion;
 
   // Constructors
   this() { super(); }

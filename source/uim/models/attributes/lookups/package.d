@@ -13,7 +13,6 @@ public {
 
 public { 
 	import uim.models.attributes.lookups.lookup;
-	import uim.models.attributes.lookups.customertype;
-	import uim.models.attributes.lookups.string_;
+	// import uim.models.attributes.lookups.customertype;
 	import uim.models.attributes.lookups.preferredcontactmethod;
 }

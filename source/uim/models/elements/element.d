@@ -9,7 +9,7 @@ import uim.models;
 @safe:
 
 class DElement {
-  static namespace = moduleName!DElement;
+  // // static namespace = moduleName!DElement;
 
   // Constructors
   this() { initialize; }

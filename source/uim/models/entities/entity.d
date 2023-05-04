@@ -9,7 +9,7 @@ import uim.models;
 @safe:
 
 class DEntity : DElement /* : IRegistrable */ {
-  static namespace = moduleName!DEntity;
+  // static namespace = moduleName!DEntity;
 
   // Constructors
   this() { initialize; }

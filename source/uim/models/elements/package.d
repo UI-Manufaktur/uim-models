@@ -5,12 +5,10 @@
 **********************************************************************************************************/
 module uim.models.elements;
 
-import uim.models;
-@safe:
-
 public { 
 	import uim.models.elements.configuration;
 	import uim.models.elements.element;
 	import uim.models.elements.registry;
 	import uim.models.elements.version_;
+}
 

@@ -13,6 +13,7 @@ public {
 	import uim.models.entities.entities;
 	import uim.models.entities.entity_lang;
 	import uim.models.entities.registry;
+}
 
 template EntityThis(string name) {
   const char[] EntityThis = `
