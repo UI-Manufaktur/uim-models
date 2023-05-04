@@ -5,8 +5,8 @@
 **********************************************************************************************************/
 module uim.models.values.maps.string;
 
-@safe:
 import uim.models;
+@safe:
 
 class DStringValueMap : DValue, IMap {
   mixin(ValueThis!("StringValueMap"));

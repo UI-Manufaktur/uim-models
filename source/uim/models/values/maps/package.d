@@ -5,8 +5,8 @@
 **********************************************************************************************************/
 module uim.models.values.maps;
 
-@safe:
 import uim.models;
+@safe:
 
 public import uim.models.values.maps.map;
 public import uim.models.values.maps.options;

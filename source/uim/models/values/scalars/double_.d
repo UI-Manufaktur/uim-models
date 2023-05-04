@@ -5,8 +5,8 @@
 **********************************************************************************************************/
 module uim.models.values.scalars.double_;
 
-@safe:
 import uim.models;
+@safe:
 
 class DDoubleValue : DValue {
   mixin(ValueThis!("DoubleValue", "double"));  

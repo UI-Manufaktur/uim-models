@@ -5,7 +5,7 @@
 **********************************************************************************************************/
 module uim.models.values.lookups;
 
-@safe:
 import uim.models;
+@safe:
 
 public import uim.models.values.lookups.lookup;

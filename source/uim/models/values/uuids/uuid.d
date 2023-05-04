@@ -5,8 +5,8 @@
 **********************************************************************************************************/
 module uim.models.values.uuids.uuid;
 
-@safe:
 import uim.models;
+@safe:
 
 class DUUIDValue : DValue {
   mixin(ValueThis!("UUIDValue", "UUID"));  

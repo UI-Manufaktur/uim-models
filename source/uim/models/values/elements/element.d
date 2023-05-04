@@ -5,8 +5,8 @@
 **********************************************************************************************************/
 module uim.models.values.elements.element;
 
-@safe:
 import uim.models;
+@safe:
 
 class DElementValue : DValue {
   mixin(ValueThis!("ElementValue", "DElement"));    

@@ -5,8 +5,8 @@
 **********************************************************************************************************/
 module uim.models.values.datetimes.timestamp;
 
-@safe:
 import uim.models;
+@safe:
 
 class DTimestampValue : DLongValue {
   mixin(ValueThis!("TimestampValue", "long"));  

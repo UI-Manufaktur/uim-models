@@ -5,8 +5,8 @@
 **********************************************************************************************************/
 module uim.models.values.scalars.integer;
 
-@safe:
 import uim.models;
+@safe:
 
 class DIntegerValue : DValue {
   mixin(ValueThis!("IntegerValue", "int"));  
