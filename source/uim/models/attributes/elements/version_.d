@@ -5,8 +5,8 @@
 **********************************************************************************************************/
 module uim.models.attributes.elements.version_;
 
-@safe:
 import uim.models;
+@safe:
 
 class DVersionElementAttribute : DAttribute {
   mixin(AttributeThis!("VersionElementAttribute"));

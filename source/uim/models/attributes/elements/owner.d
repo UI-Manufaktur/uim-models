@@ -5,8 +5,8 @@
 **********************************************************************************************************/
 module uim.models.attributes.elements.owner;
 
-@safe:
 import uim.models;
+@safe:
 
 class DOwnerElementAttribute : DAttribute {
   mixin(AttributeThis!("OwnerElementAttribute"));

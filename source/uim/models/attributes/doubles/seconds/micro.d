@@ -17,8 +17,8 @@ has.measurement.fundamentalComponent.microsecond
 means.measurement.duration.microseconds
 means.measurement.prefix.micro */
 
-@safe:
 import uim.models;
+@safe:
 
 class DMicroSecondAttribute : DSecondAttribute {
   mixin(AttributeThis!("MicroSecondAttribute"));

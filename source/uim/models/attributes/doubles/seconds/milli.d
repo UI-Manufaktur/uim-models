@@ -18,8 +18,8 @@ has.measurement.fundamentalComponent.second
 means.measurement.duration.seconds
 means.measurement.prefix.milli */
 
-@safe:
 import uim.models;
+@safe:
 
 class DMilliSecondAttribute : DSecondAttribute {
   mixin(AttributeThis!("MilliSecondAttribute"));

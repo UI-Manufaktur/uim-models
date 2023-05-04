@@ -19,8 +19,8 @@ has.measurement.fundamentalComponent.meter
 has.measurement.fundamentalComponent.second
 means.measurement.prefix.kilo */
 
-@safe:
 import uim.models;
+@safe:
 
 class DKiloWattAttribute : DWattAttribute {
   mixin(AttributeThis!("KiloWattAttribute"));

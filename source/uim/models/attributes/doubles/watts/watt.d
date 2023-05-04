@@ -18,8 +18,8 @@ has.measurement.fundamentalComponent.kilogram
 has.measurement.fundamentalComponent.meter
 has.measurement.fundamentalComponent.second */
 
-@safe:
 import uim.models;
+@safe:
 
 class DWattAttribute : DDoubleAttribute {
   mixin(AttributeThis!("WattAttribute"));

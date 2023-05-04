@@ -18,8 +18,8 @@ has.measurement.fundamentalComponent.second
 has.measurement.fundamentalComponent.ampere
 means.measurement.prefix.milli */
 
-@safe:
 import uim.models;
+@safe:
 
 class DMilliVoltAttribute : DVoltAttribute {
   mixin(AttributeThis!("MilliVoltAttribute"));
