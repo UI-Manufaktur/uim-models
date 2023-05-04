@@ -12,8 +12,8 @@ means.calendar
 means.calendar.quarter */
 
 
-@safe:
 import uim.models;
+@safe:
 
 class DQuarterAttribute : DIntegerCalendarPart {
   mixin(AttributeThis!("QuarterAttribute"));

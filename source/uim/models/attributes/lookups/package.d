@@ -5,8 +5,8 @@
 **********************************************************************************************************/
 module uim.models.attributes.lookups;
 
-@safe:
 import uim.models;
+@safe:
 
 public import uim.models.attributes.lookups.booleans;
 public import uim.models.attributes.lookups.integers;

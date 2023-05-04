@@ -5,8 +5,8 @@
 **********************************************************************************************************/
 module uim.models.attributes.lookups.integers.integer;
 
-@safe:
 import uim.models;
+@safe:
 
 class DIntegerIntegerAttribute : DLookupAttribute {
   mixin(AttributeThis!("IntegerIntegerAttribute"));

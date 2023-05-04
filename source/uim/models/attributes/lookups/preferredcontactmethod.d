@@ -5,8 +5,8 @@
 **********************************************************************************************************/
 module uim.models.attributes.lookups.preferredcontactmethod;
 
-@safe:
 import uim.models;
+@safe:
 
 class DPreferredContactMethodAttribute : DAttribute {
   mixin(AttributeThis!("PreferredContactMethodAttribute"));

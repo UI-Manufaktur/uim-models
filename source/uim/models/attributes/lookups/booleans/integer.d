@@ -5,8 +5,8 @@
 **********************************************************************************************************/
 module uim.models.attributes.lookups.booleans.integer;
 
-@safe:
 import uim.models;
+@safe:
 
 class DBooleanIntegerAttribute : DLookupAttribute {
   mixin(AttributeThis!("BooleanIntegerAttribute"));

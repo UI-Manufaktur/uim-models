@@ -11,8 +11,8 @@ is.dataFormat.integer
 means.calendar
 means.calendar.week */
 
-@safe:
 import uim.models;
+@safe:
 
 class DWeekAttribute : DIntegerCalendarPart {
   mixin(AttributeThis!("WeekAttribute"));

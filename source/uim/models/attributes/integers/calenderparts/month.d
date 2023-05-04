@@ -11,8 +11,8 @@ is.dataFormat.integer
 means.calendar
 means.calendar.month */
 
-@safe:
 import uim.models;
+@safe:
 
 /* means.calendar
 means.calendar.day */
