@@ -7,8 +7,10 @@ module uim.models.attributes.doubles.hertzes;
 
 public { 
 	import uim.models.attributes.doubles.hertzes.hertz;
+}
 
 public { 
 	import uim.models.attributes.doubles.hertzes.giga;
 	import uim.models.attributes.doubles.hertzes.kilo;
 	import uim.models.attributes.doubles.hertzes.mega;
+}

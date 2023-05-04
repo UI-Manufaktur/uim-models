@@ -5,10 +5,7 @@
 **********************************************************************************************************/
 module uim.models.attributes.entities;
 
-@safe:
-public { 
-	import uim.oop;
-
 // Main
 public { 
 	import uim.models.attributes.entities.entity;
+}

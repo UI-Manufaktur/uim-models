@@ -7,7 +7,9 @@ module uim.models.attributes.doubles.seconds;
 
 public { 
 	import uim.models.attributes.doubles.seconds.second;
+}
 
 public { 
 	import uim.models.attributes.doubles.seconds.micro;
 	import uim.models.attributes.doubles.seconds.milli;
+}

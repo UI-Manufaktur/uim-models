@@ -9,3 +9,4 @@ public {
 	import uim.models.attributes.doubles.ohms.ohm;
 	import uim.models.attributes.doubles.ohms.kilo;
 	import uim.models.attributes.doubles.ohms.mega;
+}

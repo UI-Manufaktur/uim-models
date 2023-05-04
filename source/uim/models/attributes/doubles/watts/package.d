@@ -7,8 +7,10 @@ module uim.models.attributes.doubles.watts;
 
 public { 
 	import uim.models.attributes.doubles.watts.watt;
+}
 
 public { 
 	import uim.models.attributes.doubles.watts.kilo;
 	import uim.models.attributes.doubles.watts.mega;
 	import uim.models.attributes.doubles.watts.milli;
+}

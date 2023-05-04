@@ -8,9 +8,11 @@ module uim.models.attributes.doubles.meters;
 // main
 public { 
 	import uim.models.attributes.doubles.meters.meter;
+}
 
 // subs
 public { 
 	import uim.models.attributes.doubles.meters.centi;
 	import uim.models.attributes.doubles.meters.kilo;
 	import uim.models.attributes.doubles.meters.milli;
+}
