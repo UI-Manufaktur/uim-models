@@ -8,7 +8,6 @@ module uim.models.values;
 @safe:
 import uim.models;
 
-public import uim.models.values.interface_;
 public import uim.models.values.value;
 public import uim.models.values.map;
 

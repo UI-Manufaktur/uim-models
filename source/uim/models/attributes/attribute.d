@@ -15,7 +15,8 @@ class DAttribute : /* DEntity,  */IAttribute {
   /* override  */void initialize(Json configSettings = Json(null)) { 
     /* super.initialize(configSettings); */ }
 
-  mixin(OProperty!("string[]", "dataFormats")); // Select the data type of the property.")); // 
+	// Data type of the attribute. 
+  mixin(OProperty!("string[]", "dataFormats")); 
   bool hasDataFormat(string dataFormatName) {
     foreach(df; dataFormats) if (df == dataFormatName) return true;
     return false;

@@ -9,7 +9,6 @@ module uim.models.attributes;
 import uim.models;
 
 public import uim.models.attributes.attribute;
-public import uim.models.attributes.interface_;
 public import uim.models.attributes.registry;
 
 public import uim.models.attributes.lookups;
