@@ -6,9 +6,9 @@
 module uim.models.attributes.doubles.seconds;
 
 public { 
-	importuim.models.attributes.doubles.seconds.second;
+	import uim.models.attributes.doubles.seconds.second;
 
 public { 
-	importuim.models.attributes.doubles.seconds.micro;
+	import uim.models.attributes.doubles.seconds.micro;
 public { 
-	importuim.models.attributes.doubles.seconds.milli;
+	import uim.models.attributes.doubles.seconds.milli;

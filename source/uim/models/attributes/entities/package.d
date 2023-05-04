@@ -7,8 +7,8 @@ module uim.models.attributes.entities;
 
 @safe:
 public { 
-	importuim.oop;
+	import uim.oop;
 
 // Main
 public { 
-	importuim.models.attributes.entities.entity;
+	import uim.models.attributes.entities.entity;

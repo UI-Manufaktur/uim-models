@@ -6,9 +6,9 @@
 module uim.models.attributes.doubles.amperes;
 
 public { 
-	importuim.models.attributes.doubles.amperes.ampere;
+	import uim.models.attributes.doubles.amperes.ampere;
 
 public { 
-	importuim.models.attributes.doubles.amperes.micro;
+	import uim.models.attributes.doubles.amperes.micro;
 public { 
-	importuim.models.attributes.doubles.amperes.milli;
+	import uim.models.attributes.doubles.amperes.milli;

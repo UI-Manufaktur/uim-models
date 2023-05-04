@@ -6,11 +6,11 @@
 module uim.models.attributes.doubles.hertzes;
 
 public { 
-	importuim.models.attributes.doubles.hertzes.hertz;
+	import uim.models.attributes.doubles.hertzes.hertz;
 
 public { 
-	importuim.models.attributes.doubles.hertzes.giga;
+	import uim.models.attributes.doubles.hertzes.giga;
 public { 
-	importuim.models.attributes.doubles.hertzes.kilo;
+	import uim.models.attributes.doubles.hertzes.kilo;
 public { 
-	importuim.models.attributes.doubles.hertzes.mega;
+	import uim.models.attributes.doubles.hertzes.mega;

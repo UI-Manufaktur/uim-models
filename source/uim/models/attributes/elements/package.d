@@ -6,6 +6,6 @@
 module uim.models.attributes.elements;
 
 public { 
-	importuim.models.attributes.elements.element;
+	import uim.models.attributes.elements.element;
 public { 
-	importuim.models.attributes.elements.version_;
+	import uim.models.attributes.elements.version_;

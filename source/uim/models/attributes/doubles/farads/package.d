@@ -6,11 +6,11 @@
 module uim.models.attributes.doubles.farads;
 
 public { 
-	importuim.models.attributes.doubles.farads.farad;
+	import uim.models.attributes.doubles.farads.farad;
 
 public { 
-	importuim.models.attributes.doubles.farads.micro;
+	import uim.models.attributes.doubles.farads.micro;
 public { 
-	importuim.models.attributes.doubles.farads.nano;
+	import uim.models.attributes.doubles.farads.nano;
 public { 
-	importuim.models.attributes.doubles.farads.pico;
+	import uim.models.attributes.doubles.farads.pico;
