@@ -12,8 +12,8 @@ is.dataFormat.big
 is.dataFormat.array
 means.identity.person.middleName */
 
-@safe:
 import uim.models;
+@safe:
 
 class DMiddleNameAttribute : DStringAttribute {
   mixin(AttributeThis!("MiddleNameAttribute"));

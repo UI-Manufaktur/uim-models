@@ -5,8 +5,8 @@
 **********************************************************************************************************/
 module uim.models.attributes.strings.languagetags.languagetag;
 
-@safe:
 import uim.models;
+@safe:
 
 // means.reference.language.tag
 class DLanguageTagAttribute : DStringAttribute {

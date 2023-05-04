@@ -5,8 +5,8 @@
 **********************************************************************************************************/
 module uim.models.attributes.strings.languagetags.culturetag;
 
-@safe:
 import uim.models;
+@safe:
 
 class DCultureTagAttribute : DStringAttribute {
   mixin(AttributeThis!("CultureTagAttribute"));

@@ -5,8 +5,8 @@
 **********************************************************************************************************/
 module uim.models.attributes.strings.names.first;
 
-@safe:
 import uim.models;
+@safe:
 
 /* is.dataFormat.character
 is.dataFormat.big

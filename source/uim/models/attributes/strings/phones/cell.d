@@ -12,8 +12,8 @@ is.dataFormat.big
 is.dataFormat.array
 means.identity.service.phone.cell */
 
-@safe:
 import uim.models;
+@safe:
 
 class DPhoneCellAttribute : DStringAttribute {
   mixin(AttributeThis!("PhoneCellAttribute"));
