@@ -5,8 +5,8 @@
 **********************************************************************************************************/
 module uim.models.attributes.doubles.meters.milli;
 
-@safe:
 import uim.models;
+@safe:
 
 /* Unit of measure for length in 10E-3 meters
 
@@ -20,8 +20,8 @@ means.measurement.units.si.meter
 has.measurement.fundamentalComponent.meter
 means.measurement.prefix.milli */
 
-@safe:
 import uim.models;
+@safe:
 
 class DMillimeterAttribute : DMeterAttribute {
   mixin(AttributeThis!("MillimeterAttribute"));

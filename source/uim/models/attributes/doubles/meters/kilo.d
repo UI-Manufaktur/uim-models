@@ -14,8 +14,8 @@ means.measurement.units.si.meter
 has.measurement.fundamentalComponent.meter
 means.measurement.prefix.kilo */
 
-@safe:
 import uim.models;
+@safe:
 
 class DKilometerAttribute : DMeterAttribute {
   mixin(AttributeThis!("KilometerAttribute"));

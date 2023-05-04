@@ -16,8 +16,8 @@ means.measurement.dimension.mass
 means.measurement.units.si.gram
 has.measurement.fundamentalComponent.gram */
 
-@safe:
 import uim.models;
+@safe:
 
 class DGramAttribute : DDoubleAttribute {
   mixin(AttributeThis!("GramAttribute"));

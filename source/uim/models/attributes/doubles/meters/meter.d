@@ -14,8 +14,8 @@ means.measurement.dimension.length
 means.measurement.units.si.meter
 has.measurement.fundamentalComponent.meter */
 
-@safe:
 import uim.models;
+@safe:
 
 class DMeterAttribute : DDoubleAttribute {
   mixin(AttributeThis!("MeterAttribute"));
