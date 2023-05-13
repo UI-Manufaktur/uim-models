@@ -22,7 +22,7 @@ class DBooleanValue : DValue {
   @property int get() {
     return value;
   }
-  alias get this;
+  // alias get this;
 
   O opCall(this O)(bool newValue) { this.value(newValue); return cast(O)this; }
 
