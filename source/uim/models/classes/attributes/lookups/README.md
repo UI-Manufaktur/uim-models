@@ -1,1 +1,1 @@
-# uim.models.attributes.lookups
+# uim.models.classes.attributes.lookups
