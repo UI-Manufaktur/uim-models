@@ -19,4 +19,8 @@ unittest {
   assert(json.length == 2);
 }
 
- */
+*/
+
+ bool isNull(DEntity entity) {
+  return (entity is null);
+ }
