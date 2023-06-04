@@ -3,7 +3,7 @@
   License: Subject to the terms of the Apache 2.0 license, as written in the included LICENSE.txt file.  
   Authors: Ozan Nurettin Süel (Sicherheitsschmiede)                                                      
 **********************************************************************************************************/
-module uim.models.attributes.doubles.seconds.micro;
+module uim.models.classes.attributes.doubles.seconds.micro;
 
 /* Unit of measure for time in 10E-6 microseconds
 

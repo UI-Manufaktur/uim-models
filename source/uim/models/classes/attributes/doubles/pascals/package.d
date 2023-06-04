@@ -3,14 +3,14 @@
   License: Subject to the terms of the Apache 2.0 license, as written in the included LICENSE.txt file.  
   Authors: Ozan Nurettin Süel (Sicherheitsschmiede)                                                      
 **********************************************************************************************************/
-module uim.models.attributes.doubles.pascals;
+module uim.models.classes.attributes.doubles.pascals;
 
 public { // Main module
-	import uim.models.attributes.doubles.pascals.pascal;
+	import uim.models.classes.attributes.doubles.pascals.pascal;
 }
 
 public { // Sub modules
-	import uim.models.attributes.doubles.pascals.giga;
-	import uim.models.attributes.doubles.pascals.kilo;
-	import uim.models.attributes.doubles.pascals.mega;
+	import uim.models.classes.attributes.doubles.pascals.giga;
+	import uim.models.classes.attributes.doubles.pascals.kilo;
+	import uim.models.classes.attributes.doubles.pascals.mega;
 }

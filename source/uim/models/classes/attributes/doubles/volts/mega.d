@@ -1,4 +1,4 @@
-module uim.models.attributes.doubles.volts.mega;
+module uim.models.classes.attributes.doubles.volts.mega;
 
 /* Unit of power, equivalent to 10E6 volts
 
