@@ -1,4 +1,4 @@
-module uim.models.elements.registry;
+module uim.models.classes.elements.registry;
 
 import uim.models;
 @safe:
