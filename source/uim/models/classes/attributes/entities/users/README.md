@@ -1,1 +1,1 @@
-# Package 📦 uim.models.attributes.entities.users
+# Package 📦 uim.models.classes.attributes.entities.users
