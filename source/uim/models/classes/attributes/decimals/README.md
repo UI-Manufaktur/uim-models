@@ -1,1 +1,1 @@
-# Package 📦 uim.models.attributes.decimals
+# Package 📦 uim.models.classes.attributes.decimals

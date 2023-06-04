@@ -1,4 +1,4 @@
-module uim.models.attributes.doubles.candela;
+module uim.models.classes.attributes.doubles.candela;
 
 // candela
 // Unit of measure for luminous intensity in candelas
