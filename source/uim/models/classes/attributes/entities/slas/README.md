@@ -1,1 +1,1 @@
-# Package 📦 uim.models.attributes.entities.slas
+# Package 📦 uim.models.classes.attributes.entities.slas
