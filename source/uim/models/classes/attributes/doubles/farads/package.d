@@ -3,14 +3,14 @@
   License: Subject to the terms of the Apache 2.0 license, as written in the included LICENSE.txt file.  
   Authors: Ozan Nurettin Süel (Sicherheitsschmiede)                                                      
 **********************************************************************************************************/
-module uim.models.attributes.doubles.farads;
+module uim.models.classes.attributes.doubles.farads;
 
 public { 
-	import uim.models.attributes.doubles.farads.farad;
+	import uim.models.classes.attributes.doubles.farads.farad;
 }
 
 public { 
-	import uim.models.attributes.doubles.farads.micro;
-	import uim.models.attributes.doubles.farads.nano;
-	import uim.models.attributes.doubles.farads.pico;
+	import uim.models.classes.attributes.doubles.farads.micro;
+	import uim.models.classes.attributes.doubles.farads.nano;
+	import uim.models.classes.attributes.doubles.farads.pico;
 }

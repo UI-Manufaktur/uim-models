@@ -1,36 +1,36 @@
-module uim.models.attributes.doubles;
+module uim.models.classes.attributes.doubles;
 
 // main
 public { 
-	import uim.models.attributes.doubles.double_;
+	import uim.models.classes.attributes.doubles.double_;
 }
 
 public { // Packages
-	import uim.models.attributes.doubles.amperes;
-	import uim.models.attributes.doubles.farads;
-	import uim.models.attributes.doubles.grams;
-	import uim.models.attributes.doubles.hertzes;
-	import uim.models.attributes.doubles.meters;
-	import uim.models.attributes.doubles.ohms;
-	import uim.models.attributes.doubles.pascals;
-	import uim.models.attributes.doubles.seconds;
-	import uim.models.attributes.doubles.volts;
-	import uim.models.attributes.doubles.watts;
+	import uim.models.classes.attributes.doubles.amperes;
+	import uim.models.classes.attributes.doubles.farads;
+	import uim.models.classes.attributes.doubles.grams;
+	import uim.models.classes.attributes.doubles.hertzes;
+	import uim.models.classes.attributes.doubles.meters;
+	import uim.models.classes.attributes.doubles.ohms;
+	import uim.models.classes.attributes.doubles.pascals;
+	import uim.models.classes.attributes.doubles.seconds;
+	import uim.models.classes.attributes.doubles.volts;
+	import uim.models.classes.attributes.doubles.watts;
 }
 
 // subs
 public { 
-	import uim.models.attributes.doubles.candela;
-	import uim.models.attributes.doubles.celsius;
-	import uim.models.attributes.doubles.coulomb;
-	import uim.models.attributes.doubles.degree;
-	import uim.models.attributes.doubles.inches;
-	import uim.models.attributes.doubles.joule;
-	import uim.models.attributes.doubles.kelvin;
-	import uim.models.attributes.doubles.latitude;
-	import uim.models.attributes.doubles.longitude;
-	import uim.models.attributes.doubles.mole;
-	import uim.models.attributes.doubles.newton;
-	import uim.models.attributes.doubles.percentage;
-	import uim.models.attributes.doubles.radian;
+	import uim.models.classes.attributes.doubles.candela;
+	import uim.models.classes.attributes.doubles.celsius;
+	import uim.models.classes.attributes.doubles.coulomb;
+	import uim.models.classes.attributes.doubles.degree;
+	import uim.models.classes.attributes.doubles.inches;
+	import uim.models.classes.attributes.doubles.joule;
+	import uim.models.classes.attributes.doubles.kelvin;
+	import uim.models.classes.attributes.doubles.latitude;
+	import uim.models.classes.attributes.doubles.longitude;
+	import uim.models.classes.attributes.doubles.mole;
+	import uim.models.classes.attributes.doubles.newton;
+	import uim.models.classes.attributes.doubles.percentage;
+	import uim.models.classes.attributes.doubles.radian;
 }
