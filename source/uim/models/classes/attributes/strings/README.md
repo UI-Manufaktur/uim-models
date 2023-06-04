@@ -1,1 +1,1 @@
-# uim.models.attributes.strings
+# uim.models.classes.attributes.strings

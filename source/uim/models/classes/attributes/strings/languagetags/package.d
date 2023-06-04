@@ -3,9 +3,9 @@
   License: Subject to the terms of the Apache 2.0 license, as written in the included LICENSE.txt file.  
   Authors: Ozan Nurettin Süel (Sicherheitsschmiede)                                                      
 **********************************************************************************************************/
-module uim.models.attributes.strings.languagetags;
+module uim.models.classes.attributes.strings.languagetags;
 
 public { 
-	import uim.models.attributes.strings.languagetags.languagetag;
-	import uim.models.attributes.strings.languagetags.culturetag;
+	import uim.models.classes.attributes.strings.languagetags.languagetag;
+	import uim.models.classes.attributes.strings.languagetags.culturetag;
 }
