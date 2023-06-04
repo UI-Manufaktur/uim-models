@@ -1,5 +1,5 @@
-module uim.models.values.uuids;
+module uim.models.classes.values.uuids;
 
 public { 
-	import uim.models.values.uuids.uuid;
+	import uim.models.classes.values.uuids.uuid;
 }
