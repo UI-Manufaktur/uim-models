@@ -1,1 +1,1 @@
-# Package 📦 uim.models.attributes.chars
+# Package 📦 uim.models.classes.attributes.chars

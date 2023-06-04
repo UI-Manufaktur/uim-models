@@ -3,9 +3,9 @@
 *	License: Subject to the terms of the MIT license, as written in the included LICENSE.txt file.
 *	Authors: UI Manufaktur Team
 ************************************************************************************************/
-module uim.models.attributes.dates;
+module uim.models.classes.attributes.dates;
 
 // main
 public { 
-	import uim.models.attributes.dates.date_;
+	import uim.models.classes.attributes.dates.date_;
 }
