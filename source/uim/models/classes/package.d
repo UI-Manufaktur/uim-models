@@ -1,4 +1,4 @@
-module uim.models.classes;
+module uim.models.classes.classes;
 
 public {
   import uim.models.classes.model;

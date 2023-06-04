@@ -3,35 +3,35 @@
   License: Subject to the terms of the Apache 2.0 license, as written in the included LICENSE.txt file.  
   Authors: Ozan Nurettin Süel (Sicherheitsschmiede)                                                      
 **********************************************************************************************************/
-module uim.models.attributes;
+module uim.models.classes.attributes;
 
 import uim.models;
 @safe:
 
 public { 
-	import uim.models.attributes.attribute;
-	import uim.models.attributes.registry;
+	import uim.models.classes.attributes.attribute;
+	import uim.models.classes.attributes.registry;
 }
 
 public { 
-	import uim.models.attributes.lookups;
-	import uim.models.attributes.codes;
+	import uim.models.classes.attributes.lookups;
+	import uim.models.classes.attributes.codes;
 }
 
 public { 
-	import uim.models.attributes.arrays;
-	import uim.models.attributes.booleans;
-	import uim.models.attributes.bytes;
-	import uim.models.attributes.chars;
-	import uim.models.attributes.dates;
-	import uim.models.attributes.datetimes;
-	import uim.models.attributes.decimals;
-	import uim.models.attributes.doubles;
-	import uim.models.attributes.elements;
-	import uim.models.attributes.entities;
-	import uim.models.attributes.integers;
-	import uim.models.attributes.ulongs;
-	import uim.models.attributes.uuids;
+	import uim.models.classes.attributes.arrays;
+	import uim.models.classes.attributes.booleans;
+	import uim.models.classes.attributes.bytes;
+	import uim.models.classes.attributes.chars;
+	import uim.models.classes.attributes.dates;
+	import uim.models.classes.attributes.datetimes;
+	import uim.models.classes.attributes.decimals;
+	import uim.models.classes.attributes.doubles;
+	import uim.models.classes.attributes.elements;
+	import uim.models.classes.attributes.entities;
+	import uim.models.classes.attributes.integers;
+	import uim.models.classes.attributes.ulongs;
+	import uim.models.classes.attributes.uuids;
 }
 
 template AttributeThis(string name) {

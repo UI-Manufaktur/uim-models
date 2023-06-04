@@ -1,1 +1,1 @@
-module uim.models.classes;
+module uim.models.classes.classes;
