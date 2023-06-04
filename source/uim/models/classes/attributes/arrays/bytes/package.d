@@ -3,9 +3,9 @@
 	License: Subject to the terms of the Apache 2.0 license, as written in the included LICENSE.txt file.  
 	Authors: Ozan Nurettin Süel (Sicherheitsschmiede)                                                      
 **********************************************************************************************************/
-module uim.models.attributes.arrays.bytes;
+module uim.models.classes.attributes.arrays.bytes;
 
 public { 
-	import uim.models.attributes.arrays.bytes.binary;
-	import uim.models.attributes.arrays.bytes.image;
+	import uim.models.classes.attributes.arrays.bytes.binary;
+	import uim.models.classes.attributes.arrays.bytes.image;
 }

@@ -1,1 +1,1 @@
-# Package 📦 uim.models.attributes.booleans
+# Package 📦 uim.models.classes.attributes.booleans

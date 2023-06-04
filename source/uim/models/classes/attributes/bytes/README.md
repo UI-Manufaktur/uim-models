@@ -1,1 +1,1 @@
-# Package 📦 uim.models.attributes.bytes
+# Package 📦 uim.models.classes.attributes.bytes

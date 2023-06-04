@@ -3,7 +3,7 @@
 *	License: Subject to the terms of the MIT license, as written in the included LICENSE.txt file.
 *	Authors: UI Manufaktur Team
 ************************************************************************************************/
-module uim.models.attributes.booleans.boolean;
+module uim.models.classes.attributes.booleans.boolean;
 
 import uim.models;
 @safe:
