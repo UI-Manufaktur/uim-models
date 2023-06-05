@@ -1,1 +1,1 @@
-module uim.models.rests;
+module uim.models.tests;
