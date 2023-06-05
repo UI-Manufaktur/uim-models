@@ -19,14 +19,9 @@ public { // Required uim libraries
 }
 
 public { // uim.models packages
-  import uim.models.attributes;
-  import uim.models.elements;
-  import uim.models.entities;
-  import uim.models.errors;
-  import uim.models.exceptions;
+  import uim.models.classes;
   import uim.models.interfaces;
   import uim.models.helpers;
   import uim.models.mixins;
-  import uim.models.usecases;
-  import uim.models.values;
+  import uim.models.tests;
 }

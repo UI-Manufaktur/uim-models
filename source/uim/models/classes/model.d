@@ -1,1 +1,5 @@
-module uim.models.classes.classes;
+module uim.models.classes.model;
+
+class DModel {
+  this() {}
+}
