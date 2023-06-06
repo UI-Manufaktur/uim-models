@@ -4,11 +4,26 @@ import uim.models;
 @safe:
 
 class DModel : IModel { 
-  mixin(ModelThis!("Model"));
+  this() { this.name("Model").className("Model"); }
+  this(Json configSettings) { this().initialize(configSettings); }
+  this(IModelManager aManager, Json configSettings = Json(null)) { this().manager(aManager).initialize(configSettings); }
+
+  this(string aName, Json configSettings = Json(null)) { this(configSettings).name(aName); }
+  this(string[string] someParameters, Json configSettings = Json(null)) { this(configSettings).parameters(someParameters); }
+
+  this(IModelManager aManager, string aName, Json configSettings = Json(null)) { this(aManager, configSettings).name(aName); }
+  this(IModelManager aManager, string[string] someParameters, Json configSettings = Json(null)) { this(aManager, configSettings).parameters(someParameters); }
+
+  this(string aName, string[string] someParameters, Json configSettings = Json(null)) { this(name, configSettings).parameters(someParameters); }
+  this(IModelManager aManager, string aName, string[string] someParameters, Json configSettings = Json(null)) { this(aManager, name, configSettings).parameters(someParameters); }
 
   void initialize(Json configSettings = Json(null)) {}
 
   mixin(OProperty!("string", "name"));
+  mixin(OProperty!("string", "className"));
+  mixin(OProperty!("string", "registerPath"));
+  mixin(OProperty!("IModelManager", "manager"));
+  mixin(OProperty!("string[string]", "parameters"));
 
   /**
     * Default config
@@ -24,7 +39,8 @@ class DModel : IModel {
   }
   DModel copy() {
     auto result = create;
-    return result.fromJson(this.toJson);
+    // result.fromJson(this.toJson);
+    return result;
   }  
 }
 mixin(ModelCalls!("Model", "DModel"));

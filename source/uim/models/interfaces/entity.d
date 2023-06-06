@@ -9,4 +9,6 @@ import uim.models;
 @safe:
 
 interface IEntity : IElement {
+	string description();  
+  string versionDescription(); 
 }

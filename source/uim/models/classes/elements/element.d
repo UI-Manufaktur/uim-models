@@ -8,7 +8,7 @@ module uim.models.classes.elements.element;
 import uim.models;
 @safe:
 
-class DElement {
+class DElement : IElement {
   // // static namespace = moduleName!DElement;
 
   // Constructors
