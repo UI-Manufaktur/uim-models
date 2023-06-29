@@ -6,8 +6,8 @@
 module uim.models.classes.attributes.integers.calenderparts.integer;
 
 import uim.models;
-@safe:
 
+@safe:
 class DIntegerCalendarPart : DIntegerAttribute {
   mixin(AttributeThis!"IntegerCalendarPart");
 
