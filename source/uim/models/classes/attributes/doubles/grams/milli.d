@@ -18,8 +18,8 @@ has.measurement.fundamentalComponent.kilogram
 means.measurement.prefix.milli */
 
 import uim.models;
-@safe:
 
+@safe:
 class DKilogramAttribute : DGramAttribute {
   mixin(AttributeThis!("KilogramAttribute"));
 

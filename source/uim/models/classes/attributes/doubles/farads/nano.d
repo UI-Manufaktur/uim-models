@@ -21,8 +21,8 @@ has.measurement.fundamentalComponent.ampere
 means.measurement.prefix.nano */
 
 import uim.models;
-@safe:
 
+@safe:
 class DNanoFaradAttribute : DFaradAttribute {
   mixin(AttributeThis!("NanoFaradAttribute"));
 

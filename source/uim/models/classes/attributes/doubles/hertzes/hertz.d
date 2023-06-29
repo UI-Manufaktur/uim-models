@@ -20,8 +20,8 @@ has.measurement.fundamentalComponent.second */
 // Unit of measure for luminous intensity in hertzs
 
 import uim.models;
-@safe:
 
+@safe:
 class DHertzAttribute : DDoubleAttribute {
   mixin(AttributeThis!("HertzAttribute"));
 

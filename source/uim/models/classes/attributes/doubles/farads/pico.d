@@ -21,8 +21,8 @@ has.measurement.fundamentalComponent.ampere
 means.measurement.prefix.pico */
 
 import uim.models;
-@safe:
 
+@safe:
 class DPicoFaradAttribute : DFaradAttribute {
   mixin(AttributeThis!("PicoFaradAttribute"));
 

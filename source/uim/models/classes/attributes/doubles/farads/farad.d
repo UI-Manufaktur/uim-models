@@ -20,8 +20,8 @@ has.measurement.fundamentalComponent.second
 has.measurement.fundamentalComponent.ampere */
 
 import uim.models;
-@safe:
 
+@safe:
 class DFaradAttribute : DDoubleAttribute {
   mixin(AttributeThis!("FaradAttribute"));
 

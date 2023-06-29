@@ -15,8 +15,8 @@ has.measurement.fundamentalComponent.second
 means.measurement.prefix.kilo */
 
 import uim.models;
-@safe:
 
+@safe:
 class DKiloHertzAttribute : DHertzAttribute {
   mixin(AttributeThis!("KiloHertzAttribute"));
 
