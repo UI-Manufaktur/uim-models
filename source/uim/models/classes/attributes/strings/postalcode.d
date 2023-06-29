@@ -12,8 +12,8 @@ is.dataFormat.array
 means.location.postalCode */
 
 import uim.models;
-@safe:
 
+@safe:
 class DPostalCodeAttribute : DStringAttribute {
   mixin(AttributeThis!("PostalCodeAttribute"));
 
