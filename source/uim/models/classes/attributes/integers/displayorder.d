@@ -6,8 +6,8 @@
 module uim.models.classes.attributes.integers.displayorder;
 
 import uim.models;
-@safe:
 
+@safe:
 class DDisplayOrderAttribute : DIntegerAttribute {
   mixin(AttributeThis!("DisplayOrderAttribute"));
 

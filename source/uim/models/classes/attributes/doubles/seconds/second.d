@@ -18,8 +18,8 @@ has.measurement.fundamentalComponent.second
 means.measurement.duration.seconds */
 
 import uim.models;
-@safe:
 
+@safe:
 class DSecondAttribute : DDoubleAttribute {
   mixin(AttributeThis!("SecondAttribute"));
 

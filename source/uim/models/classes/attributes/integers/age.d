@@ -6,8 +6,8 @@
 module uim.models.classes.attributes.integers.age;
 
 import uim.models;
-@safe:
 
+@safe:
 class DAgeAttribute : DIntegerAttribute {
   mixin(AttributeThis!("AgeAttribute"));
 
