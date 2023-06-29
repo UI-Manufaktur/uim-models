@@ -6,8 +6,8 @@
 module uim.models.classes.attributes.arrays.strings.tags;
 
 import uim.models;
-@safe:
 
+@safe:
 class DTagsAttribute : DStringArrayAttribute {
   mixin(AttributeThis!("TagsAttribute"));
 

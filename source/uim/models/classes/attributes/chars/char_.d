@@ -6,8 +6,8 @@
 module uim.models.classes.attributes.chars.char_;
 
 import uim.models;
-@safe:
 
+@safe:
 class DCharAttribute : DAttribute {
   mixin(AttributeThis!"CharAttribute");
 
