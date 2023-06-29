@@ -6,8 +6,8 @@
 module uim.models.classes.elements.configuration;
 
 import uim.models;
-@safe:
 
+@safe:
 class DConfigurationElement : DElement {
   // Constructors
   this() { initialize; }

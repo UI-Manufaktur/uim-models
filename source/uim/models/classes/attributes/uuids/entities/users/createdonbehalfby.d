@@ -6,8 +6,8 @@
 module uim.models.classes.attributes.uuids.entities.users.createdonbehalfby;
 
 import uim.models;
-@safe:
 
+@safe:
 class DCreatedOnBehalfByAttribute : DEntityIdAttribute {
   mixin(AttributeThis!("CreatedOnBehalfByAttribute"));
 

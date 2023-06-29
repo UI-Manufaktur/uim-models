@@ -6,8 +6,8 @@
 module uim.models.classes.elements.version_;
 
 import uim.models;
-@safe:
 
+@safe:
 class DVersion: DElement {
   // static namespace = moduleName!DVersion;
 

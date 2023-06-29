@@ -6,8 +6,8 @@
 module uim.models.classes.attributes.uuids.entities.users.team;
 
 import uim.models;
-@safe:
 
+@safe:
 class DTeamIdAttribute : DEntityIdAttribute {
   mixin(AttributeThis!("TeamIdAttribute"));
 

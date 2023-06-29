@@ -6,8 +6,8 @@
 module uim.models.classes.elements.element;
 
 import uim.models;
-@safe:
 
+@safe:
 class DElement : IElement {
   // // static namespace = moduleName!DElement;
 

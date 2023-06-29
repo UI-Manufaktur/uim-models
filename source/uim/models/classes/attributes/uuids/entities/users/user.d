@@ -18,8 +18,8 @@ means.identity.entityId
 means.userId */
 
 import uim.models;
-@safe:
 
+@safe:
 class DUserIdAttribute : DEntityIdAttribute {
   mixin(AttributeThis!("UserIdAttribute"));
 

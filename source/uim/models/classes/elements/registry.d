@@ -1,8 +1,8 @@
 module uim.models.classes.elements.registry;
 
 import uim.models;
-@safe:
 
+@safe:
 class DElementRegistry : DRegistry!DElement {
   static DElementRegistry registry;
 }
