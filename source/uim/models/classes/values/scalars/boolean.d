@@ -6,8 +6,8 @@
 module uim.models.classes.values.scalars.boolean;
 
 import uim.models;
-@safe:
 
+@safe:
 class DBooleanValue : DValue {
   mixin(ValueThis!("BooleanValue", "bool"));  
 

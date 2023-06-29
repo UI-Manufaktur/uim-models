@@ -6,8 +6,8 @@
 module uim.models.classes.values.maps.options;
 
 import uim.models;
-@safe:
 
+@safe:
 class DOptions : DMapValue!string {
   // Constructors
   this() { initialize; }

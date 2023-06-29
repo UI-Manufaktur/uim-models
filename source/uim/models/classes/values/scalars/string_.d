@@ -6,8 +6,8 @@
 module uim.models.classes.values.scalars.string_;
 
 import uim.models;
-@safe:
 
+@safe:
 class DStringValue : DValue {
   mixin(ValueThis!("StringValue"));  
     // Initialization hook method.
