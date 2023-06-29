@@ -17,8 +17,8 @@ means.content.text.HTML
  */
  
 import uim.models;
-@safe:
 
+@safe:
 class DHtmlAttribute : DStringAttribute {
   mixin(AttributeThis!("HtmlAttribute"));
 

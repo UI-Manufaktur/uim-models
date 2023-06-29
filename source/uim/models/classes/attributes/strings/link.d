@@ -6,8 +6,8 @@
 module uim.models.classes.attributes.strings.link;
 
 import uim.models;
-@safe:
 
+@safe:
 class DLinkAttribute : DStringAttribute {
   mixin(AttributeThis!("LinkAttribute"));
 

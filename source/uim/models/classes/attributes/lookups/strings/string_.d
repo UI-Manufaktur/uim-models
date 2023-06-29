@@ -6,8 +6,8 @@
 module uim.models.classes.attributes.lookups.strings.string_;
 
 import uim.models;
-@safe:
 
+@safe:
 class DStringStringAttribute : DLookupAttribute {
   mixin(AttributeThis!("StringStringAttribute"));
   

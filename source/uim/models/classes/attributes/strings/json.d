@@ -22,8 +22,8 @@ means.content.text.JSON
  */
  
 import uim.models;
-@safe:
 
+@safe:
 class DJsonAttribute : DStringAttribute {
   mixin(AttributeThis!("JsonAttribute"));
 

@@ -8,8 +8,8 @@ module uim.models.classes.attributes.strings.attributename;
 // Type for trait parameters that take attribute names as values
 
 import uim.models;
-@safe:
 
+@safe:
 class DAttributeNameAttribute : DStringAttribute {
   mixin(AttributeThis!("AttributeNameAttribute"));
 

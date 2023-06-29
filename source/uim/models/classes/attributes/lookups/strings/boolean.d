@@ -6,8 +6,8 @@
 module uim.models.classes.attributes.lookups.strings.boolean;
 
 import uim.models;
-@safe:
 
+@safe:
 class DStringBooleanAttribute : DLookupAttribute {
   mixin(AttributeThis!("StringBooleanAttribute"));
 
