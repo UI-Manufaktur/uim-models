@@ -12,8 +12,8 @@ means.calendar
 means.calendar.trimester */
 
 import uim.models;
-@safe:
 
+@safe:
 class DTrimesterAttribute : DIntegerCalendarPart {
   mixin(AttributeThis!("TrimesterAttribute"));
 

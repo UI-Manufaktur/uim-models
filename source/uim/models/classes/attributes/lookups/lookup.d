@@ -6,8 +6,8 @@
 module uim.models.classes.attributes.lookups.lookup;
 
 import uim.models;
-@safe:
 
+@safe:
 class DLookupAttribute : DAttribute {
   mixin(AttributeThis!("LookupAttribute"));
 
