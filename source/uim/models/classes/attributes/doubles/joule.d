@@ -19,8 +19,8 @@ has.measurement.fundamentalComponent.meter
 has.measurement.fundamentalComponent.second */
 
 import uim.models;
-@safe:
 
+@safe:
 class DJouleAttribute : DDoubleAttribute {
   mixin(AttributeThis!("JouleAttribute"));
 

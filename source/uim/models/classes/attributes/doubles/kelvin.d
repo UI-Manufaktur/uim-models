@@ -17,8 +17,8 @@ means.measurement.units.si.kelvin
 has.measurement.fundamentalComponent.kelvin */
 
 import uim.models;
-@safe:
 
+@safe:
 class DKelvinAttribute : DDoubleAttribute {
   mixin(AttributeThis!("KelvinAttribute"));
 

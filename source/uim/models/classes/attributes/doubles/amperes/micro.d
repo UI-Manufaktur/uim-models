@@ -18,8 +18,8 @@ has.measurement.fundamentalComponent.ampere
 means.measurement.prefix.micro */
 
 import uim.models;
-@safe:
 
+@safe:
 class DMicroAmpereAttribute : DAmpereAttribute {
   mixin(AttributeThis!("MicroAmpereAttribute"));
 
