@@ -6,8 +6,8 @@
 module uim.models.classes.attributes.arrays.strings.string_;
 
 import uim.models;
-@safe:
 
+@safe:
 class DStringArrayAttribute : DAttribute {
   mixin(AttributeThis!("StringArrayAttribute"));
 

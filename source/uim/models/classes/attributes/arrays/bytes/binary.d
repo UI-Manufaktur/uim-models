@@ -6,8 +6,8 @@
 module uim.models.classes.attributes.arrays.bytes.binary;
 
 import uim.models;
-@safe:
 
+@safe:
 class DBinaryAttribute : DAttribute {
   mixin(AttributeThis!("BinaryAttribute"));
 

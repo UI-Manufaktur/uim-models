@@ -1,8 +1,8 @@
 module uim.models.classes.model;
 
 import uim.models;
-@safe:
 
+@safe:
 class DModel : IModel { 
   this() { this.name("Model").className("Model"); }
   this(Json configSettings) { this().initialize(configSettings); }

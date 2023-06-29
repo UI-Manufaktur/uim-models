@@ -6,8 +6,8 @@
 module uim.models.classes.attributes.registry;
 
 import uim.models;
-@safe:
 
+@safe:
 class DAttributeRegistry : DRegistry!DAttribute {
   static DAttributeRegistry registry;
 }

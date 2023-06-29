@@ -12,8 +12,8 @@ is.dataFormat.array
 means.content.image.image */
 
 import uim.models;
-@safe:
 
+@safe:
 class DImageAttribute : DBinaryAttribute {
   mixin(AttributeThis!("ImageAttribute"));
 

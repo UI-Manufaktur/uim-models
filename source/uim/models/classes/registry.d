@@ -6,8 +6,8 @@
 module uim.models.classes.registry;
 
 import uim.models;
-@safe:
 
+@safe:
 class DModelRegistry : DRegistry!DModel{
   this() {}
 
