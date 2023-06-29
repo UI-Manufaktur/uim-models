@@ -6,8 +6,8 @@
 module uim.models.classes.values.null_;
 
 import uim.models;
-@safe:
 
+@safe:
 class DNullValue : DValue {
   mixin(ValueThis!("NullValue"));  
 

@@ -6,8 +6,8 @@
 module uim.models.classes.values.arrays.integer;
 
 import uim.models;
-@safe:
 
+@safe:
 class DIntegerArrayValue : DArrayValue {
   mixin(ValueThis!("IntegerArrayValue", "int[]"));  
 

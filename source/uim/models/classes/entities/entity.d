@@ -6,8 +6,8 @@
 module uim.models.classes.entities.entity;
 
 import uim.models;
-@safe:
 
+@safe:
 class DEntity : DElement, IEntity /* : IRegistrable */ {
   // static namespace = moduleName!DEntity;
 

@@ -6,8 +6,8 @@
 module uim.models.classes.values.value;
 
 import uim.models;
-@safe:
 
+@safe:
 class DValue : IValue {
   this() { initialize; }
   this(DAttribute theAttribute) { this().attribute(theAttribute); }

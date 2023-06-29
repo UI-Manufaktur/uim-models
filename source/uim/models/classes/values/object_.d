@@ -6,8 +6,8 @@
 module uim.models.classes.values.object_;
 
 import uim.models;
-@safe:
 
+@safe:
 class DJsonObjectValue : DValue {
   mixin(ValueThis!("JsonObjectValue"));  
 

@@ -6,8 +6,8 @@
 module uim.models.classes.entities.entities;
 
 import uim.models;
-@safe:
 
+@safe:
 class DOOPEntities {
   this() {}
 
