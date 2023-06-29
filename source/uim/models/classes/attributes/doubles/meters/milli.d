@@ -21,8 +21,8 @@ has.measurement.fundamentalComponent.meter
 means.measurement.prefix.milli */
 
 import uim.models;
-@safe:
 
+@safe:
 class DMillimeterAttribute : DMeterAttribute {
   mixin(AttributeThis!("MillimeterAttribute"));
 
