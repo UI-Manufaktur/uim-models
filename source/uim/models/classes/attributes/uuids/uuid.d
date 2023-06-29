@@ -6,8 +6,8 @@
 module uim.models.classes.attributes.uuids.uuid;
 
 import uim.models;
-@safe:
 
+@safe:
 class DUUIDAttribute : DAttribute {
   mixin(AttributeThis!("UUIDAttribute"));
 

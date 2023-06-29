@@ -6,8 +6,8 @@
 module uim.models.classes.attributes.uuids.entities.campaign;
 
 import uim.models;
-@safe:
 
+@safe:
 class DCampaignIdAttribute : DEntityIdAttribute {
   mixin(AttributeThis!("CampaignIdAttribute"));
 
