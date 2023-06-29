@@ -4,8 +4,8 @@ module uim.models.classes.attributes.doubles.candela;
 // Unit of measure for luminous intensity in candelas
 
 import uim.models;
-@safe:
 
+@safe:
 class DCandelaAttribute : DDoubleAttribute {
   mixin(AttributeThis!("CandelaAttribute"));
 

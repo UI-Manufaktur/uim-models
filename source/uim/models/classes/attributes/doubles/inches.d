@@ -13,8 +13,8 @@ is.dataFormat.big
 means.measurement.distance.inches */
 
 import uim.models;
-@safe:
 
+@safe:
 class DInchesAttribute : DDoubleAttribute {
   mixin(AttributeThis!("InchesAttribute"));
 

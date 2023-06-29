@@ -6,8 +6,8 @@
 module uim.models.classes.attributes.decimals.decimal;
 
 import uim.models;
-@safe:
 
+@safe:
 class DDecimalAttribute : DAttribute {
   mixin(AttributeThis!("DecimalAttribute"));
 
