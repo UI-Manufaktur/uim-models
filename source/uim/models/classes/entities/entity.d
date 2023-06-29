@@ -51,7 +51,7 @@ class DEntity : DElement, IEntity /* : IRegistrable */ {
       .versionBy(this.createdBy);
   }
 
-  mixin(OProperty!("DETBCollection", "collection"));
+  mixin(OProperty!("DEntityCollection", "collection"));
   mixin(OProperty!("string", "routingPath")); // required for routing
 
   mixin(ValueProperty!("string", "description"));  
@@ -177,7 +177,7 @@ class DEntity : DElement, IEntity /* : IRegistrable */ {
     this.etag(to!long(newValue)); 
     return cast(O)this; }
 
-  // mixin(OProperty!("DETBCollection", "collection"));
+  // mixin(OProperty!("DEntityCollection", "collection"));
   mixin(OProperty!("string", "siteName"));
   // mixin(OProperty!("DOOPModel", "model"));
   mixin(OProperty!("Json", "config"));
