@@ -6,8 +6,8 @@
 module uim.models.classes.values.lookups.lookup;
 
 import uim.models;
-@safe:
 
+@safe:
 class DLookupValue(K, V) : DValue {
   mixin(ValueThis!("LookupValue"));
 

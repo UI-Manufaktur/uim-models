@@ -6,8 +6,8 @@
 module uim.models.classes.values.datetimes.time_;
 
 import uim.models;
-@safe:
 
+@safe:
 class DTimeValue : DValue {
   mixin(ValueThis!("TimeValue", "TimeOfDay"));  
 

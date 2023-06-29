@@ -6,8 +6,8 @@
 module uim.models.classes.values.maps.map;
 
 import uim.models;
-@safe:
 
+@safe:
 class DMapValue(K) : DValue, IMap {
   mixin(ValueThis!("MapValue"));
 
