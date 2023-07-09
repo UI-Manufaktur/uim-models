@@ -5,9 +5,6 @@
 **********************************************************************************************************/
 module uim.models.classes.entities;
 
-import uim.models;
-@safe:
-
 public { 
 	import uim.models.classes.entities.entity;
 	import uim.models.classes.entities.entities;

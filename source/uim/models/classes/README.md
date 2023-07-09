@@ -1,1 +1,1 @@
-# Package 📦 uim.models.classes.classes
+# Package 📦 uim.models.classes
