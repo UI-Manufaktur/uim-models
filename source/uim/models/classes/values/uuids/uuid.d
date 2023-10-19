@@ -30,7 +30,7 @@ class DUUIDValue : DValue {
   }
 
   override void set(Json newValue) {
-    if (newValue == Json(null)) {
+    if (newValue.isEmpty) {
       if (!isNullable) return;
 
       this

@@ -18,7 +18,7 @@ class DAttribute : /* DEntity,  */IAttribute {
 	// Data type of the attribute. 
   mixin(OProperty!("string[]", "dataFormats")); 
   bool hasDataFormat(string dataFormatName) {
-    foreach(df; dataFormats) if (df == dataFormatName) return true;
+    foreach(df; dataFormats) if (df == dataFormatName) { return true; }
     return false;
   }
   O addDataFormats(this O)(string[] newDataFormats) {
@@ -133,7 +133,7 @@ class DAttribute : /* DEntity,  */IAttribute {
   } */
 
   /* override  */void fromJson(Json aJson) {
-    if (aJson == Json(null)) {return; }
+    if (aJson.isEmpty) {return; }
     /* super.fromJson(aJson); */
 
     foreach (keyvalue; aJson.byKeyValue) {

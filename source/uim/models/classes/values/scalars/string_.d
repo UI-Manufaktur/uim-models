@@ -56,7 +56,7 @@ class DStringValue : DValue {
   } 
 
   override protected void set(Json newValue) {
-    if (newValue == Json(null)) { 
+    if (newValue.isEmpty) { 
       _value = null; 
       this.isNull(isNullable ? true : false); }
     else {

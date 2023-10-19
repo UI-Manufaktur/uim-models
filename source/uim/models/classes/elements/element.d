@@ -300,7 +300,7 @@ class DElement : IElement {
   Bson toBson() { return Bson(toJson); }
 
   void fromJson(Json aJson) {
-    if (aJson == Json(null)) return;
+    if (aJson.isEmpty) return;
     
     foreach (keyvalue; aJson.byKeyValue) {
       auto k = keyvalue.key;

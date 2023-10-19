@@ -45,7 +45,7 @@ class DDoubleValue : DValue {
   }  
 
   override protected void set(Json newValue) {
-    if (newValue == Json(null)) { 
+    if (newValue.isEmpty) { 
       _value = 0; 
       this.isNull(isNullable ? true : false); }
     else {

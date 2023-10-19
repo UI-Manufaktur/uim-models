@@ -43,7 +43,7 @@ class DBooleanValue : DValue {
     _value = (newValue.toLower == "true") || (newValue.toLower == "on") || (newValue.toLower == "1"); 
   }
   override void set(Json newValue) {
-    if (newValue == Json(null)) { 
+    if (newValue.isEmpty) { 
       this
         .value(false) 
         .isNull(isNullable ? true : false); }

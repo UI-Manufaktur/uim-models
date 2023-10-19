@@ -48,7 +48,7 @@ class DStringArrayValue : DArrayValue {
   }
 
   override void set(Json newValue) {
-    if (newValue == Json(null)) this.value(cast(string[])null);
+    if (newValue.isEmpty) this.value(cast(string[])null);
     switch(newValue.type) {
       case Json.Type.string: 
         /* return  */this.value(newValue.get!string); 

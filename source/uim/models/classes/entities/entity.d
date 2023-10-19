@@ -671,7 +671,7 @@ class DEntity : DElement, IEntity /* : IRegistrable */ {
   } */
 
   override void fromJson(Json aJson) {
-    if (aJson == Json(null)) { return; }
+    if (aJson.isEmpty) { return; }
     super.fromJson(aJson);
 
     foreach (keyvalue; aJson.byKeyValue) {

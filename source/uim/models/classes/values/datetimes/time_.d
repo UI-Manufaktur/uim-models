@@ -46,7 +46,7 @@ class DTimeValue : DValue {
   }  
 
   override protected void set(Json newValue) {
-    if (newValue == Json(null)) { 
+    if (newValue.isEmpty) { 
       _value = TimeOfDay(); 
       this.isNull(isNullable ? true : false); }
     else {

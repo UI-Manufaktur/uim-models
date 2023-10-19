@@ -48,7 +48,7 @@ class DSystimeValue : DValue {
   }  
 
   override protected void set(Json newValue) {
-    if (newValue == Json(null)) { 
+    if (newValue.isEmpty) { 
       _value = SysTime(); 
       this.isNull(isNullable ? true : false); }
     else {

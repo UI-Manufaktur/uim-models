@@ -36,7 +36,7 @@ class DDateValue : DValue {
     _value = Date.fromISOExtString(newValue);
   }
   override void set(Json newValue) {
-    if (newValue == Json(null)) { 
+    if (newValue.isEmpty) { 
       this
         .value(Date()) 
         .isNull(isNullable ? true : false); }

@@ -32,7 +32,7 @@ class DIntegerBooleanAttribute : DLookupAttribute {
     return (key in _lookups ? true : false); 
   }
   bool hasLookupValue(bool lookupValue) {
-    foreach(k, v; _lookups) { if (v == lookupValue) return true; }
+    foreach(k, v; _lookups) { if (v == lookupValue) { return true; } }
     return false; 
   }  
 

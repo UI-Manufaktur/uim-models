@@ -44,7 +44,7 @@ class DDatetimeValue : DValue {
   }  
 
   override protected void set(Json newValue) {
-    if (newValue == Json(null)) { 
+    if (newValue.isEmpty) { 
       _value = DateTime(); 
       this.isNull(isNullable ? true : false); }
     else {
