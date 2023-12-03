@@ -33,7 +33,7 @@ class DAttribute : /* DEntity,  */IAttribute {
   mixin(OProperty!("string", "display"));  
   mixin(OProperty!("string", "registerPath"));  
   mixin(OProperty!("bool", "isNullable"));
-  mixin(OProperty!("string[string]", "descriptions"));
+  mixin(OProperty!("STRINGAA", "descriptions"));
   mixin(OProperty!("string", "valueType")); // Select the data type of the property.")); // 
   mixin(OProperty!("string", "keyType")); // Select the data type of the property.")); // 
   mixin(OProperty!("string", "dataType_display")); // ")); // 

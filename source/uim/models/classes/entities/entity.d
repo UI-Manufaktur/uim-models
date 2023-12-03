@@ -461,7 +461,9 @@ class DEntity : DElement, IEntity /* : IRegistrable */ {
   // Read entity from STRINGAA
   override void readFromStringAA(STRINGAA reqParameters, bool usePrefix = false) {
     super.readFromStringAA(reqParameters);
-    foreach(k, v; reqParameters) this[k] = v; 
+    
+    reqParameters.byKeyValue
+      .each!(kv => this[kv.key] = kv.value); 
   }
 
   override void readFromRequest(STRINGAA requestValues, bool usePrefix = true) {
@@ -730,35 +732,36 @@ class DEntity : DElement, IEntity /* : IRegistrable */ {
   override Json toJson(string[] showFields = null, string[] hideFields = null) {
     auto result = super.toJson(showFields, hideFields);
     
-    if (showFields.length == 0 && hideFields.length == 0) {
-      result["registerPath"] = this.registerPath;
-      result["id"] = this.id.toString;
-      result["name"] = this.name;
-      result["display"] = this.display;
-      result["createdOn"] = this.createdOn;
-      result["createdBy"] = this.createdBy.toString;
-      result["modifiedOn"] = this.modifiedOn;
-      result["modifiedBy"] = this.modifiedBy.toString;
-      result["lastAccessedOn"] = this.lastAccessedOn;
-      result["lastAccessBy"] = this.lastAccessBy.toString;
-      result["description"] = this.description;
-      result["isLocked"] = this.isLocked;
-      result["lockedOn"] = this.lockedOn;
-      result["lockedBy"] = this.lockedBy.toString;
-      result["isDeleted"] = this.isDeleted;
-      result["deletedOn"] = this.deletedOn;
-      result["deletedBy"] = this.deletedBy.toString;
+    if (showFields.isEmpty && hideFields.isEmpty) {
+      result = result.set(
+        [ "registerPath": this.registerPath,
+          "id": this.id.toString,
+          "name": this.name,
+          "display": this.display,
+          "createdOn": this.createdOn,
+          "createdBy": this.createdBy.toString,
+          "modifiedOn": this.modifiedOn,
+          "modifiedBy": this.modifiedBy.toString,
+          "lastAccessedOn": this.lastAccessedOn,
+          "lastAccessBy": this.lastAccessBy.toString,
+          "description": this.description,
+          "isLocked": this.isLocked,
+          "lockedOn": this.lockedOn,
+          "lockedBy": this.lockedBy.toString,
+          "isDeleted": this.isDeleted,
+          "deletedOn": this.deletedOn,
+          "deletedBy": this.deletedBy.toString
+        ]);
+
       /* if (this.model) {
         if (this.model.id.isNull) result["model"] = this.model.name;
         else result["model"] = this.model.id.toString;
       } */
-      result["hasVersions"] = this.hasVersions;
-      result["hasLanguages"] = this.hasLanguages;
+      result = result.set(
+        [ "hasVersions": this.hasVersions,
+          "hasLanguages": this.hasLanguages]);
 
-      auto parameterValues = Json.emptyObject;
-      foreach (kv; this.parameters.byKeyValue) {
-        parameterValues[kv.key] = this.parameters[kv.value];                
-      } 
+      auto parameterValues = Json.emptyObject.set(this.parameters);                       
       result["parameters"] = parameterValues;
 
       result["config"] = this.config;     
@@ -766,11 +769,11 @@ class DEntity : DElement, IEntity /* : IRegistrable */ {
 /*       foreach(k; _attributes.byKey) {
         if (!hideFields.exist(k)) result[k] = _attributes[k].jsonValue;
       } */
-      foreach(k; values.keys) {
-        result[k] = this.values[k].toJson;
-      }
+      values.keys
+        .each!(key => result[key] = this.values[key].toJson);
+
     }
-    else if (showFields.length == 0 && hideFields.length > 0) {
+    else if (showFields.isEmpty && !hideFields.isEmpty) {
       if (!hideFields.exist("registerPath")) result["registerPath"] = this.registerPath;
       if (!hideFields.exist("id")) result["id"] = this.id.toString;
       if (!hideFields.exist("name")) result["name"] = this.name;
@@ -832,16 +835,12 @@ class DEntity : DElement, IEntity /* : IRegistrable */ {
       if ((showFields.exist("hasVersions")) && (!hideFields.exist("hasVersions"))) result["hasVersions"] = this.hasVersions;
       if ((showFields.exist("hasLanguages")) && (!hideFields.exist("hasLanguages"))) result["hasLanguages"] = this.hasLanguages;
       if ((showFields.exist("parameters")) && (!hideFields.exist("parameters"))) {       
-        auto values = Json.emptyObject;
-        foreach (kv; this.parameters.byKeyValue) {
-          values[kv.key] = this.parameters[kv.value];                
-        } 
-        result["parameters"] = values;
+        result["parameters"] = Json.emptyObject.set(this.parameters);   ;
       }
       if ((showFields.exist("config")) && (!hideFields.exist("config"))) result["config"] = this.config;
     }
 
-    if (showFields.length == 0) {
+    if (showFields.isEmpty) {
       foreach(k; this.values.keys) {
         if (!hideFields.exist(k)) result[k] = values[k].toJson;
       } 

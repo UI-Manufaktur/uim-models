@@ -9,13 +9,13 @@ class DModel : IModel {
   this(IModelManager aManager, Json configSettings = Json(null)) { this().manager(aManager).initialize(configSettings); }
 
   this(string aName, Json configSettings = Json(null)) { this(configSettings).name(aName); }
-  this(string[string] someParameters, Json configSettings = Json(null)) { this(configSettings).parameters(someParameters); }
+  this(STRINGAA someParameters, Json configSettings = Json(null)) { this(configSettings).parameters(someParameters); }
 
   this(IModelManager aManager, string aName, Json configSettings = Json(null)) { this(aManager, configSettings).name(aName); }
-  this(IModelManager aManager, string[string] someParameters, Json configSettings = Json(null)) { this(aManager, configSettings).parameters(someParameters); }
+  this(IModelManager aManager, STRINGAA someParameters, Json configSettings = Json(null)) { this(aManager, configSettings).parameters(someParameters); }
 
-  this(string aName, string[string] someParameters, Json configSettings = Json(null)) { this(name, configSettings).parameters(someParameters); }
-  this(IModelManager aManager, string aName, string[string] someParameters, Json configSettings = Json(null)) { this(aManager, name, configSettings).parameters(someParameters); }
+  this(string aName, STRINGAA someParameters, Json configSettings = Json(null)) { this(name, configSettings).parameters(someParameters); }
+  this(IModelManager aManager, string aName, STRINGAA someParameters, Json configSettings = Json(null)) { this(aManager, name, configSettings).parameters(someParameters); }
 
   void initialize(Json configSettings = Json(null)) {}
 
@@ -23,7 +23,7 @@ class DModel : IModel {
   mixin(OProperty!("string", "className"));
   mixin(OProperty!("string", "registerPath"));
   mixin(OProperty!("IModelManager", "manager"));
-  mixin(OProperty!("string[string]", "parameters"));
+  mixin(OProperty!("STRINGAA", "parameters"));
 
   /**
     * Default config

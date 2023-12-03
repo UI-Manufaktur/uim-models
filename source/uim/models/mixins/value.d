@@ -10,6 +10,7 @@ auto valueGetter(string name, string datatype, string valueClass, string path) {
       if (auto myValue = cast(`~valueClass~`)valueOfKey("`~newPath~`")) {
         return myValue.value;
       }
+      
       return null;       
     }`;
 }

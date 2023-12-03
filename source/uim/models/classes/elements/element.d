@@ -82,7 +82,7 @@ class DElement : IElement {
     }
   }
 
-  mixin(OProperty!("string[string]", "parameters"));
+  mixin(OProperty!("STRINGAA", "parameters"));
 
 /*   // Display of entity 
   mixin(OProperty!("string", "display"));
@@ -161,7 +161,7 @@ class DElement : IElement {
   // Set data 
   void opIndexAssign(Json newValue, string key) {
     if (auto myValue = valueOfKey(key)) {
-      myValue.set(newValue);
+      // TODO myValue.set(newValue);
       return;
     }
 

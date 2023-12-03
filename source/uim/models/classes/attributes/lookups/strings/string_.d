@@ -11,7 +11,7 @@ import uim.models;
 class DStringStringAttribute : DLookupAttribute {
   mixin(AttributeThis!("StringStringAttribute"));
   
-  mixin(OProperty!("string[string]", "lookups"));
+  mixin(OProperty!("STRINGAA", "lookups"));
 
   override DValue createValue() {
     return LookupValue!(string, string).isNullable(isNullable);
