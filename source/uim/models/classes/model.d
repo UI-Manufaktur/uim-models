@@ -29,10 +29,10 @@ class DModel : IModel {
     * Default config
     * These are merged with user-provided config when the component is used.
     */
-  mixin(OProperty!("Json", "defaultConfig"));
+  mixin(OProperty!("IData[string]", "defaultConfig"));
 
-  // Configuration of mvcobject
-  mixin(OProperty!("Json", "config"));
+  // Configuration of model
+  mixin(OProperty!("IData[string]", "config"));
 
   DModel create() {
     return Model;

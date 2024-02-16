@@ -8,7 +8,7 @@ module uim.models.interfaces.value;
 import uim.models;
 @safe:
 
-interface IValue {
+interface IData {
   IAttribute attribute();
   
   bool isBoolean();
@@ -31,6 +31,7 @@ interface IValue {
   bool isNull();
   bool isReadOnly();
 
+  bool hasKeys(string[] )
   Json toJson();
   string toString();
 }

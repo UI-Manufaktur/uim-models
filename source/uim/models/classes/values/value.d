@@ -8,7 +8,7 @@ module uim.models.classes.values.value;
 import uim.models;
 
 @safe:
-class DValue : IValue {
+class DValue : IData {
   this() { initialize; }
   this(DAttribute theAttribute) { this().attribute(theAttribute); }
 
